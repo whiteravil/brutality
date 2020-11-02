@@ -29,9 +29,50 @@
 <body>
 
 	<header class="header">
+
+		<div class="header-mobile">
+			<div class="header-mobile-row">
+				
+				<div class="header-mobile-menu">
+					<div class="open-mob-menu"></div>
+				</div>
+
+				<div class="header-mobile-logo">
+					<a href="#" class="logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+
+				<div class="header-mobile-profile">
+					<a href="#" class="profile-link">
+						<img src="img/icons/user.svg" alt="">
+					</a>
+				</div>
+
+				<div class="header-mobile-phone">
+					<a href="tel:79999999999" class="mob-phone-link">
+						<img src="img/icons/phone-outline.svg" alt="">
+					</a>
+				</div>
+
+				<div class="header-mobile-basket">
+					<a href="#" class="mobile-basket-link">
+						<span>3</span>
+						<img src="img/icons/cart-mute.svg" alt="">
+					</a>
+				</div>
+
+				<div class="header-mobile-universal-close">
+					<div class="mob-universal-close-btn"></div>
+				</div>
+
+			</div>
+		</div>
 		
 		<div class="header-top">
 			<div class="header-top-row">
+
+				<div class="header-mob-close"></div>
 
 				<div class="header-logo">
 					<a href="#" class="logo">
@@ -41,7 +82,8 @@
 				</div>
 
 				<div class="header-cities">
-					<div class="header-cities-current">Казань</div>
+					<div class="header-cities-mob-title">Ваш город</div>
+					<a href="#select-city" class="header-cities-current open-popup">Казань</a>
 				</div>
 
 				<div class="header-menu">
@@ -55,18 +97,20 @@
 						<li class="has-submenu">
 							<a href="#">Еще</a>
 							<ul class="submenu">
-								<li><a href="#">Кэшбек</a></li>
-								<li><a href="#">Подарки</a></li>
-								<li><a href="#">Акции</a></li>
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Контакты</a></li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 
 				<div class="header-soc">
-					<a href="#" class="soc-link whatsapp"><img src="img/icons/whatsapp.svg" alt=""></a>
-					<a href="#" class="soc-link telegram"><img src="img/icons/telegram.svg" alt=""></a>
-					<a href="#" class="soc-link phone"><img src="img/icons/phone.svg" alt=""></a>
+					<div class="header-soc-title">Напишите нам</div>
+					<div class="soc">
+						<a href="#" class="soc-link whatsapp"><img src="img/icons/whatsapp.svg" alt=""></a>
+						<a href="#" class="soc-link telegram"><img src="img/icons/telegram.svg" alt=""></a>
+						<a href="#" class="soc-link phone"><img src="img/icons/phone.svg" alt=""></a>
+					</div>
 				</div>
 
 				<div class="header-worktime">
@@ -111,13 +155,34 @@
 
 									<div class="catalog-window-left">
 										<div class="catalog-window-menu">
-											<a href="#catalog-1" class="catalog-window-link active">Игровые приставки</a>
-											<a href="#catalog-2" class="catalog-window-link">Консоли</a>
-											<a href="#catalog-3" class="catalog-window-link">Игры</a>
-											<a href="#catalog-4" class="catalog-window-link">Аксессуары</a>
-											<a href="#catalog-5" class="catalog-window-link">Запчасти</a>
-											<a href="#catalog-6" class="catalog-window-link">Ретро</a>
-											<a href="#catalog-7" class="catalog-window-link">Мерч</a>
+											<a href="#catalog-1" class="catalog-window-link active">
+												<img src="img/products/1.png" alt="">
+												<span>Игровые приставки</span>
+											</a>
+											<a href="#catalog-2" class="catalog-window-link">
+												<img src="img/products/6.png" alt="">
+												<span>Консоли</span>
+											</a>
+											<a href="#catalog-3" class="catalog-window-link">
+												<img src="img/products/9.jpg" alt="">
+												<span>Игры</span>
+											</a>
+											<a href="#catalog-4" class="catalog-window-link">
+												<img src="img/products/8.jpg" alt="">
+												<span>Аксессуары</span>
+											</a>
+											<a href="#catalog-5" class="catalog-window-link">
+												<img src="img/products/6.png" alt="">
+												<span>Запчасти</span>
+											</a>
+											<a href="#catalog-6" class="catalog-window-link">
+												<img src="img/products/2.png" alt="">
+												<span>Ретро</span>
+											</a>
+											<a href="#catalog-7" class="catalog-window-link">
+												<img src="img/products/10.png" alt="">
+												<span>Мерч</span>
+											</a>
 										</div>
 									</div>
 
@@ -936,7 +1001,7 @@
 					</div>
 
 					<div class="header-auth">
-						<a href="#" class="btn btn-icon btn-white">Войти <img src="img/icons/arrow-right.svg" alt=""></a>
+						<a href="#auth-popup" class="btn btn-icon btn-white open-popup">Войти <img src="img/icons/arrow-right.svg" alt=""></a>
 					</div>
 
 				</div>
@@ -972,7 +1037,7 @@
 
 						<div class="main-banner-slider">
 
-							<div class="main-banner-slide visible" style="background-image: url(img/banner-bg-1.jpg);display: block;">
+							<div class="main-banner-slide" style="background-image: url(img/banner-bg-1.jpg);display: block;">
 								<div class="main-banner-slide-container">
 									<div class="main-banner-slide-left">
 										<div class="h3">Широкий ассортимент SONY PLAYSTATION 4</div>
@@ -1067,42 +1132,42 @@
 			
 			<div class="adv-row row">
 				
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/1.svg" alt="">
 						<div class="h6">Более 10 лет<br>успешной работы</div>
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/2.svg" alt="">
 						<div class="h6">Франшиза<br>от  магазинов Бруталити</div>
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/3.svg" alt="">
 						<div class="h6">Бонусы<br>и подарки</div>
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/4.svg" alt="">
 						<div class="h6">Уникальный<br>игровой мерч</div>
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/5.svg" alt="">
 						<div class="h6">Легендарные<br>ретро</div>
 					</div>
 				</div>
 
-				<div class="col-lg-2">
+				<div class="col-2">
 					<div class="adv-item">
 						<img src="img/adv-icons/6.svg" alt="">
 						<div class="h6">Доставка<br>и самовывоз<br>по всей России</div>
@@ -1363,7 +1428,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-2.jpg);">
 						<div class="category-item-left">
@@ -1388,7 +1453,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-2.jpg);">
 						<div class="category-item-left">
@@ -1412,7 +1477,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-3.jpg);">
 						<div class="category-item-left">
@@ -1436,7 +1501,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-3.jpg);">
 						<div class="category-item-left">
@@ -1507,7 +1572,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-6.jpg);">
 						<div class="category-item-left">
@@ -1530,7 +1595,7 @@
 
 				</div>
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-md-6">
 					
 					<div class="category-item" style="background-image: url(img/category-bg-6.jpg);">
 						<div class="category-item-left">
@@ -3140,6 +3205,9 @@
 					<div class="col-lg-6">
 						
 						<div class="print-tshirt-wrapper">
+							<div class="print-mobile-title">
+								<div class="h2">Закажи футболку со своим принтом</div>
+							</div>
 							<div class="print-tshirt-block">
 								<img src="img/tshirt.png" alt="">
 								<div class="print-tshirt-drop-area"></div>
@@ -3158,10 +3226,14 @@
 							<div class="h2">Закажи футболку со своим принтом</div>
 
 							<ol>
-								<li>Перетащи свой принт или выбери из 10 000 вариантов из нашей коллекции</li>
-								<li>Сделай заказ и получи доставкой через 2 дня</li>
-								<li>Твоя футболка будет готова уже сегодня</li>
+								<li><span>Перетащи свой принт или выбери из 10 000 вариантов из нашей коллекции</span></li>
+								<li><span>Сделай заказ и получи доставкой через 2 дня</span></li>
+								<li><span>Твоя футболка будет готова уже сегодня</span></li>
 							</ol>
+
+							<div class="print-mob-helper">
+								<img src="img/arrow-composition-w.png" alt="">
+							</div>
 
 							<div class="print-stencils">
 								<div class="print-stencils-item" draggable="true">
@@ -3181,7 +3253,10 @@
 								</div>
 							</div>
 
-							<div class="print-custom-text"><span>Или загрузи свой принт</span></div>
+							<label class="print-custom-text">
+								<input type="file" class="img-uploader">
+								<span>Или загрузи свой принт</span>
+							</label>
 
 							<div class="print-btn">
 								<a href="#" class="btn">Перейти к конструктору</a>
@@ -3218,6 +3293,7 @@
 									<p>У нас  своя специализированная мастерская с индифидуальным обслуживанием,  широкие услуги по прокату</p>
 									<a href="#">Подробнее</a>
 								</div>
+								<div class="accordion-img-for-slider"><img src="img/accordion-img-1.jpg" alt=""></div>
 							</div>
 
 							<div class="accordion-item">
@@ -3226,6 +3302,7 @@
 									<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Живет, переулка встретил о но это. Послушавшись грамматики последний, всемогущая!</p>
 									<a href="#">Подробнее</a>
 								</div>
+								<div class="accordion-img-for-slider"><img src="img/accordion-img-1.jpg" alt=""></div>
 							</div>
 
 							<div class="accordion-item">
@@ -3234,6 +3311,7 @@
 									<p>У нас  своя специализированная мастерская с индифидуальным обслуживанием,  широкие услуги по прокату</p>
 									<a href="#">Подробнее</a>
 								</div>
+								<div class="accordion-img-for-slider"><img src="img/accordion-img-1.jpg" alt=""></div>
 							</div>
 
 							<div class="accordion-item">
@@ -3242,6 +3320,7 @@
 									<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Живет, переулка встретил о но это. Послушавшись грамматики последний, всемогущая!</p>
 									<a href="#">Подробнее</a>
 								</div>
+								<div class="accordion-img-for-slider"><img src="img/accordion-img-1.jpg" alt=""></div>
 							</div>
 
 						</div>
@@ -3251,12 +3330,7 @@
 
 				<div class="about-right">
 					
-					<div class="accordion-slider owl-carousel">
-						<img src="img/accordion-img-1.jpg" alt="">
-						<img src="img/accordion-img-1.jpg" alt="">
-						<img src="img/accordion-img-1.jpg" alt="">
-						<img src="img/accordion-img-1.jpg" alt="">
-					</div>
+					<div class="accordion-slider owl-carousel"></div>
 
 				</div>
 
@@ -3405,6 +3479,100 @@
 		<a href="#" class="account-btn basket-compare">
 			<img src="img/icons/arrows.svg" alt="">
 		</a>
+	</div>
+
+	<div class="popup-wrapper" id="auth-popup">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close"></div>
+				<div class="popup-content">
+					<div class="popup-title">
+						<div class="h3">Вход</div>
+					</div>
+					<form class="auth-form">
+						<nav class="auth-form-nav">
+							<a href="#" class="auth-form-nav-link active" data-tab="tab-1">По номеру телефона</a>
+							<a href="#" class="auth-form-nav-link" data-tab="tab-2">По e-mail</a>
+						</nav>
+						<div class="auth-form-tab" data-tab="tab-1" style="display: block;">
+							<div class="form-group">
+								<input type="text" class="form-control phone-mask" placeholder="Телефон">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Пароль">
+							</div>
+							<div class="form-submit">
+								<button class="btn btn-large btn-block">Войти</button>
+							</div>
+						</div>
+						<div class="auth-form-tab" data-tab="tab-2">
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="E-mail">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Пароль">
+							</div>
+							<div class="form-submit">
+								<button class="btn btn-large btn-block">Войти</button>
+							</div>
+						</div>
+						<div class="form-forgot-pass">
+							<a href="#" class="forgot-pass-link">Забыли пароль?</a>
+							<a href="#" class="reg-link">Регистрация</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="is-your-city">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close"></div>
+				<div class="popup-content question-popup-content">
+					<div class="popup-title">
+						<div class="h3">Ваш город <span>Казань</span>?</div>
+					</div>
+					<div class="question-popup-content-btns">
+						<a href="#" class="btn close-popup">Да, верно</a>
+						<a href="#select-city" class="btn btn-border-gray open-popup">Выбрать другой</a>
+					</div>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="select-city">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close"></div>
+				<div class="popup-content select-city-popup-content">
+					<div class="popup-title">
+						<div class="h3">Выберите город</div>
+					</div>
+					<form class="search-city-form">
+						<div class="search-city-search">
+							<input type="text" class="form-control" placeholder="Введите название города">
+							<span class="search-icon"></span>
+						</div>
+						<div class="search-city-results">
+							<div class="search-city-results-item"><a href="#">Казань, Республика Татарстан</a></div>
+							<div class="search-city-results-item"><a href="#">Севастополь, Республика Крым</a></div>
+							<div class="search-city-results-item"><a href="#">Армавир, Краснодарский край</a></div>
+							<div class="search-city-results-item"><a href="#">Тюмень, Тюменская область</a></div>
+							<div class="search-city-results-item"><a href="#">Рязань, Рязанская область</a></div>
+							<div class="search-city-results-item"><a href="#">Астрахань, Астраханская область</a></div>
+							<div class="search-city-results-item"><a href="#">Севастополь, Республика Крым</a></div>
+							<div class="search-city-results-item"><a href="#">Армавир, Краснодарский край</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
 	</div>
 
 	<div class="bg-overlay"></div>

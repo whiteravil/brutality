@@ -18,6 +18,8 @@ body
 	font-family: $font
 	overflow-x: hidden
 	color: $text
+	&.mob-no-scroll
+		overflow: hidden
 
 b, strong
 	font-weight: bold
@@ -48,6 +50,10 @@ input:focus::placeholder
 	opacity: 0
 	transform: translateY(-10px)
 
+.container
+	padding-left: 40px
+	padding-right: 40px
+
 .btn
 	display: inline-block
 	height: 52px
@@ -61,6 +67,8 @@ input:focus::placeholder
 	outline: none !important
 	border: none
 	margin: 0
+	text-align: center
+	font-weight: 500
 	&:hover
 		background-color: #ffbc47
 	&.btn-icon
@@ -89,6 +97,21 @@ input:focus::placeholder
 		height: 45px
 		line-height: 45px
 		border-radius: 7px
+	&.btn-large
+		height: 64px
+		line-height: 64px
+		font-size: 20px
+		font-weight: 500
+		padding: 0 50px
+	&.btn-block
+		width: 100%
+	&.btn-border-gray
+		color: $dark !important
+		background-color: transparent
+		border: 1px solid #CFCFCF
+		&:hover
+			border-color: $accent
+			color: $accent !important
 
 
 .header-top
@@ -132,6 +155,9 @@ input:focus::placeholder
 	font-weight: 500
 	position: relative
 	white-space: nowrap
+	display: block
+	text-decoration: none !important
+	color: $text !important
 	&:after
 		content: ''
 		width: 14px
@@ -169,8 +195,19 @@ input:focus::placeholder
 			visibility: hidden
 			transform: translateY(-8px)
 			transition: $time
+			max-height: 170px
+			overflow: hidden auto
 			a
 				padding: 4px 10px
+			&::-webkit-scrollbar
+				width: 4px
+				height: 4px
+				background-color: $mute
+				background-color: #e2e2e2
+				border-radius: 2px
+			&::-webkit-scrollbar-thumb
+				border-radius: 2px
+				background-color: $accent
 	a
 		color: $dark
 		font-size: 16px
@@ -210,6 +247,14 @@ input:focus::placeholder
 
 .header-soc
 	margin-right: 9px
+
+.header-soc-title
+	display: none
+	font-size: 14px
+	margin-bottom: 10px
+	color: $mute
+
+.soc
 	display: flex
 	align-items: center
 
@@ -249,6 +294,7 @@ input:focus::placeholder
 .header-phone
 	font-size: 20px
 	font-weight: bold
+	white-space: nowrap
 	a
 		color: $dark
 		transition: $time
@@ -259,6 +305,84 @@ input:focus::placeholder
 .header-phone-descr
 	font-size: 14px
 	color: $mute
+	white-space: nowrap
+
+.header-mobile
+	display: none
+
+.header-mobile-row
+	display: flex
+	align-items: center
+	height: 56px
+	border-bottom: 1px solid #F2F2F2
+	position: relative
+
+.open-mob-menu
+	width: 55px
+	height: 55px
+	background-image: url(../img/icons/bar.svg)
+	background-size: 20px 18px
+	background-position: center
+	background-repeat: no-repeat
+
+.header-mobile-logo
+	flex-grow: 1
+	.logo
+		img
+			width: 152px
+			margin: 0
+
+.profile-link
+	display: flex
+	width: 45px
+	height: 55px
+	align-items: center
+	justify-content: center
+	img
+		width: 24px
+
+.mob-phone-link
+	display: flex
+	width: 45px
+	height: 55px
+	align-items: center
+	justify-content: center
+	img
+		width: 18px
+
+.mobile-basket-link
+	display: flex
+	width: 45px
+	height: 55px
+	align-items: center
+	justify-content: center
+	position: relative
+	margin-right: 10px
+	img
+		width: 18px
+	span
+		position: absolute
+		width: 15px
+		height: 15px
+		border-radius: 50%
+		color: #fff !important
+		text-decoration: none !important
+		background-color: $accent
+		text-align: center
+		line-height: 15px
+		font-size: 11px
+		font-weight: 500
+		top: 13px
+		right: 4px
+
+.header-mob-close
+	display: none
+
+.header-cities-mob-title
+	font-size: 14px
+	margin-bottom: 6px
+	color: $mute
+	display: none
 
 .header-bottom
 	position: relative
@@ -416,6 +540,7 @@ input:focus::placeholder
 	transform: translateY(-15px)
 	opacity: 0
 	display: none
+	left: 0
 	&.opened
 		opacity: 1
 		transform: translateY(0)
@@ -501,13 +626,16 @@ input:focus::placeholder
 .header-auth
 	margin-left: auto
 
+.header-mobile-universal-close
+	display: none
+
 .catalog-window
 	position: absolute
 	top: -20px
 	left: -20px
 	z-index: 10
 	width: 1481px
-	max-width: calc(100vw - 300px)
+	max-width: calc(100vw - 40px)
 	background-color: #F7F8FB
 	box-shadow: 0px 14px 46px rgba(147, 147, 147, 0.17)
 	padding: 20px 0 0 20px
@@ -519,7 +647,7 @@ input:focus::placeholder
 	max-height: 100%
 	display: flex
 	flex-direction: column
-	max-height: calc(100vh - 143px)
+	// max-height: calc(100vh - 143px)
 
 .bg-overlay
 	position: fixed
@@ -574,9 +702,14 @@ input:focus::placeholder
 	transition: $time
 	color: $dark !important
 	text-decoration: none !important
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
 	&:hover,
 	&.active
 		background-color: #fff
+	img
+		display: none
 
 .catalog-window-right
 	flex-grow: 1
@@ -1168,6 +1301,7 @@ input:focus::placeholder
 .s-categories
 	padding-top: 30px
 	padding-bottom: 50px
+	overflow: hidden
 
 .category-item
 	margin-bottom: 81px
@@ -1187,10 +1321,11 @@ input:focus::placeholder
 				width: 311px
 		.category-item-right
 			img
-				max-width: 300px
-				max-height: 360px
+				width: 300px
+				height: 360px
 				margin: 0
 				transform: translateY(-75px)
+
 .category-item-left
 	flex-grow: 1
 	display: flex
@@ -1224,6 +1359,9 @@ input:focus::placeholder
 	text-transform: uppercase
 	white-space: nowrap
 	position: relative
+	overflow: hidden
+	text-overflow: ellipsis
+	max-width: 100%
 	&:hover
 		transform: translateX(5px)
 	&:not(:last-child)
@@ -1242,10 +1380,12 @@ input:focus::placeholder
 	padding-left: 10px
 	text-align: right
 	img
-		max-width: 123px
-		max-height: 123px
+		width: 123px
+		height: 123px
+		max-width: 100%
+		max-height: 100%
 		object-fit: contain
-		object-position: center right
+		object-position: top right
 		margin: -5px -5px 0 0
 
 .category-next-link
@@ -1275,6 +1415,9 @@ input:focus::placeholder
 	.owl-stage-outer
 		padding: 50px
 		margin: -50px
+	.owl-nav
+		button
+			top: 89px
 
 .products-category
 	width: 20%
@@ -1493,7 +1636,7 @@ input:focus::placeholder
 	justify-content: center
 	user-select: none
 	img
-		width: 80%
+		width: 80% !important
 		height: auto
 		max-height: 80%
 		object-fit: contain
@@ -1539,6 +1682,8 @@ input:focus::placeholder
 				flex-shrink: 0
 				display: inline-block
 				margin-right: 19px
+			span
+				margin: auto 0
 
 .print-stencils
 	display: flex
@@ -1564,10 +1709,13 @@ input:focus::placeholder
 		object-fit: contain
 
 .print-custom-text
-	margin-bottom: 29px
+	margin: 0 0 29px
 	font-weight: 500
 	font-size: 14px
 	color: #828282
+	display: block
+	cursor: pointer
+	position: relative
 	span
 		display: inline-block
 		position: relative
@@ -1583,6 +1731,14 @@ input:focus::placeholder
 			background-size: contain
 			background-repeat: no-repeat
 
+.img-uploader
+	position: absolute
+	z-index: -1
+	opacity: 0
+	width: 0.01px
+	visibility: hidden
+	height: 0.01px
+
 .s-about
 	padding-top: 39px
 	padding-bottom: 70px
@@ -1595,6 +1751,7 @@ input:focus::placeholder
 .about-left
 	width: 39%
 	flex-shrink: 0
+	padding-right: 15px
 
 .about-right
 	width: 61%
@@ -1642,6 +1799,9 @@ input:focus::placeholder
 		.accordion-title
 			color: $dark
 			cursor: default
+
+.accordion-img-for-slider
+	display: none
 
 .accordion-title
 	margin-bottom: 29px
@@ -1821,5 +1981,211 @@ input:focus::placeholder
 
 .footer-soc
 	display: flex
+
+.popup-wrapper
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 100
+	display: none
+	&.opened
+		.popup-block
+			opacity: 1
+			transform: scale(1)
+		.popup-bg
+			opacity: 1
+
+.popup-flex
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+
+.popup-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#17212C, .5)
+	transition: opacity .4s ease
+	z-index: 0
+	opacity: 0
+
+.popup-block
+	position: relative
+	z-index: 1
+	max-width: 100%
+	width: 468px
+	background-color: #fff
+	border-radius: 10px
+	overflow-y: auto
+	max-height: 100%
+	transition: opacity .4s ease, transform .4s ease
+	transform: scale(1.2)
+	opacity: 0
+
+.popup-close
+	position: absolute
+	width: 32px
+	height: 32px
+	top: 22px
+	right: 22px
+	background-image: url(../img/icons/close.svg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 16px
+	cursor: pointer
+
+.popup-content
+	padding: 42px 50px 46px
+
+.popup-title
+	margin-bottom: 40px
+	.h3
+		font-size: 30px
+
+.auth-form-nav
+	display: flex
+	justify-content: space-between
+	border: 1px solid rgba(#CFCFCF, .6)
+	border-radius: 10px
+	margin-bottom: 35px
+
+.auth-form-nav-link
+	position: relative
+	height: 52px
+	line-height: 52px
+	margin: -1px
+	display: inline-block
+	border-radius: 10px
+	padding: 0 30px
+	color: $dark !important
+	text-decoration: none !important
+	box-shadow: -4px 4px 26px rgba(147, 147, 147, 0)
+	transition: $time
+	white-space: nowrap
+	&.active
+		background-color: #fff
+		box-shadow: -4px 4px 26px rgba(147, 147, 147, 0.12)
+	&:not(.active):hover
+		color: $accent !important
+
+.auth-form-tab
+	display: none
+
+.form-group
+	position: relative
+	margin-bottom: 18px
+
+.form-control
+	width: 100%
+	height: 52px
+	background-color: #fff
+	border-radius: 10px
+	border: 1px solid #E6E6E6
+	padding: 0 23px
+	font-size: 16px
+	outline: none !important
+	transition: $time
+	&:focus
+		border-color: $accent
+
+.form-submit
+	margin-top: 35px
+
+.form-forgot-pass
+	display: flex
+	justify-content: space-between
+	margin-top: 18px
+	font-size: 16px
+
+.forgot-pass-link
+	text-decoration: none !important
+	transition: $time
+	color: $dark
+	margin-right: 20px
+	&:hover
+		color: $accent
+
+.reg-link
+	font-weight: 500
+	text-decoration: none !important
+	transition: $time
+	color: $accent !important
+
+.question-popup-content
+	padding-top: 70px
+	padding-bottom: 70px
+	.popup-title
+		text-align: center
+		margin-bottom: 28px
+		.h5
+			font-size: 27px
+
+.question-popup-content-btns
+	display: flex
+	justify-content: center
+	.btn
+		margin: 0 7.5px
+
+.select-city-popup-content
+	.popup-title
+		margin-bottom: 30px
+
+.search-city-search
+	position: relative
+	margin-bottom: 20px
+	input
+		padding-right: 62px
+
+.search-icon
+	position: absolute
+	top: 0
+	right: 0
+	width: 52px
+	height: 52px
+	border-radius: 10px
+	background-image: url(../img/icons/search.svg)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: 17px
+
+.search-city-results
+	max-height: 300px
+	padding-right: 10px
+	overflow: hidden auto
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		background-color: $mute
+		background-color: #e2e2e2
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		border-radius: 2px
+		background-color: $accent
+
+.search-city-results-item
+	margin-bottom: 12px
+	font-size: 16px
+	a
+		color: $dark
+		text-decoration: none !important
+		transition: $time
+		&:hover
+			color: $accent
+
+.print-mobile-title
+	display: none
+
+.print-mob-helper
+	display: none
+
 
 @import "media" // Always at the end
