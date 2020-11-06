@@ -44,8 +44,11 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jqueryui/jqueryui.min.js',
+		'app/libs/jqueryui/jquery.ui.touch-punch.min.js',
 		'app/libs/owlcarousel/owl.carousel.min.js',
 		'app/libs/inputmask/jquery.inputmask.min.js',
+		'app/libs/fotorama/fotorama.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

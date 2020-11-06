@@ -37,6 +37,10 @@
 	.catalog-window-left
 		padding-right: 10px
 		width: 209px
+	.acc-dropdown-container
+		max-height: calc(100vh - 255px)
+	.go-back-link:before
+		top: 7px
 
 @media (max-width: 1599.98px)
 	.print-tshirt-block img
@@ -66,6 +70,13 @@
 		padding-right: 20px
 	.products-category .h3
 		font-size: 24px
+	.catalog-sidebar
+		padding: 38px 20px
+	.btn.btn-large
+		font-size: 16px
+	.product-main-name
+		h1, .h1
+			font-size: 33px
 
 @media (max-width: 1365.98px)
 	h1, .h1
@@ -80,7 +91,7 @@
 		font-size: 14px
 	.row
 		margin: 0 -10px
-		[class*=col]
+		[class*=col-]
 			padding: 0 10px
 	.header-logo
 		margin-right: 20px
@@ -152,6 +163,8 @@
 		height: 300px
 	.socials-item-title
 		font-size: 18px
+	.products-slider
+		padding-right: 0
 	.products-slider .owl-stage-outer
 		padding: 0
 		margin: 0
@@ -196,6 +209,21 @@
 	.auth-form-nav-link
 		width: 50%
 		text-align: center
+	.acc-dropdown
+		top: auto
+		bottom: 0
+		border-radius: 12px 12px 0 0
+	.acc-dropdown-container
+		max-height: calc(100vh - 125px)
+	.product-main-price
+		.current-price
+			font-size: 24px
+			margin-right: 20px
+		.old-price
+			font-size: 16px
+	.go-back-link:before
+		top: 5px
+
 // ≥1200px
 +media-breakpoint-down(lg)
 	.header-top-row
@@ -242,9 +270,68 @@
 		width: 338px
 	.print-tshirt-go-arrow
 		bottom: -40px
-
+	.page-title
+		margin-bottom: 30px
+		.h1, h1
+			font-size: 30px
+	.catalog-sidebar
+		position: fixed
+		top: 0
+		left: 0
+		width: 320px
+		height: 100%
+		overflow: hidden auto
+		z-index: 10
+		background-color: #fff
+		border-radius: 0
+		border: none
+		padding-top: 10px
+		transition: transform .4s ease
+		transform: translateX(-120%)
+		box-shadow: -4px 4px 36px rgba(147,147,147,.15)
+		&.opened
+			transform: translateX(0)
+	.catalog-sidebar-close
+		display: block
+		width: 40px
+		height: 40px
+		background-image: url(../img/icons/close.svg)
+		background-size: 24px
+		background-repeat: no-repeat
+		background-position: top 50% left 0
+		margin-bottom: 25px
+	.catalog-header
+		align-items: center
+	.catalog-sort
+		align-items: center
+		margin-top: 0
+	.open-fiter-btn
+		margin-left: 20px
+		height: 52px
+		width: 52px
+		flex-shrink: 0
+		background-color: #fff
+		border-radius: 10px
+		box-shadow: 0px 8px 27px rgba(0, 0, 0, 0.05)
+		display: block
+		background-image: url(../img/icons/settings.svg)
+		background-size: 26px
+		background-repeat: no-repeat
+		background-position: center
+	.filter-help-btn
+		display: none !important
+	.header-search
+		position: static
+	.search-dropdown
+		border-radius: 0
+		top: 100%
+		width: 100%
+	.acc-dropdown
 // ≥992px
 +media-breakpoint-down(md)
+	body
+		&.mob-no-scroll
+			overflow: hidden
 	section
 		overflow: hidden
 	.container
@@ -407,8 +494,12 @@
 			right: 0
 	.products-slider-with-category
 		width: 100%
+	.products-slider-with-category
+		padding-left: 0
+
 	.owl-carousel .owl-stage-outer
 		overflow: visible
+
 	.owl-nav button
 		width: 46px
 		height: 46px
@@ -423,7 +514,8 @@
 	.products-slider-with-category .owl-nav button
 		top: 120px
 	.product-img img
-		height: 140px
+		height: 140px !important
+		width: 140px !important
 	.tabs-nav
 		overflow: visible
 	.tabs-nav-slider .owl-nav
@@ -447,7 +539,7 @@
 		display: block
 		order: 1
 		img
-			width: 220px
+			width: 221px
 	.print-stencils
 		order: 2
 	.print-custom-text
@@ -503,13 +595,37 @@
 		position: absolute
 		left: 20px
 		bottom: 30px
-	.header-search
-		position: static
-	.search-dropdown
+		width: calc(100vw - 55px)
+	.category-slider
+		.owl-stage
+			overflow: visible
+	.border-block
 		border-radius: 0
-		top: 100%
-
-
+		border: none
+	.border-block-title
+		margin: 0 0 20px
+		padding: 0
+	.border-block-content
+		padding: 0
+	.sale-products-slider
+		padding: 0 20px 0 0
+		margin: 0
+		.owl-stage-outer
+			margin: 0
+		.owl-stage
+			padding-left: 0
+	.hide-on-tablet
+		display: none !important
+	.pagination-nav a
+		margin-right: 8px
+	.product-card
+		padding: 20px
+	.back-to-product
+		margin-right: 30px
+	.product-card .product-list-view-price
+		margin-right: 30px
+	.descr-item
+		font-size: 14px
 // ≥768px
 +media-breakpoint-down(sm)
 	.main-banner-slider-thumbs
@@ -545,7 +661,7 @@
 		display: block
 		margin: 0
 		padding-right: 20px
-		[class*=col]
+		[class*=col-]
 			padding: 0
 			max-width: 100%
 	.adv-item
@@ -557,6 +673,10 @@
 	.category-item:not(.category-item--big) .category-product-img img
 		width: 170px
 		height: 170px
+	.products-slider
+		padding-right: 20px
+		.owl-nav
+			display: none !important			
 	.products-slider-with-category
 		padding-right: 20px
 		.owl-nav
@@ -584,8 +704,51 @@
 		padding-right: 30px
 	.popup-title .h3
 		font-size: 21px
+	.product-sale-time .h6
+		margin-bottom: 4px
+	.account-btns
+		display: none !important
+	.page-title
+		h1, .h1
+			font-size: 22px
+	.border-block-title .h2
+		font-size: 22px
+	.catalog-header .h2
+		font-size: 22px
+	.catalog-sort-name
+		font-size: 14px
+	.catalog-sort-selected
+		font-size: 14px
+	.catalog-sort-item
+		margin-right: 0
+	.product-page-img .fotorama__stage__shaft .fotorama__img
+		max-height: 300px!important
+	.product-page-img .fotorama__stage
+		height: 300px !important
+	.gallery-thumbs-nav
+		display: none
+	.product-page-img .fotorama__nav__frame.fotorama__active
+		transform: scale(1)
+	.fotorama__nav--dots .fotorama__nav__frame
+		width: 14px
+		height: 14px
+	.fotorama__dot
+		top: 4px
+		left: 4px
+		border-color: #C4C4C4
+		background-color: #C4C4C4
+		transition: $time
+	.fotorama__nav__frame.fotorama__active .fotorama__dot
+		border-color: $accent
+		background-color: $accent
+	.s-about .section-title
+		margin-bottom: 60px
 // ≥576px
 +media-breakpoint-down(xs)
+	.btn
+		font-size: 16px
+	.h2, h2
+		font-size: 22px
 	.header-mobile-universal-close
 		display: block
 		position: absolute
@@ -777,10 +940,674 @@
 		border-radius: 0
 	.header-top
 		width: 100%
+		transform: translateX(-120%)
+	.main-banner-slide
+		padding: 27px 25px
+		position: relative
+		height: 218px
+	.main-banner-slide-left
+		padding-right: 0
+		width: 100%
+		.h3
+			font-size: 18px
+			margin-bottom: 6px
+			position: relative
+			z-index: 1
+		p
+			margin: 0
+			font-size: 14px
+			position: relative
+			z-index: 1
+		a
+			opacity: 0
+			border-radius: 0
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100% !important
+			z-index: 2
+	.main-banner-slide-right
+		img
+			position: absolute
+			bottom: 38px
+			right: 25px
+			width: 205px !important
+			height: 125px
+			object-fit: contain
+			object-position: bottom right
+			z-index: 0
+	.s-main-banner
+		padding-bottom: 0
+	.s-adv
+		padding: 24px 0 23px
+	.adv-item
+		img
+			width: 32px !important
+			margin-bottom: 12px
+	.s-sale
+		padding-top: 24px
+	.section-title
+		margin-bottom: 30px
+		&:not(.no-img)
+			.h2
+				&:after
+					width: 118px
+					height: 55px
+					top: -6px
+					margin-left: 0
+	.product-img
+		padding-top: 10px
+	.product-img
+		justify-content: center
+		margin-bottom: 15px
+		img
+			width: 95px !important
+			height: 95px !important
+	.product-sale-stick
+		width: 53px
+		height: 58px
+		padding-top: 27px
+	.counter span
+		width: 22px
+		height: 25px
+		line-height: 25px
+		font-size: 13px
+	.counter span:not(:last-child)
+		margin-right: 8px
+	.counter span:not(:last-child):after
+		right: -5px
+		top: 12px
+	.product-sale-time
+		margin-bottom: 15px
+	.product-price
+		flex-direction: column-reverse
+		align-items: flex-start
+		line-height: 1.2
+		margin-bottom: 7spx
+		.old-price
+			font-size: 14px
+		.current-price
+			font-size: 20px
+	.product-name
+		margin-bottom: 10px
+	.product-btns
+		.btn
+			height: 33px
+			line-height: 33px
+			padding: 0 10px
+			font-weight: normal
+		.product-compare-btn
+			display: none !important
+		.product-liked-btn
+			display: none !important
+	.category-item
+		height: auto !important
+		margin-bottom: 17px
+		padding: 20px
+		position: relative
+		overflow: hidden
+		.category-item-brand
+			img
+				width: 138px !important
+	.category-product-img
+		position: absolute
+		right: 20px
+		top: 20px
+		img
+			width: 100px !important
+			height: 100px !important
+			margin: 0 !important
+			transform: translateY(0) !important
+			max-width: none !important
+			max-height: none !important
+	.category-item-left
+		padding-right: 110px
+		width: 100%
+	.category-item:not(.category-item--big) .category-item-brand
+		padding-right: 0
+	.category-item-brand
+		font-size: 17px
+		margin-bottom: 152px !important
+	.category-item.category-item--big .category-item-brand
+		font-size: 26px
+	.category-next-link
+		display: none
+	.category-item-nav
+		flex-direction: row
+		overflow: auto hidden
+		position: absolute
+		bottom: 20px
+		left: 0
+		padding-left: 20px
+		right: 0
+		.category-item-nav-link
+			margin: 0 8px 0 0
+			overflow: visible
+			&:last-child
+				position: relative
+				&:after
+					content: ''
+					right: -8px
+					position: absolute
+					top: 0
+					height: 100%
+					width: 8px
+	.products-with-category
+		position: relative
+	.products-category
+		width: 50%
+		position: static
+		margin-bottom: 50px
+		a
+			display: none
+	.products-category img
+		top: 2px
+		right: -50px
+	.products-category-mob-more
+		display: block
+		.btn
+			height: 40px
+			line-height: 38px
+			padding: 0 16px
+			font-size: 18px
+	.s-game-attr
+		padding: 28px 0 40px
+	.tabs-nav-block:after
+		left: -20px
+		right: -20px
+		width: auto
+	.tabs-nav
+		padding-left: 0
+		padding-right: 0
+	.tabs-nav-link
+		padding-bottom: 14px
+	.switch-border
+		bottom: 16px
+	.tabs-items
+		margin-top: 10px
+	.product-slider-custom
+		.product-item
+			padding: 10px 10px 14px
+	.s-try-print
+		padding: 50px 0
+		background-color: #F7F8FB
+		background-image: url(../img/print-mob-bg.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+	.print-block
+		padding: 0 !important
+		background: none !important
+		border-radius: 0
+		overflow: visible
+	.print-mobile-title
+		max-width: 230px
+		line-height: 1.1
+	.print-tshirt-wrapper
+		align-items: flex-start
+	.print-tshirt-block
+		margin-left: auto
+		margin-right: auto
+		img
+			width: 220px
+		&:after
+			width: 355px
+			height: 220px
+			top: 40px
+	.print-stencils-item
+		width: 58px
+		height: 58px
+		margin: 0 10px 10px 0
+		padding: 5px
+	.print-stencils
+		margin-right: -10px
+		margin-bottom: 10px
+	.print-custom-text
+		text-align: center
+	.print-tshirt-content
+		ol
+			li
+				font-size: 16px
+				margin-bottom: 18px
+				&:before
+					width: 38px
+					height: 38px
+					font-size: 20px
+					line-height: 38px
+					margin-right: 12px
+	.print-btn
+		text-align: center
+	.print-mob-helper
+		margin-top: -50px
+		margin-bottom: -20px
+	.s-about
+		.section-title
+			margin-bottom: 30px
+			.h2
+				max-width: 227px
+	.accordion-body
+		font-size: 18px
+		margin-bottom: 34px
+		transition: $time
+		opacity: 0
+		transform: translateX(10px)
+	.accordion-title
+		margin-bottom: 14px
+		transition: $time
+		opacity: 0
+		transform: translateX(10px)
+	.accordion-img-for-slider
+		padding-top: 0
+	.accordion-item
+		margin-bottom: 0
+	.accordion-list
+		.owl-item.active
+			.accordion-body,
+			.accordion-title
+				opacity: 1
+				transform: translateX(0)
+	.s-about
+		padding-bottom: 25px
+	.s-socials
+		padding-top: 25px
+		padding-bottom: 22px
+	.socials-item-title
+		font-size: 20px
+		margin-bottom: 9px
+	.socials-item-block
+		padding: 22px 22px 28px
+	.socials-item-img
+		img
+			width: 55px
+	.socials-item-info
+		margin-top: 2px
+	.socials-item
+		margin-bottom: 18px
+	.footer
+		padding-top: 30px
+		padding-bottom: 35px
+	.footer-left
+		margin-bottom: 41px
+		order: 1
+	.footer-logo
+		margin: 0
+		.logo
+			img
+				width: 150px
+				margin: 0
+			span
+				display: none
+	.footer-contacts
+		order: 2
+	.footer-nav
+		margin-top: 0
+		max-width: 50%
+		flex: 0 0 50%
+		.h5
+			font-weight: bold
+			margin-bottom: 15px
+		nav
+			font-size: 14px
+			a
+				margin-bottom: 15px
+		&:nth-child(2)
+			order: 3
+		&:nth-child(3)
+			order: 4
+		&:nth-child(4)
+			order: 5
+	.footer-phone
+		font-size: 18px
+	.footer-soc-wrapper
+		margin-top: 30px
+		padding-bottom: 36px
+		margin-bottom: 30px
+		border-bottom: 1px solid #E0E0E0
+	.soc-link
+		width: 52px
+	.footer-copyright
+		font-size: 12px
+	.popup-block
+		border-radius: 0
+	.question-popup-content
+		padding-left: 20px
+		padding-right: 20px
+	.question-popup-content-btns
+		.btn
+			font-size: 14px
+	.breadcrumbs
+		margin-top: 31px
+	.breadcrumbs ul li
+		&:not(:last-child):after
+			content: '/'
+			color: $accent
+			font-weight: 500
+		a, span
+			font-weight: 500
+			color: $accent
+	.category-slider,
+	.border-block
+		display: none !important
+	.catalog-header
+		margin-bottom: 36px
+		.h2
+			display: none
+	.catalog-sort
+		width: 100%
+	.catalog-sort-name
+		display: none
+	.catalog-sort-selected
+		font-size: 0
+		border-radius: 10px
+		box-shadow: 0px 8px 27px rgba(0, 0, 0, 0.05)
+		background-color: #fff
+		padding: 0 35px 0 15px
+		height: 52px
+		line-height: 52px
+		color: #585858
+		&:after
+			top: 20px
+			right: 16px
+		&:before
+			content: 'Сортировать'
+			font-size: 18px
+	.catalog-sort-dropdown
+		left: 0
+		right: auto
+		text-align: left
+	.open-fiter-btn
+		margin-left: auto
+	.catalog-sidebar
+		width: 100%
+	.stick
+		height: 21px
+		line-height: 21px
+		font-size: 10px
+		padding: 0 7px
+	.product-video-link
+		width: 40px
+		height: 40px
+		background-size: 11.67px
+	.product-available
+		font-size: 12px
+		margin-bottom: 10px
+		&:before
+			top: 1px
+	.catalog-item
+		.product-name
+			flex-grow: 1
+		.product-price
+			margin-bottom: 10px
+			height: 38px
+			flex-shrink: 0
+		.old-price
+			font-size: 12px
+		.product-price
+			flex-direction: row
+			.old-price
+				order: 1
+			.current-price
+				order: 2
+			.price-discount
+				order: 3
+	.price-discount
+		height: 17px
+		line-height: 17px
+		font-size: 10px
+		margin-top: 3px
+		margin-left: 0
+	.s-recommend-catalog
+		margin: 0 -20px
+		padding: 0 20px
+		padding-bottom: 70px
+	.pagination-next-page
+		display: none
+	.pagination-nav
+		justify-content: center
+		width: 100%
+		a
+			&:last-child
+				margin-right: 0
+			margin-right: 5px
+			width: 28px
+			height: 28px
+			font-size: 12px
+			line-height: 26px
+	.seo-text a
+		text-decoration: none !important
+	.s-catalog
+		padding-bottom: 25px
+	.catalog-window-items-nav
+		a
+			display: block
+	.product-video-link
+		background-position: top 50% left calc(50% + 2px)
+	.auth-form-nav-link
+		padding: 0 10px
+	.search-dropdown
+		display: none !important
+	.search-input-wrapper
+		position: absolute
+		top: 100%
+		right: -20px
+		width: 100vw
+		background-color: #fff
+		padding: 10px
+		box-shadow: 0 8px 7px rgba(0,0,0,.03)
+		visibility: hidden
+		transform: translateY(-10px)
+		opacity: 0
+		transition: $time
+		z-index: 5
+		&.opened
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+		.search-input
+			display: block !important
+			box-shadow: none
+			border: 1px solid #E6E6E6
+		.search-mob-btn
+			width: 52px
+			height: 52px
+			top: 10px
+			right: 10px
+			position: absolute
+			background-image: url(../img/icons/search.svg)
+			background-size: 17px
+			background-repeat: no-repeat
+	.product-page-left
+
+			background-position: center
+			display: block
+			border: none
+			outline: none !important
+			background-color: transparent
+			padding: 0
+			margin: 0
+	.mobile-product-header
+		display: block
+	.product-main-stick
+		margin-bottom: 6px
+	.product-main-name
+		margin-bottom: 14px
+		h1, .h1
+			font-size: 20px
+	.product-main-liked
+		margin-bottom: 30px
+	.icon-link
+		font-size: 18px
+		img
+			width: 17px
+		span
+			transform: translateY(1px)
+			&:after
+				margin-left: -8.5px
+				width: 17px
+	.product-page-img .fotorama__stage__shaft .fotorama__img
+		max-height: 260px !important
+		max-width: 100% !important
+	.product-page-img .fotorama__stage
+		height: 260px !important
+	.product-main
+		.product-main-stick,
+		.product-main-name,
+		.product-main-liked
+			display: none !important
+	.product-page-left
+		margin-bottom: 27px
+	.product-main-descr
+		font-size: 16px
+		text-align: center
+		p
+			text-align: left
+		.open-descr-tab
+			display: inline-block
+			height: 40px
+			line-height: 38px
+			padding: 0 17px
+			font-size: 18px
+			color: #17212C !important
+			border-radius: 6px
+			background-color: #fff
+			border: 1px solid #E6E6E6
+			text-decoration: none !important
+			margin-top: 24px
+	.product-page-img .fotorama__stage__frame .fotorama__video-play
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		margin: 0
+		border-radius: 0
+		background-color: transparent
+		&:after
+			content: ''
+			position: absolute
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			top: 50%
+			left: 50%
+			margin: -25px 0 0 -25px
+			background-color: #fff
+			z-index: 1
+			background-image: url(../img/icons/play.svg)
+			background-repeat: no-repeat
+			background-position: top 50% left calc(50% + 2px)
+			background-size: 14px
+	.product-main-price
+		.old-price
+			order: 1
+			width: 100%
+			margin: 0
+		.current-price
+			order: 2
+			margin-right: auto
+		.price-link
+			order: 3
+			width: auto
+		.cashback
+			width: 100%
+			order: 4
+			font-size: 12px
+			margin-top: 5px
+		.product-available
+			display: flex
+			width: 100%
+			order: 5
+	.product-main-btns
+		.btn
+			height: 52px
+			line-height: 50px
+			font-size: 18px
+			padding: 0
+	.buy-product-btn
+		margin-bottom: 18px
+	.one-click-buy-btn
+		width: 50%
+		&:nth-last-child(1)
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+		&:nth-last-child(2)
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+	.back-to-product
+		margin-bottom: 20px
+	.product-card
+		margin-bottom: 25px
+		display: block
+		.product-list-view
+			flex-wrap: wrap
+		.product-list-view-name
+			flex-shrink: 0
+			padding-right: 0
+			width: calc(100% - 75px)
+			flex-grow: 0
+			margin-bottom: 15px
+		.product-list-view-img
+			margin-bottom: 15px
+		.product-list-view-price
+			margin-right: auto
+	.product-description h2
+		font-size: 20px
+		margin-bottom: 20px
+	.descr-item
+		display: block
+		line-height: 1.25
+		margin-bottom: 35px
+		span
+			width: 100% !important
+			display: block
+			padding: 0
+			margin: 0 0 5px!important
+			&:after
+				display: none !important
+	.product-main-btns
+		margin-bottom: 38px
+	.product-main-gift
+		padding: 20px 18px
+	.product-main-gift-img
+		margin-right: 13px
+		width: 66px
+		height: 66px
+	.product-main-gift-content
+		font-weight: normal
+	.product-main-gift
+		margin-bottom: 18px
+	.product-main-del-btn
+		height: 52px
+		line-height: 50px
+		font-size: 14px
+		padding: 0 50px 0 20px
+		&:after
+			top: 14px
+			right: 14px
+	.product-main
+		margin-bottom: 30px
+	.one-click-form
+		.product-list-view
+			flex-wrap: wrap
+		.product-list-view-name
+			flex-shrink: 0
+			padding-right: 0
+			width: calc(100% - 75px)
+			flex-grow: 0
+			margin-bottom: 15px
+		.product-list-view-img
+			margin-bottom: 15px
+		.product-list-view-price
+			margin-right: auto
+			text-align: left
+
+
 /*==========  Mobile First  ==========*/
 
 // ≤576px
 +media-breakpoint-up(sm)
+	.hidden-on-desktop
+		display: none !important
 
 // ≤768px
 +media-breakpoint-up(md)
