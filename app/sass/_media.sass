@@ -77,6 +77,26 @@
 	.product-main-name
 		h1, .h1
 			font-size: 33px
+	.basket-item-img img
+		width: 125px
+		height: 125px
+	.basket-item-name .h5
+		font-size: 18px
+	.basket-item-total .current-price
+		font-size: 21px
+	.basket-qnt
+		margin-bottom: 15px
+		font-size: 16px
+	.basket-total
+		font-size: 18px
+		span
+			font-size: 21px
+	.free-delivery
+		margin-bottom: 25px
+	.basket-cashback .checkbox-item
+		font-size: 14px
+		span
+			padding-top: 5px
 
 @media (max-width: 1365.98px)
 	h1, .h1
@@ -223,6 +243,16 @@
 			font-size: 16px
 	.go-back-link:before
 		top: 5px
+	.basket-sidebar
+		padding-left: 30px
+		padding-right: 30px
+	.gifts-slider
+		padding-right: 0
+		.owl-stage-outer
+			margin-right: 0
+	.also-buy-slider .owl-stage-outer
+		padding: 0
+		margin: 0
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -326,7 +356,15 @@
 		border-radius: 0
 		top: 100%
 		width: 100%
-	.acc-dropdown
+	.basket-btns
+		display: flex
+		justify-content: space-between
+		.btn
+			width: calc(50% - 10px)
+	.basket-cashback .checkbox-item span
+		padding-top: 3px
+	.basket-sidebar
+		margin: 0 0 30px
 // ≥992px
 +media-breakpoint-down(md)
 	body
@@ -499,17 +537,16 @@
 
 	.owl-carousel .owl-stage-outer
 		overflow: visible
-
 	.owl-nav button
 		width: 46px
 		height: 46px
 		background-size: 17px !important
 		top: 120px
 		&.owl-prev
-			left: -23px
+			left: 10px
 			background-position: center !important
 		&.owl-next
-			right: -23px
+			right: 10px
 			background-position: center !important
 	.products-slider-with-category .owl-nav button
 		top: 120px
@@ -626,6 +663,18 @@
 		margin-right: 30px
 	.descr-item
 		font-size: 14px
+	.basket
+		overflow: hidden
+	.gifts-slider
+		.owl-nav
+			button
+				margin-top: -23px
+				&.owl-prev
+					left: 10px
+				&.owl-next
+					right: 10px
+	.gift-item
+		padding: 30px 20px
 // ≥768px
 +media-breakpoint-down(sm)
 	.main-banner-slider-thumbs
@@ -669,7 +718,7 @@
 		img
 			width: 50px !important
 	.product-img img
-		object-position: left center
+		// object-position: left center
 	.category-item:not(.category-item--big) .category-product-img img
 		width: 170px
 		height: 170px
@@ -743,6 +792,28 @@
 		background-color: $accent
 	.s-about .section-title
 		margin-bottom: 60px
+	.basket-item
+		flex-wrap: wrap
+	.basket-item-img						
+		margin-right: 20px
+		margin-bottom: 20px
+		img
+			width: 80px
+			height: 80px
+	.basket-item-name
+		width: calc(100% - 100px)
+		padding: 0
+		margin: 0 0 10px
+	.basket-item-price
+		margin-left: 100px
+	.basket-item-total
+		margin-left: auto
+	.gifts-slider
+		padding-right: 20px
+	.also-buy-slider
+		padding-right: 20px
+		.owl-nav
+			display: none !important
 // ≥576px
 +media-breakpoint-down(xs)
 	.btn
@@ -1600,7 +1671,173 @@
 		.product-list-view-price
 			margin-right: auto
 			text-align: left
-
+	.basket-item
+		position: relative
+		padding-top: 4px
+		min-height: 100px
+		padding-left: 88px
+		padding-bottom: 30px
+		&:not(:last-child)
+			margin-bottom: 26px
+	.basket-item-img
+		margin-right: 14px
+		position: absolute
+		top: 0
+		left: 0
+		margin: 0
+		img
+			width: 74px
+			height: 74px
+	.basket-item-name
+		width: 100%
+		padding-right: 38px
+		margin-bottom: 3px
+		order: 1
+		.h5
+			font-size: 16px
+			margin-bottom: 5px
+	.basket-item-total
+		.basket-item-remove
+			position: absolute
+			right: 0
+			top: 0
+			img
+				width: 28px
+	.basket-item-price
+		margin-left: 0
+	.basket-item-price
+		order: 3
+		text-align: left
+		.current-price
+			position: absolute
+			margin: 0
+			bottom: 41px
+			left: 217px
+			font-size: 14px
+			color: #BDBDBD
+			font-weight: normal
+			&:after
+				content: '/шт.'
+		.old-price
+			margin-top: 1px
+	.basket-item-total
+		order: 2
+		min-width: 0
+		padding: 0
+		margin: 0 10px 0 0
+		.current-price
+			font-size: 20px
+			margin: 0
+	.basket-item-qnt
+		order: 4
+		width: 100%
+		margin: 12px 0 0
+	.number-group
+		width: 119px
+		height: 40px !important
+		.number-input
+			margin-bottom: 3px
+	.gift-block
+		padding: 30px 0
+	.gift-header
+		margin-bottom: 20px
+		.current-price
+			display: none
+		.h4
+			font-size: 20px
+	.gifts-slider
+		padding-right: 121px
+		.owl-nav
+			display: none !important
+	.gift-item
+		padding: 20px 20px 67px
+		&.checked
+			border-color: $accent
+			.gift-item-mob-btn
+				background-color: $accent
+				border-top-color: $accent
+				color: #fff
+				&:before
+					content: 'Выбрано'
+	.gift-item-mob-btn
+		display: block
+		height: 52px
+		line-height: 51px
+		border-top: 1px solid #E5E5E5
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		color: #17212C
+		transition: $time
+		font-weight: 500
+		font-size: 16px
+		font-weight: 500
+		text-align: center
+		&:before
+			content: 'Выбрать'
+	.select-color-popup
+		width: 289px
+		border-radius: 10px
+		.popup-content
+			padding: 19px 24px 25px
+		.popup-title .h3
+			font-size: 20px
+		.popup-close
+			width: 24px
+			height: 24px
+	.selected-item-img
+		margin-right: 10px
+		img
+			width: 35px
+	.selected-item-content
+		.h6
+			display: none
+	.selected-item-name
+		font-size: 12px
+	.selected-item
+		margin-bottom: 20px
+	.basket-sidebar
+		box-shadow: none
+		border-radius: 0
+		padding: 36px 20px 30px
+		border-top: 17px solid #F2F2F2
+		margin: 0 -20px
+	.basket-total
+		margin-bottom: 24px
+	.basket-cashback .checkbox-item
+		flex-grow: 0
+		margin-right: 23px
+	.basket-cashback-qnt
+		height: 24px
+		line-height: 24px
+		padding: 0 8px
+		font-size: 16px
+		margin-top: 2px
+	.basket-btns
+		display: block
+		.btn
+			width: 100%
+			height: 52px
+			line-height: 52px
+			margin-bottom: 18px
+	.s-also-buy
+		padding-top: 30px
+	.section-title-2 .h3
+		font-size: 22px
+	.product-sale-time .h6
+		font-size: 10px
+	.also-buy-slider
+		.product-price
+			display: flex
+			flex-direction: column-reverse
+		.product-name
+			font-size: 14px
+	.switch-nav-link
+		height: 46px
+		line-height: 46px
+		font-size: 16px
+		padding: 0 19px
 
 /*==========  Mobile First  ==========*/
 

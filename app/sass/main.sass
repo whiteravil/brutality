@@ -106,6 +106,7 @@ input:focus::placeholder
 		padding: 0 50px
 	&.btn-block
 		width: 100%
+		padding: 0 10px
 	&.btn-border-gray
 		color: $dark !important
 		background-color: transparent
@@ -851,6 +852,7 @@ input:focus::placeholder
 	margin-right: 10px
 	font-size: 24px
 	font-weight: bold
+	white-space: nowrap
 	&.danger
 		color: $red
 
@@ -858,6 +860,7 @@ input:focus::placeholder
 	font-size: 14px
 	font-weight: 500
 	text-decoration: line-through
+	white-space: nowrap
 
 .sale-block-name
 	font-size: 16px
@@ -1108,6 +1111,7 @@ input:focus::placeholder
 	position: relative
 	img
 		width: 220px !important
+		max-width: 100%
 		height: 220px
 		object-fit: contain
 		display: inline !important
@@ -3744,6 +3748,9 @@ input:focus::placeholder
 	height: 100%
 	display: flex
 	flex-direction: column
+	cursor: pointer
+	transition: $time
+	overflow: hidden
 
 .gift-checkbox
 	position: absolute
@@ -3804,7 +3811,7 @@ input:focus::placeholder
 	margin-bottom: 6px
 
 .gift-color
-	display: flex
+	display: none
 
 .gift-color-item
 	position: relative
@@ -3879,6 +3886,7 @@ input:focus::placeholder
 
 .free-delivery
 	display: flex
+	align-items: center
 	padding: 22px
 	border-radius: 10px
 	background-color: #FFF6E6
@@ -3899,6 +3907,12 @@ input:focus::placeholder
 		width: 34px
 		flex-shrink: 0
 
+.free-delivery-content
+	.h6
+		font-weight: 500
+	p
+		margin: 0
+
 .basket-cashback
 	display: flex
 	margin-bottom: 23px
@@ -3907,6 +3921,8 @@ input:focus::placeholder
 		font-weight: 500
 		color: #585858
 		margin-right: 11px
+		flex-grow: 1
+		margin: 0 10px 0 0 !important
 		label
 			span
 				&:after,
@@ -3955,5 +3971,163 @@ input:focus::placeholder
 	.btn
 		&:not(:last-child)
 			margin-bottom: 24px
+
+.s-also-buy
+	padding: 70px 0
+
+.section-title-2
+	margin-bottom: 40px
+	.h3
+		font-size: 30px
+
+.nav-tabs-wrapper
+	overflow: auto hidden
+	padding: 30px
+	margin: -30px -30px 31px
+	position: relative
+	z-index: 2
+
+.switch-nav
+	display: inline-flex
+	align-items: center
+	background-color: #fff
+	border: 1px solid #CFCFCF
+	border-radius: 10px
+	white-space: nowrap
+
+.switch-nav-link
+	display: inline-block
+	transition: $time
+	margin: -1px
+	height: 53px
+	line-height: 53px
+	z-index: 1
+	position: relative
+	padding: 0 25px
+	color: $dark !important
+	text-decoration: none !important
+	border-radius: 10px
+	&:not(.active):hover
+		color: $accent !important
+	&.active
+		background-color: #fff
+		box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
+
+.tabs-block
+	display: none
+
+.also-buy-slider
+	.owl-stage-outer
+		padding: 50px
+		margin: -50px
+
+.also-buy-slider
+	.owl-nav button
+		top: 50%
+		margin-top: -70px
+	.product-img
+		img
+			width: 154px !important
+			height: 154px
+	.product-sale-time
+		margin-bottom: 24px
+	.product-price
+		display: block
+		.current-price
+			font-size: 22px
+			margin: 0 0 4px
+		.old-price
+			font-size: 14px
+			color: #bdbdbd
+	.product-name
+		font-size: 16px
+
+.s-also-buy
+	overflow: hidden
+
+.select-color-popup
+	width: 455px
+
+.selected-item
+	margin-bottom: 33px
+	display: flex
+
+.selected-item-img
+	margin-right: 16px
+	img
+		width: 66px
+
+.selected-item-content
+	.h6
+		font-weight: 500
+		margin-bottom: 4px
+		color: #B3B3B3
+
+.selected-item-name
+	font-size: 16px
+	line-height: 1.25
+
+.selected-item-colors-item
+	cursor: pointer
+	border-radius: 7px
+	border: 1px solid #CFCFCF
+	display: flex
+	align-items: center
+	height: 52px
+	padding: 0 12px
+	position: relative
+	font-size: 12px
+	padding-right: 40px
+	transition: $time
+	&:not(:last-child)
+		margin-bottom: 8px
+	&.selected
+		border-color: #FFA200
+		&:after
+			transform: scale(1)
+	&:after
+		content: ''
+		position: absolute
+		width: 20px
+		height: 20px
+		top: 15px
+		right: 15px
+		background-image: url(../img/icons/checkmark-orange.svg)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		transition: $time
+		transform: scale(0)
+
+.selected-item-color
+	width: 28px
+	height: 28px
+	border-radius: 50%
+	margin-right: 12px
+	flex-shrink: 0
+	&.with-border
+		border: 1px solid #F5F5F5
+
+.gift-item-mob-btn
+	display: none
+
+.gift-selected-color
+	font-size: 14px
+	color: #BDBDBD
+	display: none
+	p
+		margin: 0
+		display: flex
+	span
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		flex-shrink: 0
+		margin-left: 6px
+		display: inline-block
+		margin-top: 5px
+		&.with-border
+			border: 1px solid #e0e0e0
+
 
 @import "media" // Always at the end
