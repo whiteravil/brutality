@@ -2614,10 +2614,11 @@ textarea.form-control
 		padding: 0
 		margin: 0
 		display: flex
-		flex-wrap: wrap
+		overflow: hidden
 		li
 			font-size: 15px
 			color: #BDBDBD
+			white-space: nowrap
 			&:not(:last-child):after
 				content: '—'
 				margin: 0 4px
@@ -2628,6 +2629,13 @@ textarea.form-control
 				transition: $time
 				&:hover
 					color: $accent
+			&:last-child
+				overflow: hidden
+				flex-grow: 1
+				max-width: 100%
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
 
 .page-title
 	margin-bottom: 73px
@@ -3159,11 +3167,11 @@ textarea.form-control
 		&:after
 			content: ''
 			position: absolute
-			top: 5px
+			top: 7px
 			right: 0
 			width: 15px
 			height: 15px
-			background-image: url(../img/icons/angle-right-black.svg)
+			background-image: url(../img/icons/angle-right-gray.svg)
 			background-size: 10px auto
 			background-repeat: no-repeat
 			background-position: center
@@ -4229,6 +4237,9 @@ textarea.form-control
 		z-index: 1
 		img
 			width: 17px
+			margin: 0 !important
+			border-radius: 0 !important
+			display: inline !important
 
 .checkout-city-dropdown
 	position: absolute
@@ -5073,6 +5084,12 @@ textarea.form-control
 	margin-bottom: 40px
 	font-size: 26px
 	padding-right: 120px
+	&.right
+		padding-right: 0
+	.h4, h4
+		font-size: 30px
+		margin-bottom: 40px
+		font-family: $font
 	ul
 		margin: 0
 		padding: 0
@@ -5103,7 +5120,7 @@ textarea.form-control
 
 .cashback-img
 	img
-		width: 100%
+		width: calc(100% + 100px)
 		margin-left: -100px
 
 .cashback-footer-text
@@ -5139,9 +5156,19 @@ textarea.form-control
 			color: #27AE60 !important
 			&:before
 				content: 'Сбросить'
+	&.danger
+		.promocode-input
+			border-color: #FFCDCD
+			background-color: #FFCDCD
+			color: #F14545
+		.promocode-apply
+			color: #F14545 !important
+			&:before
+				content: 'Сбросить'
 
 .promocode-input
 	padding-right: 110px
+	transition: $time
 	&.active
 		border-color: $accent
 
@@ -5161,6 +5188,11 @@ textarea.form-control
 	&.visible
 		opacity: 1
 		visibility: visible
+
+.text-danger
+	font-size: 12px
+	color: #F14545
+	margin-top: 6px
 
 .checkout-success
 	display: flex
@@ -5264,5 +5296,866 @@ textarea.form-control
 	p
 		font-size: 20px
 		margin-bottom: 43px
+
+.cashback-card-info-block
+	position: relative
+	border-radius: 10px
+	background-color: #4A9BFF
+	color: #fff
+	padding: 72px 85px
+	margin-bottom: 250px
+
+.cashback-card-info-bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: 10px
+	overflow: hidden
+	&:before
+		content: ''
+		position: absolute
+		top: -130px
+		left: -528px
+		width: 1272px
+		height: 1272px
+		border-radius: 50%
+		background: radial-gradient(50% 50% at 50% 50%, #3300FF 0%, rgba(31, 107, 255, 0) 100%)
+		opacity: 0.8
+	&:after
+		content: ''
+		position: absolute
+		width: 1321px
+		height: 1321px
+		border-radius: 50%
+		background: radial-gradient(50% 50% at 50% 50%, #B3FFF1 0%, rgba(179, 255, 241, 0) 100%)
+		right: -459px
+		top: -915px
+
+.cashback-card-info
+	position: relative
+	z-index: 1
+	max-width: 50%
+	h2, .h2
+		margin-bottom: 30px
+	p
+		font-size: 26px
+		margin-bottom: 60px
+
+.cashback-card-img
+	position: absolute
+	width: 59%
+	right: 0
+	top: 16px
+	right: -25px
+	z-index: 1
+	img
+		width: 917px
+		max-width: 100%
+
+.get-cashback
+	position: relative
+	border-radius: 10px
+	background-color: #4A9BFF
+	padding: 75px 270px 75px 135px
+	color: #fff
+	margin-top: 60px
+
+.get-cashback-text
+	position: relative
+	z-index: 1
+	display: flex
+	align-items: center
+	.h2
+		flex-grow: 1
+		margin: 0 20px 0 0
+	.btn
+		padding: 0 36px
+
+.cashback-info
+	margin-bottom: 129px
+
+.news-main
+	margin-bottom: 55px
+
+.news-main-item
+	position: relative
+	&:not(:last-child)
+		margin-bottom: 30px
+	&:hover
+		.news-main-item-title
+			color: $accent
+		.news-main-item-img
+			img
+				transform: scale(1.05)
+	&.small
+		padding: 100px 24px 24px
+		min-height: calc(50% - 30px)
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		.news-main-body
+			position: relative
+			z-index: 1
+			color: #fff
+		.news-footer
+			color: #fff
+		.news-main-item-img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 0
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(#000, .5)
+		.news-main-item-title
+			color: #fff !important
+		.news-item-link
+			z-index: 2
+		.news-views
+			&:before
+				background-image: url(../img/icons/eye-white.svg)
+
+.news-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+
+.news-main-item-img
+	margin-bottom: 20px
+	overflow: hidden
+	border-radius: 10px
+	img
+		width: 100%
+		border-radius: 10px
+		transition: $time
+
+.news-main-item-title
+	font-size: 30px
+	line-height: 1.167
+	margin-bottom: 8px
+	font-weight: 500
+	transition: $time
+
+.news-footer
+	display: flex
+	color: #727272
+	font-size: 14px
+
+.news-date
+	margin-right: 14px
+
+.news-views
+	position: relative
+	padding-left: 20px
+	&:before
+		content: ''
+		position: absolute
+		top: 3px
+		left: 0
+		width: 15px
+		height: 15px
+		background-image: url(../img/icons/eye.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+.news-main-body
+	position: relative
+
+.news
+	padding: 100px 0 20px
+	background-color: #FBFBFB
+	.pagination-wrapper
+		margin-top: 40px
+
+.news-item
+	margin-bottom: 30px
+	background-color: #fff
+	box-shadow: 0px 14px 30px -12px rgba(0, 0, 0, 0.03)
+	overflow: hidden
+	border-radius: 10px
+	height: calc(100% - 30px)
+	display: flex
+	flex-direction: column
+	&:hover
+		.news-img img
+			transform: scale(1.05)
+		.news-title
+			color: $accent
+	.news-footer
+		opacity: 0.7
+
+.news-img
+	overflow: hidden
+	img
+		width: 100%
+		height: 315px
+		object-fit: cover
+		transition: $time
+
+.news-body
+	flex-grow: 1
+	padding: 37px 32px 26px
+	display: flex
+	flex-direction: column
+
+.news-tag
+	font-weight: 500
+	letter-spacing: 0.06em
+	color: #A8A8A8
+	margin-bottom: 22px
+	text-transform: uppercase
+	font-size: 14px
+
+.news-title
+	font-size: 24px
+	transition: $time
+	line-height: 1.167
+	margin-bottom: 24px
+	flex-grow: 1
+
+.article
+	padding: 50px 0 35px
+
+.article-container
+	position: relative
+	.text-content
+		width: 69%
+		margin-left: auto
+		margin-right: auto
+
+.article-view-info
+	position: absolute
+	top: 7px
+	left: 0
+	max-width: 15.5%
+	color: #A3A3A3
+
+.article-date
+	margin-bottom: 16px
+
+.article-views
+	position: relative
+	font-size: 14px
+	padding-left: 20px
+	&:before
+		content: ''
+		position: absolute
+		top: 3px
+		left: 0
+		width: 15px
+		height: 15px
+		background-image: url(../img/icons/eye-gray.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+.text-content
+	color: $dark
+	margin-bottom: 55px
+	h1, .h1
+		font-size: 50px
+		margin-bottom: 45px
+		margin-top: 30px
+	h2, .h2
+		font-size: 40px
+		margin-bottom: 25px
+		margin-top: 30px
+	h3, .h3
+		font-size: 30px
+		margin-bottom: 24px
+		margin-top: 30px
+	h4, .h4
+		font-size: 27px
+		margin-bottom: 20px
+		margin-top: 30px
+	h5, .h5
+		font-size: 21px
+		font-weight: bold
+		margin-bottom: 18px
+		margin-top: 30px
+	h6, .h6
+		font-size: 18px
+		font-weight: bold
+		margin-bottom: 15px
+		margin-top: 30px
+	p
+		margin-bottom: 30px
+	img
+		width: 100%
+		display: block
+		border-radius: 10px
+		margin-bottom: 30px
+		&.big-img
+			width: 120%
+			margin-left: -10%
+			margin-bottom: 70px
+	ul, ol
+		list-style-type: none
+		padding: 0
+		margin-bottom: 70px
+		font-size: 20px
+		li
+			position: relative
+			margin-bottom: 7px
+			padding-left: 21px
+	ul
+		li
+			&:before
+				content: ''
+				position: absolute
+				width: 5px
+				height: 5px
+				border-radius: 50%
+				background-color: $accent
+				left: 0
+				top: 10px
+	ol
+		counter-reset: olCounter
+		li
+			&:before
+				content: counter(olCounter)
+				counter-increment: olCounter
+				font-size: 16px
+				font-weight: 500
+				color: $accent
+				top: 3px
+				left: 0
+				position: absolute
+
+
+.big-text-content
+	margin-bottom: 50px
+	font-size: 28px
+
+.images-gallery
+	margin: 55px 0 70px
+	.fotorama__img
+		border-radius: 10px !important
+	.fotorama__nav:before, .fotorama__stage:before,
+	.fotorama__nav:after, .fotorama__stage:after
+		display: none !important
+	.fotorama__arr
+		width: 64px
+		height: 64px
+		margin-top: -32px
+		border-radius: 50%
+		background-color: #FFCB72
+		background-size: 32px
+		background-repeat: no-repeat
+		background-position: center
+	.fotorama__arr--prev
+		background-image: url(../img/icons/angle-left-white.svg)
+		background-position: top 50% left calc(50% - 2px)
+		left: 32px
+	.fotorama__arr--next
+		background-image: url(../img/icons/angle-right-white.svg)
+		background-position: top 50% right calc(50% - 2px)
+		right: 32px
+	.fotorama__nav__frame--thumb
+		.fotorama__thumb
+			transition: $time
+			position: relative
+			border-radius: 5px
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border: 1px solid #EDECEC
+				border-radius: 5px
+				transition: $time
+		.fotorama__video-play
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border-radius: 5px
+			margin: 0
+			width: auto
+			height: auto
+			background: none
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				border-radius: 5px
+				background-image: url(../img/icons/play.svg)
+				background-repeat: no-repeat
+				background-position: top 50% left calc(50% + 1px)
+				background-size: 14.67px
+				z-index: 1
+			&:before
+				content: ''
+				position: absolute
+				top: 1px
+				left: 1px
+				right: 1px
+				bottom: 1px
+				border-radius: 5px
+				z-index: 0
+				background: linear-gradient(0deg, rgba(255, 255, 255, 0.66))
+		&.fotorama__active
+			.fotorama__thumb
+				transform: scale(1.36)
+				&:after
+					border-color: $accent
+	.fotorama__thumb-border
+		display: none
+	.fotorama__nav-wrap
+		margin-top: 14px
+	.fotorama__stage__frame
+		.fotorama__video-play
+			background-color: #fff
+			border-radius: 50%
+			background-image: url(../img/icons/play.svg)
+			background-size: 21px
+			background-repeat: no-repeat
+			background-position: top 50% left calc(50% + 2px)
+
+.table-wrapper
+	overflow: auto hidden
+	padding-bottom: 20px
+	margin-bottom: 45px
+	padding-top: 16px
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		background-color: $mute
+		background-color: #e2e2e2
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		border-radius: 2px
+		background-color: $accent
+	table
+		min-width: 100%
+		table-layout: fixed
+		tr
+			border-bottom: 1px solid #E9E9E9
+	tbody
+		tr
+			&:last-child
+				border-bottom: none
+	th, td
+		min-width: 220px
+		padding: 24px 10px 24px 0
+		vertical-align: top
+	th
+		padding-top: 0
+		font-weight: 500
+		font-size: 24px
+	td
+		font-size: 20px
+	.accent
+		font-weight: 500
+		color: $accent
+
+.article-footer
+	margin-top: 55px
+	border-top: 1px solid #E9E9E9
+	padding-top: 24px
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.article-footer-date
+	margin-right: 15px
+	color: #A3A3A3
+
+.share-block
+	position: relative
+	display: inline-block
+	&.opened
+		.share-link
+			color: $accent
+			&:before
+				opacity: 0
+			&:after
+				opacity: 1
+		.share-dropdown
+			opacity: 1
+			transform: translateY(0)
+			visibility: visible
+
+.share-link
+	transition: $time
+	position: relative
+	display: inline-block
+	padding-right: 22px
+	font-size: 18px
+	color: #A3A3A3
+	text-decoration: none !important
+	&:hover
+		color: $accent
+		&:before
+			opacity: 0
+		&:after
+			opacity: 1
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		top: 6px
+		right: 0
+		width: 15px
+		height: 15px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		transition: $time
+	&:before
+		background-image: url(../img/icons/share.svg)
+	&:after
+		background-image: url(../img/icons/share-accent.svg)
+		opacity: 0
+
+.share-dropdown
+	display: flex
+	position: absolute
+	align-items: center
+	top: 100%
+	margin-top: 8px
+	right: 0
+	height: 52px
+	padding: 0 20px
+	border-radius: 7px
+	overflow: hidden
+	background-color: #fff
+	z-index: 5
+	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
+	transform: translateY(-10px)
+	opacity: 0
+	visibility: hidden
+	transition: $time
+
+
+.share-soc
+	margin-right: 19px
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: $time
+	&:hover
+		opacity: .5
+	&:last-child
+		margin-right: 0
+	img
+		width: 30px
+		margin: 0!important
+		flex-shrink: 0
+
+.s-some-news
+	padding: 90px 0 110px
+	background-color: #FBFBFB
+
+.section-title-3
+	margin-bottom: 40px
+
+.news-slider
+	.owl-nav
+		button
+			top: 281px
+	.news-item
+		margin: 0
+		height: 100%
+
+.delivery-block
+	position: relative
+	overflow: hidden
+	border-radius: 10px
+	border: 1px solid #D5D5D5
+	margin-bottom: 70px
+
+.delivery-header
+	padding: 32px 70px
+	background-color: #FFF6E6
+	display: flex
+	align-items: center
+
+.delivery-header-img
+	width: 107px
+	height: 107px
+	background-color: #fff
+	border-radius: 50%
+	flex-shrink: 0
+	margin-right: 31px
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		min-width: 50px
+
+.delivery-header-title
+	font-size: 34px
+	font-weight: bold
+
+.delivery-body
+	padding: 40px 70px 70px
+	[class*=col-]:first-child
+		padding-right: 100px
+	ol
+		list-style-type: none
+		padding: 0
+		margin: 0 0 30px
+		counter-reset: olCounter2
+		&:last-child
+			margin-bottom: 0
+		li
+			margin-bottom: 10px
+			padding-left: 20px
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: counter(olCounter2)
+				counter-increment: olCounter2
+				position: absolute
+				top: 1px
+				left: 0
+				font-size: 16px
+				font-weight: 500
+	ul
+		list-style-type: none
+		margin: 0 0 30px
+		padding: 0
+		&:last-child
+			margin-bottom: 0
+		li
+			margin-bottom: 5px
+			position: relative
+			padding-left: 16px
+			&:before
+				content: ''
+				position: absolute
+				top: 10px
+				width: 5px
+				height: 5px
+				background-color: $accent
+				border-radius: 50%
+				left: 0
+.accent-title
+	text-transform: uppercase
+	font-weight: 500
+	color: $accent
+	margin-bottom: 20px
+
+.delivery-contacts
+	display: flex
+	flex-wrap: wrap
+	.delivery-contacts-item
+		margin-right: 130px
+		&:last-child
+			margin-right: 0
+
+.delivery-contact
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	margin-bottom: 40px
+	span
+		font-size: 24px
+		font-weight: bold
+		margin-bottom: 4px
+		line-height: 1.1
+	.btn
+		margin-top: 30px
+
+.small-mute-text
+	font-size: 15px
+	color: #A8A8A8
+
+.delivery-brands
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+
+.delivery-brand
+	margin-right: 32px
+	margin-bottom: 20px
+	img
+		max-width: 246px
+		max-height: 124px
+		object-fit: contain
+
+.delivery-warning-text
+	margin-bottom: 45px
+
+.delivery-contact-links
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 45px
+	p
+		width: 100%
+		margin-bottom: 10px
+	a
+		font-size: 24px
+		line-height: 1.1
+		margin-bottom: 10px
+		font-weight: bold
+		margin-right: 86px
+		color: #000
+		text-decoration: none !important
+		transition: $time
+		&:hover
+			color: $accent
+
+.delivery-calculator
+	p
+		margin-bottom: 14px
+
+.delivery-calc-row
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+.delivery-calc-item
+	display: inline-flex
+	align-items: center
+	margin: 0 15px 15px 0
+	height: 54px
+	line-height: 54px
+	padding: 0 24px 0 15px
+	border-radius: 7px
+	box-shadow: -4px 4px 33px rgba(147, 147, 147, 0.13)
+	background-color: #fff
+	font-weight: 500
+	font-size: 14px
+	text-decoration: none !important
+	color: #000
+	min-width: 207px
+	transition: $time
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: $accent !important
+	&.green
+		color: #05A402
+	&.red
+		color: #C5204B
+	&.blue
+		color: #0055A5
+	img
+		max-height: 40px
+		max-width: 75px
+		margin-right: auto
+		object-fit: contain
+
+.delivery-big-text
+	letter-spacing: .0.01em
+	font-size: 28px
+	margin-bottom: 50px
+
+.delivery-phone
+	p
+		margin-bottom: 10px
+	a
+		font-size: 24px
+		font-weight: bold
+		line-height: 1.1
+		color: #000
+		text-decoration: none !important
+		transition: $time
+		&:hover
+			color: $accent
+
+.delivery-contacts-item
+	margin-bottom: 55px
+	&:last-child
+		margin-bottom: 0
+
+.delivery-price
+	font-size: 24px
+	font-weight: bold
+	line-height: 1.1
+	margin-bottom: 18px
+	&:last-child
+		margin-bottom: 0
+
+.delivery-ul
+	display: flex
+	ul
+		margin-bottom: 22px
+		margin-right: 80px
+		&:last-child
+			margin-right: 0
+
+.delivery-text-content
+	max-width: 1024px
+	h4, .h4
+		font-size: 34px
+		font-family: $font
+		font-weight: bold
+
+.delivery-text-item
+	margin-bottom: 75px
+	font-size: 20px
+
+.delivery-map-block
+	h4, .h4
+		font-size: 34px
+		font-family: $font
+		font-weight: bold
+
+.map-wrapper
+	#map
+		height: 535px
+		border-radius: 10px
+		overflow: hidden
+
+.map-item
+	background-color: #fff
+	border-radius: 10px
+	box-shadow: -4px 4px 50px rgba(147, 147, 147, 0.27)
+	padding: 15px 22px 22px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 23px
+		height: 23px
+		bottom: -10px
+		left: 42px
+		transform: rotate(45deg)
+		border-radius: 2px
+		background-color: #fff
+
+.map-item-title
+	font-weight: bold
+	margin-bottom: 10px
+
+.map-item-street
+	font-size: 14px
+
+.map-item-worktime
+	font-size: 14px
+	color: #ccc
+
+.popover-inner
+	> ymaps
+		height: auto !important
+		width: 320px !important
+		overflow: visible !important
 
 @import "media" // Always at the end

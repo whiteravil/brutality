@@ -43,6 +43,8 @@
 		top: 7px
 	.header-user-exit a:after
 		top: 9px
+	.news-main-item-title
+		font-size: 24px
 
 @media (max-width: 1599.98px)
 	.print-tshirt-block img
@@ -92,8 +94,21 @@
 		font-size: 24px
 	.cashback-img img
 		margin-left: -50px
+		width: calc(100% + 50px)
 	.cashback-footer-text
 		font-size: 18px
+	.get-cashback
+		padding: 75px
+	.cashback-card-info
+		.h2, h2
+			font-size: 33px
+		p
+			font-size: 21px
+	.cashback-card-info-block
+		margin-bottom: 190px
+	.get-cashback-text
+		.h2, h2
+			font-size: 33px
 
 @media (max-width: 1439.98px)
 	.category-item
@@ -146,6 +161,43 @@
 		font-size: 13px
 	.not-found-composition
 		font-size: 179px
+	.cashback-info
+		margin-bottom: 80px
+	.news-title
+		font-size: 20px
+	.news-main-item-title
+		font-size: 21px
+	.big-text-content
+		font-size: 21px
+	.text-content
+		margin-bottom: 55px
+		h1, .h1
+			font-size: 44px
+			margin-bottom: 35px
+		h2, .h2
+			font-size: 33px
+		p
+			margin-bottom: 20px
+		img
+			margin-bottom: 20px
+			&.big-img
+				margin-bottom: 50px
+		ul, ol
+			margin-bottom: 50px
+			font-size: 16px
+		ul
+			li
+				&:before
+					top: 9px
+		ol
+			li
+				&:before
+					top: 0
+	.table-wrapper
+		th
+			font-size: 18px
+		td
+			font-size: 16px
 
 @media (max-width: 1365.98px)
 	h1, .h1
@@ -318,6 +370,23 @@
 		font-size: 14px
 	.order-main:after
 		top: 17px
+	.cashback-card-info-block
+		margin-bottom: 70px
+		padding: 62px 50px
+	.news-img
+		img
+			height: 200px
+	.news
+		padding-top: 70px
+	.share-link
+		font-size: 14px
+		&:after,
+		&:before
+			top: 3px
+	.news-slider .owl-nav button
+		top: 164px
+	.s-some-news
+		padding: 70px 0
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -438,6 +507,7 @@
 		padding: 0 10px 0 15px
 	.cashback-img img
 		margin-left: 0
+		width: 100%
 	.cashback-text
 		padding-right: 0
 	.cashback-banner
@@ -476,7 +546,26 @@
 		margin-top: 50px
 		padding-left: 0
 		padding-right: 0
-
+	.cashback-card-info
+		h2, .h2
+			margin-bottom: 20px
+			font-size: 27px
+		p
+			font-size: 18px
+			margin-bottom: 20px
+	.get-cashback-text
+		.h2, h2
+			font-size: 27px
+	.get-cashback
+		padding: 50px
+	.news-body
+		padding: 30px 20px
+	.news-item
+		margin-bottom: 20px
+		height: calc(100% - 20px)
+	.text-content
+		.h1, h1
+			font-size: 38px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -929,6 +1018,64 @@
 		display: block
 	.not-found-composition
 		margin: 0
+	.news-main-item
+		margin-bottom: 30px
+	.article
+		padding-top: 30px
+	.article-view-info
+		margin-bottom: 30px
+		position: static
+		display: flex
+		align-items: center
+		max-width: 100%
+	.article-date
+		margin-bottom: 0
+		margin-right: 20px
+	.article-container .text-content
+		width: 100%
+	.text-content
+		h1, .h1
+			font-size: 33px
+		h2, .h2
+			font-size: 27px
+		h3, .h3
+			font-size: 24px
+		h4, .h4
+			font-size: 21px
+		h5, .h5
+			font-size: 18px
+		h6, .h6
+			font-size: 16px
+		img
+			&.big-img
+				width: calc(100% + 40px)
+				margin-left: -20px
+				border-radius: 0
+	.images-gallery
+		.fotorama__arr
+			width: 44px
+			height: 44px
+			margin-top: -22px
+			background-size: 16px
+			background-position: center !important
+		.fotorama__arr--next
+			right: 15px
+		.fotorama__arr--prev
+			left: 15px
+	.table-wrapper
+		th
+			font-size: 16px
+		td
+			font-size: 14px
+		th, td
+			padding: 15px 10px 15px
+			min-width: 190px
+	.news-slider
+		padding-right: 20px
+		.owl-stage-outer
+			margin-right: -20px
+		.owl-nav
+			display: none !important
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1113,6 +1260,25 @@
 		width: 100%
 	.not-found-text h1
 		font-size: 33px
+	.cashback-card-info
+		max-width: none
+	.cashback-card-img
+		width: 56%
+		top: calc(100% - 140px)
+	.get-cashback-text
+		display: block
+		text-align: center
+		.h2
+			margin: 0 0 20px
+	.news-main-item.small
+		min-height: 0
+		padding-top: 60px
+		min-height: 200px
+	.news-main
+		margin-bottom: 30px
+	.news
+		padding-top: 60px
+
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1652,14 +1818,24 @@
 			font-size: 14px
 	.breadcrumbs
 		margin-top: 31px
-	.breadcrumbs ul li
-		&:not(:last-child):after
-			content: '/'
-			color: $accent
-			font-weight: 500
-		a, span
-			font-weight: 500
-			color: $accent
+		margin-bottom: 15px
+		ul
+			overflow: auto hidden
+			margin-right: -20px
+			padding-bottom: 15px
+			li
+				overflow: visible !important
+				max-width: none!important
+				flex-grow: 0 !important
+				&:not(:last-child):after
+					content: '/'
+					color: $accent
+					font-weight: 500
+				a, span
+					font-weight: 500
+					color: $accent
+				span
+					padding-right: 20px
 	.category-slider,
 	.border-block
 		display: none !important
@@ -2484,6 +2660,64 @@
 			font-size: 21px
 		p
 			font-size: 16px
+	.cashback-card-info-block
+		padding: 40px 25px 120px
+	.cashback-card-img
+		width: auto
+		left: 20px
+		right: 20px
+		top: calc(100% - 115px)
+		img
+			width: 295px
+	.cashback-card-info-block
+		margin-bottom: 110px
+	.cashback-card-info
+		.h2, h2
+			font-size: 21px
+		p
+			font-size: 16px
+	.cashback-text
+		h4, .h4
+			font-size: 18px
+			margin-bottom: 20px
+	.get-cashback
+		padding: 30px 20px
+		&-text
+			h2, .h2
+				font-size: 21px
+			.btn
+				height: 48px
+				line-height: 48px
+	.article
+		padding-top: 20px
+	.article-view-info
+		margin-bottom: 20px
+	.text-content
+		h1, .h1
+			font-size: 27px
+		h2, .h2
+			font-size: 27px
+	.big-text-content
+		font-size: 18px
+	.images-gallery
+		margin-left: -20px
+		margin-right: -20px
+		.fotorama__img
+			border-radius: 0 !important
+		.fotorama__arr
+			display: none !important
+		.fotorama__stage__frame  .fotorama__video-play
+			width: 50px
+			height: 50px
+			background-size: 14px
+			margin-left: -25px
+			margin-top: -25px
+	.table-wrapper td, .table-wrapper th
+		min-width: 170px
+	.text-content
+		margin-bottom: 30px
+	.s-some-news
+		padding: 50px 0
 
 /*==========  Mobile First  ==========*/
 

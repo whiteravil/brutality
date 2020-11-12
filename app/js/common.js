@@ -1234,16 +1234,71 @@ $(function() {
 
 	$('.promocode-apply').on('click', function(e) {
 		e.preventDefault();
-		if ( !$('.basket-promo').hasClass('success') ) {
+		if ( !$('.basket-promo').hasClass('success') && !$('.basket-promo').hasClass('danger') ) {
 			$('.basket-promo').addClass('success');
 			$('.promocode-input').prop('disabled', true);
 		}
+		else if ( $('.basket-promo').hasClass('danger') ) {
+			$('.basket-promo').removeClass('success danger');
+			$('.promocode-input').prop('disabled', false).removeClass('active').val('');
+			$(this).removeClass('visible');
+			$('.basket-promo .text-danger').hide();
+		}
 		else {
-			$('.basket-promo').removeClass('success');
+			$('.basket-promo').removeClass('success danger');
 			$('.promocode-input').prop('disabled', false).removeClass('active').val('');
 			$(this).removeClass('visible');
 		}
 	});
+
+	let galleryFotorama = $('.images-gallery').fotorama(),
+  		galleryFotoramaAPI = galleryFotorama.data('fotorama');
+
+  function initGallery() {
+  	if ( $(window).width() > 576 ) {
+  		galleryFotoramaAPI.setOptions({
+				nav: 'thumbs',
+				thumbwidth: 55,
+				thumbheight : 55,
+				thumbmargin: 20,
+				width: '100%'
+			});
+  	}
+  	else {
+  		galleryFotoramaAPI.setOptions({
+				nav: 'dots',
+				width: '100%'
+			});
+  	}
+  }initGallery();
+
+
+	
+
+	$('.share-link').on('click', function(e) {
+		e.preventDefault();
+		$(this).parent().toggleClass('opened');
+	});
+
+	$('.news-slider').owlCarousel({
+		items: 3,
+		margin: 30,
+		nav: true,
+		dots: false,
+		responsive: {
+			0: {
+				items: 1,
+				margin: 20
+			},
+			576: {
+				items: 2,
+				margin: 20
+			},
+			992: {
+				items: 3
+			}
+		}
+	})
 
 	$(window).on('resize', function() {
 		checkNavSwitchPos();
@@ -1255,6 +1310,7 @@ $(function() {
 		// initMobCatalogSlider();
 		helpBtn.removeClass('visible');
 		resizeProdFotorama();
+		initGallery();
 	});
 
 	$(document).on('click', function(e) {
@@ -1276,6 +1332,9 @@ $(function() {
 		}
 		if ( !$(e.target).closest('.header-acc').length && !$(e.target).closest('.profile-link').length ) {
 			$('.header-acc').removeClass('opened visible')
+		}
+		if ( !$(e.target).closest('.share-block').length ) {
+			$('.share-block').removeClass('opened')
 		}
 	});
 
