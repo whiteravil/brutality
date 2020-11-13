@@ -2651,7 +2651,7 @@ textarea.form-control
 	position: relative
 
 .catalog-sidebar-title
-	font-size: 24px
+	font-size: 22px
 	font-weight: bold
 	margin-bottom: 10px
 
@@ -3068,6 +3068,8 @@ textarea.form-control
 .catalog-item
 	margin-bottom: 50px
 	height: calc(100% - 50px)
+	.product-img
+		padding-top: 15px
 	.product-name
 		margin-bottom: 10px
 	.product-price
@@ -5277,18 +5279,26 @@ textarea.form-control
 
 .not-found-wrapper
 	display: flex
-	margin-top: 100px
-	padding: 0 120px
+	margin-top: 40px
+	padding-right: 120px
 
 .not-found-composition
 	margin-right: 80px
 	line-height: 1
-	font-size: 250px
+	font-size: 310px
 	font-family: $font2
-	color: #FFECCC
+	color: #FFF6E5
+	position: relative
+	img
+		width: 304px
+		position: absolute
+		z-index: 1
+		top: 120px
+		right: 129px
+		max-width: 50%
 
 .not-found-text
-	padding-top: 18px
+	padding-top: 145px
 	h1
 		font-size: 40px
 		line-height: 1.1
@@ -5569,6 +5579,10 @@ textarea.form-control
 .text-content
 	color: $dark
 	margin-bottom: 55px
+	> *:first-child
+		margin-top: 0 !important
+	> *:last-child
+		margin-bottom: 0 !important
 	h1, .h1
 		font-size: 50px
 		margin-bottom: 45px
@@ -5906,6 +5920,9 @@ textarea.form-control
 	justify-content: center
 	img
 		min-width: 50px
+		max-width: 50%
+		max-height: 50%
+		object-fit: contain
 
 .delivery-header-title
 	font-size: 34px
@@ -6084,6 +6101,9 @@ textarea.form-control
 	margin-bottom: 55px
 	&:last-child
 		margin-bottom: 0
+	.delivery-contact
+		&:last-child
+			margin-bottom: 0
 
 .delivery-price
 	font-size: 24px
@@ -6157,5 +6177,505 @@ textarea.form-control
 		height: auto !important
 		width: 320px !important
 		overflow: visible !important
+
+.popup-map-frame
+	height: 420px
+	border-radius: 5px
+	overflow: hidden
+
+.map-popup
+	width: 930px
+	.popup-close
+		top: 12px
+		right: 12px
+
+.about-slider-wrapper
+	position: relative
+	.breadcrumbs
+		position: absolute
+		top: 50px
+		left: 0
+		width: 100%
+		z-index: 2
+		ul
+			li
+				color: #fff
+				&:after
+					color: #fff
+				a
+					color: #fff
+
+.about-slider
+	position: relative
+	height: 812px
+	// .owl-item
+	// 	transform: translateZ(0) scale(1, 1)
+	// 	backface-visibility: hidden
+	// .owl-nav
+	// 	button
+	// 		width: 64px
+	// 		height: 64px
+	// 		background-color: rgba(#FFCB72, .3) !important
+	// 		top: 50%
+	// 		margin: 0
+	// 		transform: translateY(-50%)
+	// 		opacity: 1 !important
+	// 		&.owl-prev
+	// 			left: 45px
+	// 		&.owl-next
+	// 			right: 45px
+
+.about-slider-item
+	height: 812px
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	padding-bottom: 193px
+	transition: all .8s ease
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.36%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32))
+	.container
+		position: relative
+		z-index: 1
+
+.about-slider-nav-btn
+	position: absolute
+	top: 50%
+	width: 64px
+	height: 64px
+	z-index: 3
+	border-radius: 50%
+	transform: translateY(-50%)
+	background-color: rgba(#FFCB72, .3)
+	cursor: pointer
+	background-size: 32px
+	background-repeat: no-repeat
+	transition: $time
+	&.prev
+		left: 45px
+		background-image: url(../img/icons/angle-left-white.svg) !important
+		background-position: top 50% left calc(50% - 2px) !important
+	&.next
+		right: 45px
+		background-image: url(../img/icons/angle-right-white.svg) !important
+		background-position: top 50% right calc(50% - 2px) !important
+
+.about-slider-nav-block
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	z-index: 3
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: #FFFFFF
+		opacity: 0.4
+
+.about-slider-nav
+	display: flex
+	overflow: auto hidden
+	white-space: nowrap
+	justify-content: space-between
+	margin-left: -40px
+	margin-right: -40px
+	padding: 0 40px
+	&::-webkit-scrollbar
+		width: 3px
+		height: 3px
+		border-radius: 10px
+		background-color: #F8F8F8
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		background-color: $accent
+
+
+.about-slider-nav-link
+	margin-right: 70px
+	flex-basis: 0
+	flex-grow: 1
+	max-width: 100%
+	height: 109px
+	position: relative
+	line-height: 97px
+	color: #fff
+	font-weight: 500
+	font-size: 24px
+	cursor: pointer
+	&:first-child
+		&:after
+			content: ''
+			position: absolute
+			right: 100%
+			width: 40px
+			height: 100%
+	&:last-child
+		margin-right: 0
+		&:after
+			content: ''
+			position: absolute
+			left: 100%
+			width: 40px
+			height: 100%
+	&.active
+		.about-slider-nav-link-progress
+			opacity: 1
+			span
+				animation-name: scaleAnimate
+
+.about-slider-nav-link-progress
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	background-color: rgba(#fff, .4)
+	height: 4px
+	transition: $time
+	opacity: 0
+	span
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		background-color: #fff
+		width: 100%
+		transform: scaleX(0)
+		transform-origin: 0 50%
+		animation-timing-function: linear
+
+@keyframes scaleAnimate
+	0%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(1)
+
+.s-blockquote
+	padding-top: 20px
+	padding-bottom: 35px
+
+.blockquote
+	margin-left: auto
+	margin-right: auto
+	max-width: 812px
+	position: relative
+	text-align: center
+	font-size: 24px
+	letter-spacing: 0.04em
+	color: #A8A8A8
+	font-size: 24px
+	line-height: 2
+	text-transform: uppercase
+	padding: 24px 0
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		height: 4px
+		width: 82px
+		border-radius: 7px
+		background: linear-gradient(90.29deg, #62EAE9 -4.98%, #3B82F4 54.4%, #4966FF 84.93%)
+		left: 50%
+		transform: translateX(-50%)
+	&:after
+		top: 0
+	&:before
+		bottom: 0
+
+.s-about-company
+	padding: 35px 0 40px
+
+.about-company-row
+	display: flex
+
+.about-company
+	padding-right: 100px
+	width: calc(100% - 396px)
+
+
+.about-company-sidebar
+	width: 396px
+	background-color: #fff
+	border-radius: 10px
+	box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.05)
+	position: sticky
+	top: 30px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding: 30px 40px
+	margin-bottom: 50px
+
+.about-company-sidebar-link
+	font-size: 22px
+	font-weight: 500
+	color: #000
+	text-decoration: none !important
+	transition: $time
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+	&:hover,
+	&.active
+		color: $accent	
+
+.video-frame
+	margin-bottom: 80px
+	position: relative
+	width: 100%
+	padding-bottom: 56.25%
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+blockquote
+	display: block
+	margin-bottom: 80px
+	position: relative
+	background-color: #fff
+	border-radius: 4px
+	padding: 60px 62px 50px 109px
+	&:after
+		content: ''
+		position: absolute
+		width: 49px
+		height: 39px
+		top: 46px
+		left: 46px
+		background-image: url(../img/icons/quote.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		opacity: 0.9
+	&:before
+		content: ''
+		position: absolute
+		z-index: -1
+		top: -4px
+		left: -4px
+		right: -4px
+		bottom: -4px
+		border-radius: 7px
+		background: linear-gradient(0, #3F79F8 0%, #59D1EB 100%)
+	p
+		font-size: 28px
+		color: #17212C
+		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
+
+.blockquote-author
+	font-size: 24px
+	font-weight: 500
+	color: #4966FF
+	background-image: linear-gradient(90deg, #62EAE9 0%, #3B82F4 40%, #4966FF 100%)
+	display: inline-block
+	-webkit-background-clip: text
+	background-clip: text
+	-webkit-text-fill-color: transparent
+
+.timeline
+	position: relative
+	margin-bottom: 80px
+	&:after
+		content: ''
+		position: absolute
+		top: 12px
+		bottom: 12px
+		left: 50%
+		margin-left: -3px
+		border-radius: 5px
+		width: 6px
+		background: linear-gradient(180.48deg, #62FF9D 0.42%, #39E0EC 18.35%, #499CFF 50.38%, #256FFF 71.55%, #5301FF 93.76%)
+
+.timeline-item
+	width: 50%
+	display: flex
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 11px
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		background-color: #fff
+		z-index: 2
+		border: 5px solid #4AC2F2
+	&:nth-child(odd)
+		margin-left: auto
+		padding-left: 38px
+		&:before
+			left: -11px
+		&:last-child
+			&:after
+				content: ''
+				position: absolute
+				top: 22px
+				width: 30px
+				left: -15px
+				background-color: #fff
+				z-index: 1
+				height: 100%
+	&:nth-child(even)
+		padding-right: 38px
+		text-align: right
+		flex-direction: row-reverse
+		.timeline-item-date
+			margin-right: 0
+			margin-left: 24px
+		&:last-child
+			&:after
+				content: ''
+				position: absolute
+				top: 22px
+				width: 30px
+				right: -15px
+				background-color: #fff
+				z-index: 1
+				height: 100%
+		&:before
+			right: -11px
+		.timeline-item-content
+			.h5
+				margin-left: auto
+			img
+				margin-left: auto
+
+
+.timeline-item-date
+	font-size: 34px
+	font-family: $font2
+	margin-right: 24px
+	min-width: 100px
+
+.timeline-item-content
+	padding-top: 4px
+	max-width: calc(100% - 124px)
+	.h5
+		font-size: 28px
+		font-weight: 500
+		color: $dark
+		line-height: 1.18
+		margin-bottom: 28px
+		max-width: 500px
+	p
+		margin-bottom: 12px
+		font-size: 20px
+	img
+		width: 441px
+		max-width: 100%
+		border-radius: 10px
+		margin-top: 30px
+		display: block
+	.logo
+		img
+			width: 244px
+			margin: 0
+
+.tl-soc-link
+	display: flex
+	align-items: center
+	width: 553px
+	max-width: 100%
+	height: 95px
+	line-height: 1.1
+	color: #000 !important
+	text-decoration: none !important
+	font-size: 22px
+	font-weight: bold
+	padding: 0 25px 0 32px
+	text-align: left
+	img
+		width: 41px
+		flex-shrink: 0
+		margin: 0 20px 0 0 !important
+	&.vk
+		color: #4D7198 !important
+		box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.03)
+		border-radius: 10px
+		background-color: #fff
+
+.tl-link-block
+	display: flex
+	align-items: center
+	padding: 30px 27px
+	background-color: #fff
+	border-radius: 10px
+	box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.03)
+	font-size: 22px
+	line-height: 1.18
+	font-weight: bold
+	color: #000
+	text-decoration: none !important
+	transition: $time
+	margin-bottom: 15px
+	&:hover
+		color: $accent
+	img
+		width: 95px
+		flex-shrink: 0
+		margin: 0 25px 0 0
+
+.small-img
+	img
+		width: auto !important
+		margin: 0 0 20px
+
+.s-timeline
+	padding-top: 50px
+
+.warranty-content
+	font-size: 20px
+
+.warranty-item
+	margin-bottom: 70px
+
+.warranty-header
+	font-size: 34px
+	font-weight: bold
+	line-height: 1.1
+	padding: 43px 50px
+	border-radius: 10px 10px 0 0
+	background-color: #FFF6E6
+
+.warranty-body
+	padding: 40px 50px 50px
+	border: 1px solid #E6E6E6
+	border-top: none
+	border-radius: 0 0 10px 10px
+	> *:last-child
+		margin-bottom: 0
+
+.s-about-company
+	padding-top: 0
 
 @import "media" // Always at the end

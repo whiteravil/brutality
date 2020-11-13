@@ -45,6 +45,12 @@
 		top: 9px
 	.news-main-item-title
 		font-size: 24px
+	.delivery-body ol li:before
+		top: 0
+	.delivery-body ul li:before
+		top: 9px
+	.about-slider
+		height: 732px
 
 @media (max-width: 1599.98px)
 	.print-tshirt-block img
@@ -109,6 +115,11 @@
 	.get-cashback-text
 		.h2, h2
 			font-size: 33px
+	.delivery-body [class*=col-]:first-child
+		padding-right: 30px
+	.about-slider-nav-link
+		font-size: 16px
+		margin-right: 40px
 
 @media (max-width: 1439.98px)
 	.category-item
@@ -198,6 +209,46 @@
 			font-size: 18px
 		td
 			font-size: 16px
+	.delivery-header
+		padding: 25px 50px
+	.delivery-header-img
+		width: 87px
+		height: 87px
+	.delivery-header-title
+		font-size: 28px
+	.delivery-brand img
+		max-width: 196px
+		max-height: 104px
+	.about-slider
+		height: 500px
+	.about-slider-item
+		padding-bottom: 123px
+		h1, .h1
+			font-size: 33px
+	.about-slider-nav-link
+		height: 89px
+		line-height: 87px
+	.about-company
+		padding-right: 60px
+	blockquote
+		padding: 30px 45px 30px 89px
+		&:after
+			top: 28px
+			left: 22px
+		p
+			font-size: 21px
+	.blockquote-author
+		font-size: 18px
+	.warranty-header
+		font-size: 25px
+	.warranty-content
+		font-size: 16px
+	.not-found-text
+		padding-top: 45px
+	.not-found-composition img
+		right: 69px
+		top: 70px
+
 
 @media (max-width: 1365.98px)
 	h1, .h1
@@ -387,6 +438,50 @@
 		top: 164px
 	.s-some-news
 		padding: 70px 0
+	.small-mute-text
+		font-size: 12px
+	.delivery-contacts .delivery-contacts-item
+		margin-right: 50px
+	.delivery-big-text
+		font-size: 21px
+	.delivery-body ol li:before
+		font-size: 14px
+	.delivery-body ul li:before
+		top: 8px
+	.about-company-sidebar
+		width: 340px
+		padding: 25px 20px
+	.about-company-sidebar-link
+		font-size: 16px
+	.about-company
+		padding-right: 30px
+	.timeline-item
+		padding-top: 6px
+		min-width: 66px
+		&:nth-child(odd)
+			padding-left: 20px
+		&:nth-child(even)
+			padding-right: 20px
+			.timeline-item-date
+				margin-left: 20px
+	.timeline-item-date
+		font-size: 24px
+		margin-right: 20px
+		min-width: 65px
+	.timeline-item-content
+		max-width: calc(100% - 85px)
+		.h5
+			font-size: 20px
+		p
+			font-size: 14px
+	.tl-soc-link
+		height: 65px
+		font-size: 13px
+		width: auto
+		text-align: left
+	.tl-link-block
+		padding: 20px
+		font-size: 14px
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -566,6 +661,25 @@
 	.text-content
 		.h1, h1
 			font-size: 38px
+	.delivery-contacts
+		display: block
+		.delivery-contacts-item
+			width: 100%
+			margin-right: 0
+	.about-company
+		width: 100%
+		padding-right: 0
+	.about-company-sidebar-col
+		display: none
+	.warranty-content
+		font-size: 14px
+	.warranty-item
+		margin-bottom: 30px
+	.warranty-header
+		padding: 30px 20px
+		font-size: 21px
+	.warranty-body
+		padding: 30px 20px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -1076,6 +1190,67 @@
 			margin-right: -20px
 		.owl-nav
 			display: none !important
+	.delivery-body
+		padding: 30px
+	.delivery-contacts
+		margin-top: 40px
+	.delivery-contacts-item
+		margin-bottom: 35px
+	.delivery-brand img
+		max-width: 166px
+		max-height: 64px
+	.delivery-header
+		padding: 20px 30px
+	.delivery-header-img
+		margin-right: 20px
+	.delivery-header-title
+		font-size: 24px
+	.delivery-contact-links 
+		a
+			font-size: 18px
+			margin-right: 20px
+	.delivery-block
+		margin-bottom: 30px
+	.delivery-contacts-item
+		margin-top: 30px
+	.delivery-text-item
+		font-size: 14px
+	.delivery-text-item
+		margin-bottom: 40px
+	.map-wrapper
+		#map
+			height: 395px
+	.s-timeline
+		padding-top: 30px
+	.s-about-company
+		padding-bottom: 0
+	.timeline-item
+		display: block
+	.timeline-item-content
+		max-width: 100%
+		width: 100%
+	.about-slider-nav
+		margin-left: -20px
+		margin-right: -20px
+		padding-left: 20px
+		padding-right: 20px
+	.about-slider-nav-link
+		&:first-child
+			&:after
+				width: 20px
+		&:last-child
+			&:after
+				width: 20px
+	.about-slider-nav-btn
+		&.prev
+			left: 20px
+		&.next
+			right: 20px
+	.blockquote
+		font-size: 20px
+	.not-found-composition img
+		left: 120px
+		width: 150px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1278,6 +1453,62 @@
 		margin-bottom: 30px
 	.news
 		padding-top: 60px
+	.delivery-header-img
+		width: 57px
+		height: 57px
+		img
+			min-width: 20px
+	.delivery-contact span
+		font-size: 18px
+	.accent-title
+		margin-bottom: 16px
+	.map-popup .popup-close
+		top: 6px
+		right: 6px
+	.delivery-warning-text
+		margin-bottom: 30px
+	.delivery-contact-links
+		margin-bottom: 30px
+	.about-slider-wrapper .breadcrumbs
+		top: 0
+	.about-slider-nav-btn
+		width: 42px
+		height: 42px
+		background-size: 21px
+		background-position: center !important
+	.timeline:after
+		left: 0
+		margin-left: 0
+		width: 4px
+	.timeline-item
+		width: 100%
+		padding-left: 20px !important
+		padding-right: 0 !important
+		text-align: left !important
+		padding-bottom: 30px
+		&:before
+			width: 20px
+			height: 20px
+			border-width: 3px
+			left: 0 !important
+			margin-left: -8px !important
+	.timeline-item-content img
+		width: 100%
+	.tl-soc-link
+		padding: 0 20px
+		img
+			width: 30px
+			margin-right: 10px
+	.tl-link-block img
+		width: 75px
+	.timeline-item:nth-child(even) .timeline-item-date
+		margin-left: 0
+	.timeline-item:nth-child(even) .timeline-item-content .h5
+		margin-left: 0
+	.timeline-item:nth-child(even):last-child:after
+		left: -15px
+	.timeline-item:nth-child(odd):last-child:after
+		left: -15px
 
 
 // ≥576px
@@ -2718,6 +2949,112 @@
 		margin-bottom: 30px
 	.s-some-news
 		padding: 50px 0
+	.delivery-header
+		padding: 10px 20px
+	.delivery-header-title
+		font-size: 18px
+	.delivery-body
+		padding: 20px
+	.delivery-calc-item
+		margin-right: 0
+		width: 100%
+	.delivery-ul ul
+		margin-right: 30px
+	.delivery-price
+		font-size: 18px
+	.delivery-phone a
+		font-size: 18px
+	.delivery-block
+		margin-left: -20px
+		margin-right: -20px
+		border-radius: 0
+		border: none !important
+	.delivery-map
+		margin-left: -20px
+		margin-right: -20px
+	.map-wrapper #map
+		border-radius: 0
+	.about-slider-nav-block
+		display: none
+	.about-slider
+		.owl-stage-outer
+			overflow: hidden
+	.about-slider-item
+		position: static
+		opacity: 1
+		visibility: visible
+		height: 100%
+	.about-slider-item
+		padding: 150px 0 50px
+		min-height: 400px
+		h1, .h1
+			font-size: 24px
+	.about-slider-nav-btns
+		display: none !important
+	.about-slider-wrapper
+		.breadcrumbs ul li span
+			color: #fff
+		.breadcrumbs ul li:not(:last-child):after
+			color: #fff
+	.about-slider
+		.owl-dots
+			display: flex
+			justify-content: center
+			.owl-dot
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				outline: none !important
+				background-color: #c4c4c4 !important
+				margin: 0 4px
+				margin-top: 20px
+				transition: $time
+				&.active
+					background-color: $accent !important
+	.about-slider
+		height: auto
+		margin-bottom: 40px
+	.blockquote
+		font-size: 14px
+	.video-frame
+		margin-bottom: 40px
+	blockquote
+		padding: 40px 20px 20px
+		margin-bottom: 40px
+		&:before
+			top: -2px
+			left: -2px
+			right: -2px
+			bottom: -2px
+		p
+			font-size: 16px
+		&:after
+			width: 29px
+			height: 18px
+			top: 14px
+			left: 17px
+	.blockquote-author
+		font-size: 12px
+	.s-timeline
+		padding-top: 0
+	.timeline
+		margin-bottom: 30px
+	.warranty-item
+		margin-left: -20px
+		margin-right: -20px
+	.warranty-header
+		padding: 15px 20px
+		border-radius: 0
+		font-size: 18px
+	.warranty-body
+		padding: 20px
+		border: none
+	.not-found-composition img
+		left: 109px
+		width: 100px
+
+
+
 
 /*==========  Mobile First  ==========*/
 

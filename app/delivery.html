@@ -1387,7 +1387,7 @@
 									<div class="delivery-contact">
 										<span>ул. Тази Гиззата 15</span>
 										<div class="small-mute-text">Казань</div>
-										<a href="#" class="btn btn-white">Показать на карте</a>
+										<a href="#address-map" class="btn btn-white open-popup">Показать на карте</a>
 									</div>
 								</div>
 							</div>
@@ -1499,7 +1499,7 @@
 									</ul>
 								</div>
 								<div class="delivery-btn">
-									<a href="#" class="btn btn-white">Показать на карте</a>
+									<a href="#address-map-2" class="btn btn-white open-popup">Показать на карте</a>
 								</div>
 							</div>
 						</div>
@@ -2281,22 +2281,38 @@
 						<div class="selected-item-img"></div>
 						<div class="selected-item-content">
 							<div class="h6">Вы выбрали</div>
-							<div class="selected-item-name">Бумага упаковочная подарочная крафт "ретро-деньги"</div>
+							<div class="selected-item-name"></div>
 						</div>
 					</div>
 					<div class="selected-item-colors">
-						<div class="selected-item-colors-item selected">
-							<div class="selected-item-color"></div>
-							<div class="selected-item-color-name">Голубой</div>
-						</div>
-						<div class="selected-item-colors-item">
-							<div class="selected-item-color"></div>
-							<div class="selected-item-color-name">Красный</div>
-						</div>
-						<div class="selected-item-colors-item">
-							<div class="selected-item-color with-border"></div>
-							<div class="selected-item-color-name">Белый</div>
-						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="address-map">
+		<div class="popup-flex">
+			<div class="popup-block map-popup">
+				<div class="popup-close"></div>
+				<div class="popup-content">
+					<div class="map-popup-content">
+						<div id="map-2" class="popup-map-frame"></div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-bg"></div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="address-map-2">
+		<div class="popup-flex">
+			<div class="popup-block map-popup">
+				<div class="popup-close"></div>
+				<div class="popup-content">
+					<div class="map-popup-content">
+						<div id="map-3" class="popup-map-frame"></div>
 					</div>
 				</div>
 			</div>
@@ -2307,6 +2323,7 @@
 	<div class="bg-overlay"></div>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="js/common.js"></script>
 
 	<script type="text/javascript" defer>
 
@@ -2331,6 +2348,30 @@
 				street: 'улица Марселя Салимжанова, 5',
 				workTime: 'Открыто до 20:00'
 			}
+		];
+
+		let mainStreet = [
+			{
+				name: 'Бруталити видеоигры',
+				coordinates: [55.786359, 49.104770],
+				street: 'улица Тази Гиззата, 15',
+				workTime: 'c 15:00 до 19:00'
+			}
+		];
+
+		let districts = [
+			{
+				name: 'Залесный',
+				coordinates: [55.847947, 48.896819]
+			},
+			{
+				name: 'село Осиново',
+				coordinates: [55.877556, 48.889785]
+			},
+			{
+				name: 'село Нижний Услон',
+				coordinates: [55.696473, 48.968298]
+			}
 		]
 
 		ymaps.ready(init);
@@ -2346,7 +2387,27 @@
 				suppressMapOpenBlock: true
 			});
 
-			let myCollection = new ymaps.GeoObjectCollection();
+			let myMap2 = new ymaps.Map("map-2", {
+				center: mainStreet[0].coordinates,
+				zoom: 12,
+				controls: [],
+				duration: 1000
+			}, {
+				suppressMapOpenBlock: true
+			});
+
+			let myMap3 = new ymaps.Map("map-3", {
+				center: mainStreet[0].coordinates,
+				zoom: 10,
+				controls: [],
+				duration: 1000
+			}, {
+				suppressMapOpenBlock: true
+			});
+
+			let myCollection = new ymaps.GeoObjectCollection(),
+					myCollection2 = new ymaps.GeoObjectCollection(),
+					myCollection3 = new ymaps.GeoObjectCollection();
 
 			let MyBalloonLayout = ymaps.templateLayoutFactory.createClass('<div class="popover top">' + '<a class="close popover-close" href="#"><span class="icon-close"></span></a>' + '<div class="arrow"></div>' + '<div class="popover-inner">' + '$[[options.contentLayout observeSize minWidth=328 maxWidth=328 maxHeight=110 minHeight=110]]' + '</div>' + '</div>', {
 				build: function build() {
@@ -2411,7 +2472,7 @@
 								`<div class="map-item-worktime">${item.workTime}</div>`,
 							`</div>`,
 						`</div>`
-					].join(''),
+					].join('');
 
 					myCollection.add(new ymaps.Placemark(item.coordinates, {
 						balloonContent: ballonCont
@@ -2423,11 +2484,76 @@
 						iconLayout: 'default#imageWithContent',
 						iconImageHref: 'img/map-sticker.png',
 						iconImageSize: [59, 59],
-						iconImageOffset: [-29, 0],
+						iconImageOffset: [-29, -29],
 						hideIconOnBalloonOpen: false
 					}));
 
 					myMap.geoObjects.add(myCollection);
+
+				});
+
+				mainStreet.forEach(item => {
+
+					ballonCont = [
+						`<div class="map-item"`,
+							`<div class="map-item-info">`,
+								`<div class="map-item-title">${item.name}</div>`,
+								`<div class="map-item-street">${item.street}</div>`,
+								`<div class="map-item-worktime">${item.workTime}</div>`,
+							`</div>`,
+						`</div>`
+					].join('');
+
+					let placeMark = new ymaps.Placemark(item.coordinates, {
+						balloonContent: ballonCont
+					}, {
+						balloonLayout: MyBalloonLayout,
+						balloonContentLayout: MyBalloonContentLayout,
+						balloonPanelMaxMapArea: 0,
+						balloonOffset: [-53, -131],
+						iconLayout: 'default#imageWithContent',
+						iconImageHref: 'img/map-sticker.png',
+						iconImageSize: [59, 59],
+						iconImageOffset: [-29, -29],
+						hideIconOnBalloonOpen: false
+					});
+
+
+					myCollection2.add(placeMark);
+
+					myMap2.geoObjects.add(myCollection2);
+
+					placeMark.balloon.open();
+
+				});
+
+				districts.forEach(item => {
+
+					ballonCont = [
+						`<div class="map-item"`,
+							`<div class="map-item-info">`,
+								`<div class="map-item-title">${item.name}</div>`,
+							`</div>`,
+						`</div>`
+					].join('');
+
+					let placeMark = new ymaps.Placemark(item.coordinates, {
+						balloonContent: ballonCont
+					}, {
+						balloonLayout: MyBalloonLayout,
+						balloonContentLayout: MyBalloonContentLayout,
+						balloonPanelMaxMapArea: 0,
+						balloonOffset: [-53, -90],
+						iconLayout: 'default#imageWithContent',
+						iconImageHref: 'img/map-sticker.png',
+						iconImageSize: [59, 59],
+						iconImageOffset: [-29, -29],
+						hideIconOnBalloonOpen: false
+					});
+
+					myCollection3.add(placeMark);
+					
+					myMap3.geoObjects.add(myCollection3);
 
 				});
 
@@ -2436,7 +2562,54 @@
 			filterApiData();
 
 			myMap.behaviors.disable('scrollZoom');
+			myMap2.behaviors.disable('scrollZoom');
+			myMap3.behaviors.disable('scrollZoom');
 			myMap.controls.add('zoomControl');
+			myMap2.controls.add('zoomControl');
+			myMap3.controls.add('zoomControl');
+
+			let isMobile = {
+				Android: function() {
+					return navigator.userAgent.match(/Android/i);
+				},
+				BlackBerry: function() {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+				iOS: function() {
+					return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+				},
+				Opera: function() {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+				Windows: function() {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+				any: function() {
+					return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+				}
+			};
+
+			function disableDrag() {
+				if ( isMobile.any() != null ) {
+					myMap.behaviors.disable('drag');
+				}
+				else {
+					myMap.behaviors.enable('drag');
+				}
+			}disableDrag();
+
+			myMap.events.add('click', function(){
+				if ( isMobile.any() != null ) {
+					myMap.behaviors.enable('drag')
+				}
+			});
+
+			$(window).on('scroll', function() {
+				if ( isMobile.any() != null ) {
+					myMap.behaviors.disable('drag')
+				}
+			});
+			$(window).on('resize', disableDrag);
 
 		}
 

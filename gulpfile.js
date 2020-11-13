@@ -51,7 +51,7 @@ gulp.task('scripts', function() {
 		'app/libs/fotorama/fotorama.js',
 		'app/libs/select2/select2.min.js',
 		'app/libs/autosize/autosize.min.js',
-		'app/js/common.js', // Always at the end
+		// 'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
