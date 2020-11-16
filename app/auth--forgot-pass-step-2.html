@@ -1291,56 +1291,7 @@
 					</div>
 
 					<div class="header-auth">
-
-						<div class="header-acc">
-							<div class="header-mob-close"></div>
-							<div class="header-user">
-								<img src="img/avatar.png" loading="lazy" alt="">
-								<div class="header-user-name">Александр Гаврилов</div>
-							</div>
-							<div class="header-user-dropdown">
-								<a href="#" class="header-user-link with-color">
-									<span class="header-user-icon"><img src="img/icons/flash.svg" loading="lazy" alt=""></span>
-									<span class="header-user-title">Кэшбек</span>
-									<span class="header-user-qnt">1250</span>
-								</a>
-								<a href="#" class="header-user-link">
-									<span class="header-user-icon"><img src="img/icons/box-2.svg" loading="lazy" alt=""></span>
-									<span class="header-user-title">Мои заказы</span>
-								</a>
-								<div class="header-user-border">
-									<a href="#" class="header-user-link">
-										<span class="header-user-icon"><img src="img/icons/user-2.svg" loading="lazy" alt=""></span>
-										<span class="header-user-title">Мой профиль</span>
-									</a>
-									<a href="#" class="header-user-link">
-										<span class="header-user-icon"><img src="img/icons/settings-2.svg" loading="lazy" alt=""></span>
-										<span class="header-user-title">Настройки</span>
-									</a>
-								</div>
-								<div class="header-user-exit">
-									<a href="#">Выход</a>
-								</div>
-							</div>
-							<div class="header-user-footer">
-								<div class="header-callback">
-									<div class="header-phone"><a href="#">8 927 438 06 33</a></div>
-									<div class="header-worktime">
-										<div class="header-worktime-title">Консультация</div>
-										<div class="header-worktime-gap">10<sup>00</sup>—19<sup>00</sup></div>
-									</div>
-									<div class="header-soc">
-										<div class="header-soc-title">Напишите нам</div>
-										<div class="soc">
-											<a href="#" class="soc-link whatsapp"><img src="img/icons/whatsapp.svg" loading="lazy" alt=""></a>
-											<a href="#" class="soc-link telegram"><img src="img/icons/telegram.svg" loading="lazy" alt=""></a>
-											<a href="#" class="soc-link phone"><img src="img/icons/phone.svg" loading="lazy" alt=""></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
+						<a href="#auth-popup" class="btn btn-icon btn-white open-popup">Войти <img src="img/icons/arrow-right.svg" loading="lazy" alt=""></a>
 					</div>
 
 				</div>
@@ -1353,70 +1304,31 @@
 		<div class="container">
 			<ul>
 				<li><a href="#">Главная</a></li>
-				<li><span>Личный кабинет</span></li>
+				<li><span>Вход</span></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="page-title">
 		<div class="container">
-			<h1>Кэшбек</h1>
+			<h1>Придумайте новый пароль</h1>
 		</div>
 	</div>
 
-	<div class="account-container">
+	<div class="auth-wrapper">
 		<div class="container">
 			
-			<div class="profile-nav-block">
-				<div class="profile-nav">
-					<a href="#" class="profile-nav-link">
-						<img src="img/icons/user-2.svg" loading="lazy" alt="">
-						<span class="profile-nav-link-title">Мой профиль</span>
-					</a>
-					<a href="#" class="profile-nav-link">
-						<img src="img/icons/box-2.svg" loading="lazy" alt="">
-						<span class="profile-nav-link-title">Мои заказы</span>
-					</a>
-					<a href="#" class="profile-nav-link">
-						<span class="profile-nav-link-title">Кэшбек</span>
-						<span class="basket-cashback-qnt"><span>1 250</span></span>
-					</a>
-					<a href="#" class="profile-nav-link active">
-						<img src="img/icons/settings-2.svg" loading="lazy" alt="">
-						<span class="profile-nav-link-title">Настройки</span>
-					</a>
+			<form class="auth-form">
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Новый пароль">
 				</div>
-			</div>
-
-			<div class="account-tab">
-
-				<div class="settings">
-					
-					<form class="settings-form">
-						
-						<div class="checkbox-item">
-							<label>
-								<input type="checkbox" checked>
-								<span>Получать сообщения об  акциях и спецпредложениях</span>
-							</label>
-						</div>
-
-						<div class="checkbox-item">
-							<label>
-								<input type="checkbox">
-								<span>Получать сообщения об  изменениях статуса моего заказа</span>
-							</label>
-						</div>
-
-						<div class="form-submit">
-							<button type="submit" class="btn">Сохранить</button>
-						</div>
-
-					</form>
-
+				<div class="form-group">
+					<input type="password" class="form-control" placeholder="Подтверждение пароля">
 				</div>
-
-			</div>
+				<div class="form-submit">
+					<button class="btn btn-large btn-block">Восстановить</button>
+				</div>
+			</form>
 
 		</div>
 	</div>
@@ -1873,23 +1785,9 @@
 				<div class="popup-content">
 					<div class="popup-title">
 						<div class="h3">Заказ в 1 клик</div>
-						<p>Оформим ваш заказ за пару минут по телефону</p>
+						<p>Оформим ваш заказ Playstation 4 1Tb PRO Rev 2 + NHL 20 за пару минут по телефону</p>
 					</div>
 					<form class="one-click-form">
-						<div class="product-list-view">
-							<div class="product-list-view-img">
-								<a href="#">
-									<img src="img/products/14.png" loading="lazy" alt="">
-								</a>
-							</div>
-							<div class="product-list-view-name">
-								<div class="h6"><a href="#">Игровая приставка Playstation 4 1Tb PRO Rev 2 + NHL 20</a></div>
-							</div>
-							<div class="product-list-view-price">
-								<div class="current-price danger">28 990 ₽</div>
-								<div class="old-price">5 490 ₽</div>
-							</div>
-						</div>
 						<div class="product-list-view">
 							<div class="product-list-view-img">
 								<a href="#">
@@ -1920,128 +1818,9 @@
 							</div>
 						</div>
 						<div class="form-submit">
-							<button class="btn btn-large open-success-popup" data-success-popup="#thanks-for-order">Отправить заявку</button>
+							<button class="btn btn-large">Отправить заявку</button>
 						</div>
 					</form>
-				</div>
-			</div>
-			<div class="popup-bg"></div>
-		</div>
-	</div>
-
-	<div class="popup-wrapper" id="thanks-for-order">
-		<div class="popup-flex">
-			<div class="popup-block info-popup">
-				<div class="popup-close"></div>
-				<div class="popup-content">
-					<div class="popup-title">
-						<div class="h3">Спасибо за заказ!</div>
-					</div>
-					<div class="info-popup-text">Ваш заказ Playstation 4 1Tb PRO Rev 2 + NHL 20 отправлен на оформление</div>
-					<div class="info-popup-btn">
-						<a href="#" class="btn btn-large close-popup">Продолжить покупки</a>
-					</div>
-				</div>
-			</div>
-			<div class="popup-bg"></div>
-		</div>
-	</div>
-
-	<div class="popup-wrapper" id="credit-popup">
-		<div class="popup-flex">
-			<div class="popup-block one-click-block">
-				<div class="popup-close"></div>
-				<div class="popup-content">
-					<div class="popup-title">
-						<div class="h3">Заявка на кредит</div>
-						<p>Чтобы оформить покупку в кредит, оставьте ваши контакты. Наш специалист свяжется с вами в течении 30 минут</p>
-					</div>
-					<form class="one-click-form">
-						<div class="product-list-view">
-							<div class="product-list-view-img">
-								<a href="#">
-									<img src="img/products/14.png" loading="lazy" alt="">
-								</a>
-							</div>
-							<div class="product-list-view-name">
-								<div class="h6"><a href="#">Игровая приставка Playstation 4 1Tb PRO Rev 2 + NHL 20</a></div>
-							</div>
-							<div class="product-list-view-price">
-								<div class="current-price danger">28 990 ₽</div>
-								<div class="old-price">5 490 ₽</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control phone-mask" placeholder="Телефон">
-						</div>
-						<div class="form-group">
-							<input type="password" class="form-control" placeholder="Пароль">
-						</div>
-						<div class="form-checkbox">
-							<div class="checkbox-item">
-								<label>
-									<input type="checkbox" checked>
-									<span>Я согласен(а) на обработку персональных данных</span>
-								</label>
-							</div>
-						</div>
-						<div class="form-submit">
-							<button class="btn btn-large open-success-popup" data-success-popup="#thanks-for-credit">Отправить заявку</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="popup-bg"></div>
-		</div>
-	</div>
-
-	<div class="popup-wrapper" id="thanks-for-credit">
-		<div class="popup-flex">
-			<div class="popup-block info-popup">
-				<div class="popup-close"></div>
-				<div class="popup-content">
-					<div class="popup-title">
-						<div class="h3">Заявка отправлена</div>
-					</div>
-					<div class="info-popup-text">Наш специалист свяжется с вами в течении 30 минут и поможет вам подобрать кредит</div>
-					<div class="info-popup-btn">
-						<a href="#" class="btn btn-large close-popup">Продолжить покупки</a>
-					</div>
-				</div>
-			</div>
-			<div class="popup-bg"></div>
-		</div>
-	</div>
-
-	<div class="popup-wrapper" id="select-color">
-		<div class="popup-flex">
-			<div class="popup-block select-color-popup">
-				<div class="popup-close"></div>
-				<div class="popup-content">
-					<div class="popup-title">
-						<div class="h3">Цвет ленты</div>
-					</div>
-					<div class="selected-item">
-						<div class="selected-item-img"></div>
-						<div class="selected-item-content">
-							<div class="h6">Вы выбрали</div>
-							<div class="selected-item-name">Бумага упаковочная подарочная крафт "ретро-деньги"</div>
-						</div>
-					</div>
-					<div class="selected-item-colors">
-						<div class="selected-item-colors-item selected">
-							<div class="selected-item-color"></div>
-							<div class="selected-item-color-name">Голубой</div>
-						</div>
-						<div class="selected-item-colors-item">
-							<div class="selected-item-color"></div>
-							<div class="selected-item-color-name">Красный</div>
-						</div>
-						<div class="selected-item-colors-item">
-							<div class="selected-item-color with-border"></div>
-							<div class="selected-item-color-name">Белый</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="popup-bg"></div>
