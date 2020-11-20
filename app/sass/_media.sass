@@ -458,10 +458,19 @@
 	.timeline-item
 		padding-top: 6px
 		min-width: 66px
+		&:after
+			width: 27px
+			height: 27px
+			background-size: 16px
+			top: 9px
 		&:nth-child(odd)
-			padding-left: 20px
+			padding-left: 35px
+			&:after
+				left: 10px
 		&:nth-child(even)
-			padding-right: 20px
+			padding-right: 35px
+			&:after
+				right: 10px
 			.timeline-item-date
 				margin-left: 20px
 	.timeline-item-date
@@ -482,6 +491,8 @@
 	.tl-link-block
 		padding: 20px
 		font-size: 14px
+	.catalog-item .product-img img
+		height: 300px
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -680,6 +691,8 @@
 		font-size: 21px
 	.warranty-body
 		padding: 30px 20px
+	.catalog-item .product-img img
+		height: 330px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -869,8 +882,8 @@
 	.products-slider-with-category .owl-nav button
 		top: 120px
 	.product-img img
-		height: 140px !important
-		width: 140px !important
+		height: 250px !important
+		width: 250px !important
 	.tabs-nav
 		overflow: visible
 	.tabs-nav-slider .owl-nav
@@ -1252,6 +1265,11 @@
 	.not-found-composition img
 		left: 120px
 		width: 150px
+	.catalog-item .product-img img
+		height: 260px !important
+	.product-item.product-item-small .product-img img
+		width: 225px !important
+		height: 225px !important
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1502,6 +1520,9 @@
 			margin-right: 10px
 	.tl-link-block img
 		width: 75px
+	.timeline-item:after
+		left: 10px
+		right: auto !important
 	.timeline-item:nth-child(even) .timeline-item-date
 		margin-left: 0
 	.timeline-item:nth-child(even) .timeline-item-content .h5
@@ -1510,6 +1531,8 @@
 		left: -15px
 	.timeline-item:nth-child(odd):last-child:after
 		left: -15px
+	.timeline-item-date
+		padding-left: 20px
 
 
 // ≥576px
@@ -1774,8 +1797,8 @@
 		justify-content: center
 		margin-bottom: 15px
 		img
-			width: 95px !important
-			height: 95px !important
+			width: 195px !important
+			height: 195px !important
 	.product-sale-stick
 		width: 53px
 		height: 58px
@@ -3055,6 +3078,11 @@
 		width: 100px
 	.auth-wrapper .auth-form
 		max-width: none
+	.catalog-item .product-img img
+		height: 170px !important
+	.search-city-results-item
+		flex: 0 0 100%
+		max-width: 100%
 
 
 

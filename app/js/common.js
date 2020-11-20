@@ -1427,6 +1427,20 @@ $(function() {
 		}, 1000)
 	});
 
+	$('.open-shop-results').on('click', function(e) {
+		e.preventDefault();
+		let thsText = $(this).text();
+		$('.select-city-tab').hide();
+		$('.select-shop-tab').fadeIn(400);
+		$('.current-city-link').text(thsText)
+	});
+
+	$('.current-city-link').on('click', function(e) {
+		e.preventDefault();
+		$('.select-shop-tab').hide();
+		$('.select-city-tab').fadeIn(400);
+	});
+
 	$(window).on('scroll', function() {
 		scrollSidebar();
 	});
