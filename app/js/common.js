@@ -638,6 +638,13 @@ $(function() {
   	if ( $(window).width() < 576 ) {
   		bodyNoScroll();
   	}
+  	$('.catalog-window').fadeOut(400);
+  	$('.bg-overlay').fadeOut(400);
+  	setTimeout(() => {
+  		$('.open-catalog-btn').removeClass('active');
+  	}, 400);
+  	$('.header-mobile-universal-close').removeClass('visible');
+  	bodyHasScroll();
   });
 
   $('.header-mob-close').on('click', function() {

@@ -10,10 +10,8 @@
 	background-color: $accent
 	color: #fff
 
-html, body
-	font-size: .9357vw
-
 body
+	font-size: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.4
@@ -29,19 +27,19 @@ h1, h2, h3, h4,
 	font-family: $font2
 
 h1, .h1
-	font-size: rem(50px)
+	font-size: 50px
 
 h2, .h2
-	font-size: rem(40px)
+	font-size: 40px
 
 h3, .h3
-	font-size: rem(32px)
+	font-size: 32px
 
 h4, .h4
-	font-size: rem(24px)
+	font-size: 24px
 
 h5, .h5
-	font-size: rem(18px)
+	font-size: 18px
 
 button
 	cursor: pointer
@@ -51,17 +49,17 @@ input:focus::placeholder
 	transform: translateY(-10px)
 
 .container
-	padding-left: rem(40px)
-	padding-right: rem(40px)
+	padding-left: 40px
+	padding-right: 40px
 
 .btn
 	display: inline-block
-	height: rem(52px)
-	line-height: rem(52px)
-	border-radius: rem(10px)
+	height: 52px
+	line-height: 52px
+	border-radius: 10px
 	color: #fff !important
 	background-color: $accent
-	padding: 0 rem(22px)
+	padding: 0 22px
 	text-decoration: none !important
 	transition: $time
 	outline: none !important
@@ -77,10 +75,10 @@ input:focus::placeholder
 		align-items: center
 		&:hover
 			img
-				transform: translateX(rem(5px))
+				transform: translateX(5px)
 		img
-			margin-left: rem(12px)
-			width: rem(13px)
+			margin-left: 12px
+			width: 13px
 			flex-shrink: 0
 			transition: $time
 			border-radius: 0 !important
@@ -92,81 +90,79 @@ input:focus::placeholder
 			color: $accent !important
 	&.btn-border
 		background-color: transparent !important
-		height: rem(48px)
-		line-height: rem(46px)
+		height: 48px
+		line-height: 46px
 		border: 1px solid #fff
-		font-size: rem(16px)
+		font-size: 16px
 	&.btn-small
-		padding: 0 rem(22px)
-		height: rem(45px)
-		line-height: rem(45px)
-		border-radius: rem(7px)
+		padding: 0 22px
+		height: 45px
+		line-height: 45px
+		border-radius: 7px
 	&.btn-large
-		height: rem(64px)
-		line-height: rem(64px)
-		font-size: rem(20px)
+		height: 64px
+		line-height: 64px
+		font-size: 20px
 		font-weight: 500
-		padding: 0 rem(50px)
-		&.btn-border-gray
-			line-height: rem(62px)
+		padding: 0 50px
 	&.btn-block
 		width: 100%
-		padding: 0 rem(10px)
+		padding: 0 10px
 		justify-content: center
 	&.btn-border-gray
 		color: $dark !important
 		background-color: transparent
 		border: 1px solid #CFCFCF
-		line-height: rem(50px)
 		&:hover
 			border-color: $accent
 			color: $accent !important
 	&.btn-extrasmall
-		font-size: rem(16px)
+		font-size: 16px
 		font-weight: normal
-		padding: 0 rem(12px)
-		height: rem(36px)
-		line-height: rem(36px)
+		padding: 0 12px
+		height: 36px
+		line-height: 36px
 
 .header-top
 	background-color: #fff
-	padding: 0 rem(100px)
+	padding: 0 100px
 
 .header-top-row
 	display: flex
 	align-items: center
-	height: rem(108px)
+	height: calc(100vh / 8.7673)
+	min-height: 65px
 
 .header-logo
-	margin-right: rem(40px)
+	margin-right: 40px
 
 .logo
 	display: block
 	color: #a8a8a8 !important
 	text-decoration: none !important
 	img
-		width: rem(249px)
-		margin-bottom: rem(16px)
+		width: 249px
+		margin-bottom: 16px
 	span
 		display: block
-		font-size: rem(14px)
+		font-size: 14px
 		white-space: nowrap
 
 .header-cities
-	margin-right: rem(50px)
+	margin-right: 50px
 
 .header-cities-current
 	cursor: pointer
-	height: rem(40px)
-	line-height: rem(38px)
-	width: rem(138px)
+	height: 40px
+	line-height: 38px
+	width: 138px
 	overflow: hidden
 	text-overflow: ellipsis
 	background-color: #fff
 	border: 1px solid #E6E6E6
-	padding: 0 rem(33px) 0 rem(14px)
-	border-radius: rem(10px)
-	font-size: rem(16px)
+	padding: 0 33px 0 14px
+	border-radius: 10px
+	font-size: 16px
 	font-weight: 500
 	position: relative
 	white-space: nowrap
@@ -175,11 +171,11 @@ input:focus::placeholder
 	color: $text !important
 	&:after
 		content: ''
-		width: rem(14px)
-		height: rem(15px)
+		width: 14px
+		height: 15px
 		position: absolute
-		top: rem(12px)
-		right: rem(14px)
+		top: 12px
+		right: 14px
 		background-image: url(../img/icons/angle-down.svg)
 		background-repeat: no-repeat
 		background-position: center
@@ -196,24 +192,24 @@ input:focus::placeholder
 			display: flex
 			align-items: center
 			> li
-				margin-right: rem(25px)
+				margin-right: 25px
 		&.submenu
 			position: absolute
-			top: calc(100% + #{rem(7px)})
+			top: calc(100% + 7px)
 			left: 0
 			z-index: 3
 			background-color: #fff
-			border-radius: rem(10px)
-			padding: rem(15px) 0
+			border-radius: 10px
+			padding: 15px 0
 			box-shadow: 0px 1px 45px rgba(0, 0, 0, 0.08)
 			opacity: 0
 			visibility: hidden
-			transform: translateY(rem(-8px))
+			transform: translateY(-8px)
 			transition: $time
-			max-height: rem(220px)
+			max-height: 220px
 			overflow: hidden auto
 			a
-				padding: rem(7px) rem(30px)
+				padding: 7px 30px
 			&::-webkit-scrollbar
 				width: 4px
 				height: 4px
@@ -225,7 +221,7 @@ input:focus::placeholder
 				background-color: $accent
 	a
 		color: $dark
-		font-size: rem(16px)
+		font-size: 16px
 		font-weight: 500
 		text-decoration: none !important
 		transition: $time
@@ -238,7 +234,7 @@ input:focus::placeholder
 			display: flex
 			align-items: center
 			img
-				margin-left: rem(3px)
+				margin-left: 3px
 				transform: translateY(1px)
 				flex-shrink: 0
 	.has-submenu
@@ -253,13 +249,13 @@ input:focus::placeholder
 				visibility: visible
 				transform: translateY(0)
 		> a
-			padding-right: rem(20px)
+			padding-right: 20px
 			&:after
 				content: ''
-				width: rem(14px)
-				height: rem(15px)
+				width: 14px
+				height: 15px
 				position: absolute
-				top: rem(4px)
+				top: 4px
 				right: 0
 				background-image: url(../img/icons/angle-down.svg)
 				background-repeat: no-repeat
@@ -268,12 +264,12 @@ input:focus::placeholder
 				transition: $time
 
 .header-soc
-	margin-right: rem(9px)
+	margin-right: 9px
 
 .header-soc-title
 	display: none
-	font-size: rem(14px)
-	margin-bottom: rem(10px)
+	font-size: 14px
+	margin-bottom: 10px
 	color: $mute
 
 .soc
@@ -284,10 +280,10 @@ input:focus::placeholder
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	width: rem(52px)
-	height: rem(40px)
+	width: 52px
+	height: 40px
 	background-color: #ccc
-	border-radius: rem(12px)
+	border-radius: 12px
 	transition: $time
 	&.whatsapp
 		background-color: #4CAF50
@@ -296,25 +292,25 @@ input:focus::placeholder
 	&.phone
 		background-color: #FFA200
 	img
-		max-width: rem(26px)
-		max-height: rem(26px)
+		max-width: 26px
+		max-height: 26px
 		object-fit: contain
 	&:hover
 		opacity: .7
 	&:not(:last-child)
-		margin-right: rem(9px)
+		margin-right: 9px
 
 .header-worktime
-	margin-right: rem(70px)
+	margin-right: 70px
 	color: #a8a8a8
-	font-size: rem(14px)
+	font-size: 14px
 
 .header-worktime-gap
 	sup
-		font-size: rem(8px)
+		font-size: 8px
 
 .header-phone
-	font-size: rem(20px)
+	font-size: 20px
 	font-weight: bold
 	white-space: nowrap
 	a
@@ -325,7 +321,7 @@ input:focus::placeholder
 			color: $accent
 
 .header-phone-descr
-	font-size: rem(14px)
+	font-size: 14px
 	color: #a8a8a8
 	white-space: nowrap
 
@@ -408,15 +404,15 @@ input:focus::placeholder
 
 .header-bottom
 	position: relative
-	margin-bottom: rem(10px)
-	padding: rem(35px) 0
+	margin-bottom: 10px
+	padding: 35px 0
 	&:after
 		content: ''
 		position: absolute
 		left: 0
 		width: 100%
 		top: 0
-		height: rem(160px)
+		height: 160px
 		background: linear-gradient(180deg, #E4EBF1 -68.47%, rgba(242, 242, 242, 0) 100%)
 		z-index: -1
 		opacity: 0.7
@@ -427,7 +423,7 @@ input:focus::placeholder
 
 .header-catalog
 	position: relative
-	margin-right: rem(23px)
+	margin-right: 23px
 
 .open-catalog-btn
 	position: relative
@@ -438,14 +434,13 @@ input:focus::placeholder
 	outline: none !important
 	background-color: $accent
 	color: #fff
-	height: rem(52px)
-	line-height: rem(52px)
-	padding: 0 rem(25px) 0 rem(51px)
-	border-radius: rem(7px)
+	height: 52px
+	line-height: 52px
+	padding: 0 25px 0 51px
+	border-radius: 7px
 	cursor: pointer
 	transition: $time
-	max-width: rem(214px)
-	width: rem(214px)
+	max-width: 214px
 	white-space: nowrap
 	text-align: left
 	&:hover
@@ -453,24 +448,24 @@ input:focus::placeholder
 	&.active
 		z-index: 11
 		.toggle-btn
-			transform: rotate(45deg) translate(rem(-2px), rem(1px))
+			transform: rotate(45deg) translate(-2px, -1px)
 			transform-origin: top left
-			width: rem(24px)
+			width: 24px
 			&:after
 				opacity: 0
 				transform: rotate(-45deg)
 			&:before
-				transform: rotate(-90deg) translate(rem(12px), 0px)
+				transform: rotate(-90deg) translate(12px, 0px)
 
 .toggle-btn
 	position: absolute
 	display: inline-block
-	top: rem(19px)
-	left: rem(19px)
-	width: rem(17px)
-	height: rem(2px)
+	top: 19px
+	left: 19px
+	width: 17px
+	height: 2px
 	background-color: #fff
-	border-radius: rem(2px)
+	border-radius: 2px
 	transition: all .15s ease
 	&:after,
 	&:before
@@ -479,18 +474,18 @@ input:focus::placeholder
 		left: 0
 		width: 100%
 		height: 100%
-		border-radius: rem(2px)
+		border-radius: 2px
 		background-color: #fff
 		transition: all .15s ease
 	&:after
-		top: rem(6px)
+		top: 6px
 	&:before
-		top: rem(12px)
+		top: 12px
 
 .header-search
 	flex-grow: 1
-	margin-right: rem(44px)
-	max-width: rem(710px)
+	margin-right: 44px
+	max-width: 710px
 	position: relative
 
 .search-form
@@ -506,17 +501,17 @@ input:focus::placeholder
 	width: 100%
 	outline: none !important
 	border: none
-	height: rem(52px)
-	padding: 0 rem(65px) 0 rem(24px)
+	height: 52px
+	padding: 0 65px 0 24px
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.03)
-	font-size: rem(14px)
+	font-size: 14px
 	color: $dark
 
 .search-btn
-	width: rem(52px)
-	height: rem(52px)
+	width: 52px
+	height: 52px
 	display: block
 	position: absolute
 	background-color: transparent
@@ -527,7 +522,7 @@ input:focus::placeholder
 	padding: 0
 	right: 0
 	top: 0
-	border-radius: rem(10px)
+	border-radius: 10px
 	&.active
 		&:before
 			transform: scale(0)
@@ -538,7 +533,7 @@ input:focus::placeholder
 		background-image: url(../img/icons/search.svg)
 		background-position: center
 		background-repeat: no-repeat
-		background-size: rem(17px)
+		background-size: 17px
 		position: absolute
 		top: 0
 		left: 0
@@ -550,7 +545,7 @@ input:focus::placeholder
 		background-image: url(../img/icons/close.svg)
 		background-position: center
 		background-repeat: no-repeat
-		background-size: rem(14px)
+		background-size: 14px
 		position: absolute
 		top: 0
 		left: 0
@@ -561,14 +556,14 @@ input:focus::placeholder
 
 .search-dropdown
 	position: absolute
-	top: calc(100% + #{rem(8px)})
+	top: calc(100% + 8px)
 	z-index: 15
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.03)
-	padding: rem(25px)
+	padding: 25px
 	transition: transform .4s ease, opacity .4s ease
-	transform: translateY(rem(-15px))
+	transform: translateY(-15px)
 	opacity: 0
 	display: none
 	left: 0
@@ -576,9 +571,9 @@ input:focus::placeholder
 		opacity: 1
 		transform: translateY(0)
 	.h6
-		font-size: rem(12px)
+		font-size: 12px
 		color: #bdbdbd
-		margin-bottom: rem(8px)
+		margin-bottom: 8px
 
 .search-dropdown-container
 	display: flex
@@ -586,18 +581,18 @@ input:focus::placeholder
 .search-dropdown-left
 	width: 50%
 	flex-shrink: 0
-	padding-right: rem(20px)
+	padding-right: 20px
 
 .search-results
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	margin-bottom: rem(6px)
+	margin-bottom: 6px
 	a
 		color: #A7A7A7
 		text-decoration: none !important
-		font-size: rem(14px)
-		margin-bottom: rem(12px)
+		font-size: 14px
+		margin-bottom: 12px
 		line-height: 1.2
 		transition: $time
 		white-space: nowrap
@@ -614,21 +609,21 @@ input:focus::placeholder
 			color: $dark
 
 .search-dropdown-popular-item
-	margin-bottom: rem(23px)
+	margin-bottom: 23px
 	display: flex
 	&:not(:last-child)
-		margin-bottom: rem(17px)
+		margin-bottom: 17px
 
 .search-dropdown-item-img
-	margin-right: rem(8px)
+	margin-right: 8px
 	img
-		width: rem(40px)
-		height: rem(40px)
+		width: 40px
+		height: 40px
 		object-fit: contain
 
 .search-dropdown-item-title
-	margin-bottom: rem(4px)
-	font-size: rem(13px)
+	margin-bottom: 4px
+	font-size: 13px
 	a
 		color: #000
 		text-decoration: none !important
@@ -640,15 +635,15 @@ input:focus::placeholder
 	display: flex
 	align-items: center
 	.current-price
-		font-size: rem(12px)
-		margin-right: rem(8px)
+		font-size: 12px
+		margin-right: 8px
 	.old-price
-		font-size: rem(10px)
+		font-size: 10px
 		color: #BDBDBD
 
 
 .header-sale
-	margin-right: rem(30px)
+	margin-right: 30px
 	a
 		display: inline-flex
 		align-items: center
@@ -656,9 +651,9 @@ input:focus::placeholder
 		text-decoration: none !important
 		font-weight: 500
 		img
-			width: rem(30px)
-			margin-right: rem(8px)
-			transform: translateY(rem(-4px))
+			width: 30px
+			margin-right: 8px
+			transform: translateY(-4px)
 
 .header-auth
 	margin-left: auto
@@ -668,16 +663,16 @@ input:focus::placeholder
 
 .catalog-window
 	position: absolute
-	top: rem(-20px)
-	left: rem(-20px)
+	top: -20px
+	left: -20px
 	z-index: 10
-	width: rem(1213px)
-	max-width: calc(100vw - #{rem(40px)})
+	width: 1213px
+	max-width: calc(100vw - 40px)
 	background-color: #F7F8FB
 	box-shadow: 0px 14px 46px rgba(147, 147, 147, 0.17)
-	padding: rem(20px) 0 0 rem(20px)
+	padding: 20px 0 0 20px
 	overflow: hidden
-	border-radius: rem(10px)
+	border-radius: 10px
 	display: none
 
 .catalog-window-container
@@ -697,15 +692,15 @@ input:focus::placeholder
 	display: none
 
 .catalog-window-header
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	display: flex
 	align-items: center
-	padding-left: rem(237px)
+	padding-left: 237px
 
 .catalog-window-search
 	flex-grow: 1
-	max-width: rem(554px)
-	margin-right: rem(30px)
+	max-width: 554px
+	margin-right: 30px
 
 .catalog-window-body
 	display: flex
@@ -713,11 +708,12 @@ input:focus::placeholder
 	overflow: hidden
 
 .catalog-window-left
-	width: rem(214px)
+	width: 227px
 	flex-shrink: 0
-	margin-right: rem(23px)
+	padding-right: 13px
+	margin-right: 10px
 	overflow: hidden auto
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	&::-webkit-scrollbar
 		width: 4px
 		height: 4px
@@ -730,11 +726,11 @@ input:focus::placeholder
 
 .catalog-window-link
 	display: block
-	height: rem(40px)
-	line-height: rem(40px)
-	border-radius: rem(7px)
+	height: 40px
+	line-height: 40px
+	border-radius: 7px
 	overflow: hidden
-	padding: 0 rem(20px)
+	padding: 0 20px
 	text-overflow: ellipsis
 	transition: $time
 	color: $dark !important
@@ -742,7 +738,7 @@ input:focus::placeholder
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: ellipsis
-	font-size: rem(16px)
+	font-size: 16px
 	&:hover,
 	&.active
 		background-color: #fff
@@ -754,12 +750,12 @@ input:focus::placeholder
 	background-color: #fff
 	border-radius: 10px 0 0 0
 	display: flex
-	padding: rem(30px) rem(85px) 0 rem(30px)
+	padding: 30px 85px 0 30px
 
 .catalog-window-items
 	flex-grow: 1
 	overflow: hidden auto
-	margin-right: rem(10px)
+	margin-right: 10px
 	&::-webkit-scrollbar
 		width: 4px
 		height: 4px
@@ -780,29 +776,29 @@ input:focus::placeholder
 .catalog-window-items-row
 	display: flex
 	flex-wrap: wrap
-	margin: 0 rem(-10px)
+	margin: 0 -10px
 
 .catalog-window-items-col
-	padding: 0 rem(10px)
+	padding: 0 10px
 	width: 100%
 	max-width: 50%
 	flex: 0 0 50%
 
 .catalog-window-item
-	margin-bottom: rem(36px)
+	margin-bottom: 36px
 	display: flex
 
 .catalog-window-items-img
-	margin-right: rem(15px)
+	margin-right: 15px
 	img
-		width: rem(100px)
-		max-height: rem(108px)
+		width: 100px
+		max-height: 108px
 		object-fit: contain
 
 .catalog-window-items-nav
 	.h5
 		font-weight: 500
-		margin-bottom: rem(10px)
+		margin-bottom: 10px
 		a
 			color: $dark
 			text-decoration: none !important
@@ -831,38 +827,38 @@ input:focus::placeholder
 
 .sale-block
 	position: relative
-	border-radius: rem(10px)
+	border-radius: 10px
 	overflow: hidden
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
-	height: rem(443px)
-	width: rem(318px)
+	height: 443px
+	width: 318px
 	flex-shrink: 0
 	display: flex
 	flex-direction: column
 	justify-content: flex-end
-	padding: rem(30px)
+	padding: 30px
 	color: #fff
 
 .bonuses-stick
 	position: absolute
-	top: rem(15px)
+	top: 15px
 	right: 0
 	z-index: 1
 	transform: rotate(6.46deg)
 	color: $accent
-	font-size: rem(14px)
-	padding: rem(40px) rem(70px) 0 0
+	font-size: 14px
+	padding: 40px 70px 0 0
 	line-height: 1.1
 	span
-		font-size: rem(20px)
+		font-size: 20px
 		font-weight: bold
 		display: block
 	&:after
 		content: ''
-		width: rem(171px)
-		height: rem(122px)
+		width: 171px
+		height: 122px
 		position: absolute
 		z-index: -1
 		top: 0
@@ -877,24 +873,24 @@ input:focus::placeholder
 	display: flex
 	align-items: center
 	white-space: nowrap
-	margin-bottom: rem(8px)
+	margin-bottom: 8px
 
 .current-price
-	margin-right: rem(10px)
-	font-size: rem(24px)
+	margin-right: 10px
+	font-size: 24px
 	font-weight: bold
 	white-space: nowrap
 	&.danger
 		color: $red
 
 .old-price
-	font-size: rem(14px)
+	font-size: 14px
 	font-weight: 500
 	text-decoration: line-through
 	white-space: nowrap
 
 .sale-block-name
-	font-size: rem(16px)
+	font-size: 16px
 	line-height: 1.2
 
 .sale-block-link
@@ -905,26 +901,26 @@ input:focus::placeholder
 	height: 100%
 
 .s-main-banner
-	padding-bottom: rem(47px)
+	padding-bottom: 47px
 
 .main-catalog
-	padding: rem(47px) rem(47px) rem(34px)
-	border-radius: rem(10px)
+	padding: 47px 47px 34px
+	border-radius: 10px
 	background-color: #F7F8FB
 	background-image: url(../img/bg-composition-1.svg)
-	background-size: rem(283px)
+	background-size: 283px
 	background-position: top 0 right 0
 	background-repeat: no-repeat
 	min-height: 100%
 
 .main-catalog-title
-	margin-bottom: rem(15px)
+	margin-bottom: 15px
 	color: $dark
-	font-size: rem(22px)
+	font-size: 22px
 	font-weight: bold
 
 .main-catalog-link
-	padding: rem(13px) 0
+	padding: 13px 0
 	display: block
 	color: $dark
 	text-decoration: none !important
@@ -946,11 +942,11 @@ input:focus::placeholder
 .main-banner-slide
 	height: 100%
 	overflow: hidden
-	border-radius: rem(20px)
+	border-radius: 20px
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
-	padding: rem(57px) rem(68px) rem(64px) rem(64px)
+	padding: 57px 68px 64px 64px
 	display: none
 	opacity: 0
 	transition: opacity .4s ease
@@ -983,22 +979,22 @@ input:focus::placeholder
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	padding-right: rem(15px)
+	padding-right: 15px
 	.h3
-		margin-bottom: rem(20px)
+		margin-bottom: 20px
 	p
 		font-weight: 500
-		font-size: rem(16px)
+		font-size: 16px
 	.btn
 		margin-top: auto
 
 .main-banner-slide-right
 	width: 59%
 	flex-shrink: 0
-	padding-top: rem(26px)
+	padding-top: 26px
 	img
 		width: 100%
-		height: rem(230px)
+		height: 230px
 		object-fit: contain
 		object-position: center right
 
@@ -1006,8 +1002,8 @@ input:focus::placeholder
 	position: absolute
 	display: flex
 	align-items: center
-	right: rem(53px)
-	bottom: rem(35px)
+	right: 53px
+	bottom: 35px
 	z-index: 2
 
 .main-banner-slider-thumb
@@ -1019,7 +1015,7 @@ input:focus::placeholder
 	background-repeat: no-repeat
 	background-position: center
 	cursor: pointer
-	margin-left: rem(21px)
+	margin-left: 21px
 	transition: $time
 	&.active
 		transform: scale(1.18)
@@ -1039,40 +1035,40 @@ input:focus::placeholder
 		stroke-dashoffset: 0
 
 .s-adv
-	padding-top: rem(47px)
-	padding-bottom: rem(60px)
+	padding-top: 47px
+	padding-bottom: 60px
 
 .adv-item
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 	text-align: center
 	img
-		width: rem(56px)
-		margin-bottom: rem(25px)
+		width: 56px
+		margin-bottom: 25px
 	.h6
 		color: #585858
 		font-weight: 500
 
 .s-sale
-	padding-top: rem(65px)
-	padding-bottom: rem(35px)
+	padding-top: 65px
+	padding-bottom: 35px
 
 .section-title
 	text-align: center
-	margin-bottom: rem(75px)
+	margin-bottom: 75px
 	&:not(.no-img)
 		.h2
 			&:after
 				content: ''
-				width: rem(283px)
-				height: rem(181px)
+				width: 283px
+				height: 181px
 				background-image: url(../img/section-bg.png)
 				background-size: contain
 				background-repeat: no-repeat
 				background-position: center
 				position: absolute
-				top: rem(-68px)
+				top: -68px
 				left: 50%
-				margin-left: rem(-50px)
+				margin-left: -50px
 				z-index: -1
 	.h2
 		display: inline-block
@@ -1086,10 +1082,10 @@ input:focus::placeholder
 		flex-shrink: 0
 
 .products-slider
-	padding-right: rem(120px)
+	padding-right: 120px
 	.owl-stage-outer
-		padding: rem(50px)
-		margin: rem(-50px) rem(-120px) rem(-50px) rem(-50px)
+		padding: 50px
+		margin: -50px -120px -50px -50px
 
 .product-item
 	height: 100%
@@ -1097,21 +1093,21 @@ input:focus::placeholder
 	flex-direction: column
 	position: relative
 	z-index: 1
-	padding-left: rem(1px)
+	padding-left: 1px
 	&.disable
 		opacity: 0.25
 		.product-btns
-			min-height: rem(45px)
+			min-height: 45px
 			*
 				display: none !important
 	&:after
 		content: ''
 		position: absolute
-		top: rem(-25px)
-		left: rem(-25px)
-		right: rem(-25px)
-		bottom: rem(-25px)
-		border-radius: rem(15px)
+		top: -25px
+		left: -25px
+		right: -25px
+		bottom: -25px
+		border-radius: 15px
 		background-color: #fff
 		box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.03)
 		z-index: -1
@@ -1124,8 +1120,8 @@ input:focus::placeholder
 			opacity: 1
 			transform: translateY(0)
 	&.with-background
-		border-radius: rem(15px)
-		padding: rem(24px)
+		border-radius: 15px
+		padding: 24px
 		&:hover
 			.product-btns
 				transition-delay: .3s
@@ -1135,47 +1131,47 @@ input:focus::placeholder
 			top: 0
 			left: 0
 			right: 0
-			bottom: rem(67px)
+			bottom: 67px
 			opacity: 1
 		.product-sale-stick
 			top: 0
 			right: 0
 
 .product-img
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 	text-align: center
 	position: relative
 	img
-		width: rem(220px) !important
+		width: 220px !important
 		max-width: 100%
-		height: rem(220px)
+		height: 220px
 		object-fit: contain
 		display: inline !important
 
 .product-sale-time
-	margin-bottom: rem(34px)
+	margin-bottom: 34px
 	.h6
-		font-size: rem(12px)
+		font-size: 12px
 		color: $mute
-		margin-bottom: rem(7px)
+		margin-bottom: 7px
 
 .counter
 	display: flex
 	align-items: center
 	span
-		width: rem(32px)
-		height: rem(36px)
+		width: 32px
+		height: 36px
 		flex-shrink: 0
 		display: inline-block
 		position: relative
-		line-height: rem(36px)
+		line-height: 36px
 		text-align: center
-		font-size: rem(20px)
+		font-size: 20px
 		color: $mute
-		border-radius: rem(5px)
+		border-radius: 5px
 		background-color: #F2F2F2
 		&:not(:last-child)
-			margin-right: rem(14px)
+			margin-right: 14px
 			&:after
 				content: ''
 				position: absolute
@@ -1183,8 +1179,8 @@ input:focus::placeholder
 				height: 2px
 				border-radius: 50%
 				background-color: $mute
-				right: rem(-8px)
-				top: rem(17px)
+				right: -8px
+				top: 17px
 		&.counter-seconds
 			color: #FF7121
 			color: linear-gradient(320.25deg, #F14545 11.43%, #FF7121 86.47%)
@@ -1194,15 +1190,15 @@ input:focus::placeholder
 	flex-wrap: wrap
 	white-space: nowrap
 	align-items: center
-	margin-bottom: rem(6px)
+	margin-bottom: 6px
 	.current-price
-		font-size: rem(28px)
+		font-size: 28px
 	.old-price
 		color: $mute
-		font-size: rem(16px)
+		font-size: 16px
 
 .product-name
-	margin-bottom: rem(18px)
+	margin-bottom: 18px
 	a
 		color: $text
 		text-decoration: none !important
@@ -1215,31 +1211,31 @@ input:focus::placeholder
 	align-items: center
 	transition: $time
 	opacity: 0
-	transform: translateY(rem(-10px))
+	transform: translateY(-10px)
 	margin-top: auto
 	a
 		flex-shrink: 0
 	.btn
-		margin-right: rem(17px)
+		margin-right: 17px
 
 .product-compare-btn
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	width: rem(42px)
-	height: rem(42px)
+	width: 42px
+	height: 42px
 	transition: $time
 	&:hover
 		opacity: 0.6
 	img
-		width: rem(16px) !important
+		width: 16px !important
 
 .product-liked-btn
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	width: rem(42px)
-	height: rem(42px)
+	width: 42px
+	height: 42px
 	transition: $time
 	position: relative
 	&:after
@@ -1247,16 +1243,16 @@ input:focus::placeholder
 		position: absolute
 		top: 50%
 		left: 50%
-		margin-left: rem(-11px)
-		margin-top: rem(-10px)
+		margin-left: -11px
+		margin-top: -10px
 		background-image: url(../img/icons/heart-accent.svg)
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
 		transition: $time
 		transform: scale(0)
-		width: rem(22px)
-		height: rem(20px)
+		width: 22px
+		height: 20px
 	&.active
 		&:after
 			transform: scale(1)
@@ -1265,38 +1261,35 @@ input:focus::placeholder
 	&:not(.active):hover
 		opacity: 0.6
 	img
-		width: rem(22px) !important
-		height: rem(22px) !important
-		flex-shrink: 0
-		object-fit: contain
+		width: 22px !important
 		transition: $time
 
 .product-sale-stick
-	width: rem(67px)
-	height: rem(74px)
+	width: 67px
+	height: 74px
 	color: #fff
 	text-align: center
-	padding-top: rem(35px)
+	padding-top: 35px
 	font-weight: bold
 	background-image: url(../img/icons/fire-2.svg)
 	background-size: contain
 	background-repeat: no-repeat
 	background-position: center
 	position: absolute
-	top: rem(-20px)
+	top: -20px
 	right: 0
 
 .owl-nav
 	button
 		position: absolute
 		z-index: 2
-		width: rem(64px)
-		height: rem(64px)
+		width: 64px
+		height: 64px
 		border-radius: 50%
 		background-color: #FFCB72 !important
 		outline: none !important
-		top: rem(133px)
-		background-size: rem(32px) !important
+		top: 133px
+		background-size: 32px !important
 		background-repeat: no-repeat !important
 		transition: $time
 		&.disabled
@@ -1304,41 +1297,41 @@ input:focus::placeholder
 		span
 			display: none
 		&.owl-prev
-			left: rem(-32px)
+			left: -32px
 			background-image: url(../img/icons/angle-left-white.svg) !important
-			background-position: top 50% left calc(50% + #{rem(-2px)}) !important
+			background-position: top 50% left calc(50% - 2px) !important
 		&.owl-next
-			right: rem(-32px)
+			right: -32px
 			background-image: url(../img/icons/angle-right-white.svg) !important
-			background-position: top 50% right calc(50% + #{rem(-2px)}) !important
+			background-position: top 50% right calc(50% - 2px) !important
 
 .s-categories
-	padding-top: rem(40px)
-	padding-bottom: rem(50px)
+	padding-top: 30px
+	padding-bottom: 50px
 	overflow: hidden
 
 .category-item
-	margin-bottom: rem(81px)
-	height: calc(100% - #{rem(81px)})
+	margin-bottom: 81px
+	height: calc(100% - 81px)
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
-	border-radius: rem(10px)
+	border-radius: 10px
 	display: flex
-	padding: rem(34px) rem(37px) rem(30px) rem(30px)
+	padding: 34px 37px 30px 30px
 	position: relative
 	&.category-item--big
 		.category-item-brand
-			margin-bottom: rem(55px)
-			font-size: rem(52px)
+			margin-bottom: 55px
+			font-size: 52px
 			img
-				width: rem(311px)
+				width: 311px
 		.category-item-right
 			img
-				width: rem(300px)
-				height: rem(360px)
+				width: 300px
+				height: 360px
 				margin: 0
-				transform: translateY(rem(-75px))
+				transform: translateY(-75px)
 
 .category-item-left
 	flex-grow: 1
@@ -1346,9 +1339,9 @@ input:focus::placeholder
 	flex-direction: column
 
 .category-item-brand
-	margin-bottom: rem(35px)
+	margin-bottom: 35px
 	flex-grow: 1
-	font-size: rem(22px)
+	font-size: 22px
 	font-family: $font2
 	line-height: 1.2
 	img
@@ -1361,16 +1354,16 @@ input:focus::placeholder
 
 .category-item-nav-link
 	display: inline-block
-	height: rem(32px)
-	line-height: rem(32px)
+	height: 32px
+	line-height: 32px
 	background-color: #fff
 	transition: $time
-	border-radius: rem(10px)
+	border-radius: 10px
 	color: $dark !important
 	text-decoration: none !important
-	font-size: rem(12px)
+	font-size: 12px
 	font-weight: 500
-	padding: 0 rem(10px)
+	padding: 0 10px
 	text-transform: uppercase
 	white-space: nowrap
 	position: relative
@@ -1378,41 +1371,41 @@ input:focus::placeholder
 	text-overflow: ellipsis
 	max-width: 100%
 	&:hover
-		transform: translateX(rem(5px))
+		transform: translateX(5px)
 	&:not(:last-child)
-		margin-bottom: rem(12px)
+		margin-bottom: 12px
 	span
 		position: absolute
 		top: 0
-		height: rem(32px)
-		width: rem(34px)
+		height: 32px
+		width: 34px
 		text-align: center
-		right: rem(-42px)
+		right: -42px
 		background-color: #fff
-		border-radius: rem(10px)
+		border-radius: 10px
 
 .category-item-right
-	padding-left: rem(10px)
+	padding-left: 10px
 	text-align: right
 	img
-		width: rem(123px)
-		height: rem(123px)
+		width: 123px
+		height: 123px
 		max-width: 100%
 		max-height: 100%
 		object-fit: contain
 		object-position: top right
-		margin: rem(-5px) rem(-5px) 0 0
+		margin: -5px -5px 0 0
 
 .category-next-link
 	position: absolute
-	width: rem(32px)
-	height: rem(32px)
+	width: 32px
+	height: 32px
 	border-radius: 50%
 	background-color: #fff
-	right: rem(30px)
-	bottom: rem(30px)
+	right: 30px
+	bottom: 30px
 	background-image: url(../img/icons/arrow-right-black.svg)
-	background-size: rem(12px)
+	background-size: 12px
 	background-position: center
 	background-repeat: no-repeat
 	transition: $time
@@ -1421,42 +1414,42 @@ input:focus::placeholder
 
 .products-with-category
 	display: flex
-	padding-top: rem(50px)
-	padding-bottom: rem(20px)
+	padding-top: 50px
+	padding-bottom: 20px
 
 .products-slider-with-category
 	width: 80%
 	flex-shrink: 0
 	.owl-stage-outer
-		padding: rem(50px)
-		margin: rem(-50px)
+		padding: 50px
+		margin: -50px
 	.owl-nav
 		button
-			top: rem(89px)
+			top: 89px
 
 .products-category
 	width: 20%
 	flex-shrink: 0
-	padding-right: rem(30px)
+	padding-right: 30px
 	.h3
-		font-size: rem(37px)
+		font-size: 37px
 		line-height: 1.19
-		margin-bottom: rem(15px)
+		margin-bottom: 15px
 	a
 		display: inline-block
 		position: relative
-		font-size: rem(20px)
+		font-size: 20px
 		color: $dark !important
 		text-decoration: none !important
 		&:hover:after
-			transform: translateX(rem(7px))
+			transform: translateX(7px)
 		&:after
 			content: ''
-			width: rem(12px)
-			height: rem(12px)
+			width: 12px
+			height: 12px
 			position: absolute
-			top: rem(9px)
-			right: rem(-18px)
+			top: 9px
+			right: -18px
 			background-image: url(../img/icons/angle-right-black.svg)
 			background-size: contain
 			background-repeat: no-repeat
@@ -1464,10 +1457,10 @@ input:focus::placeholder
 			transition: $time
 	img
 		width: 100%
-		margin-top: rem(-30px)
+		margin-top: -30px
 
 .s-game-attr
-	padding: rem(120px) 0
+	padding: 120px 0
 	position: relative
 	overflow: hidden
 	background-color: #D4F0FF
@@ -1477,25 +1470,25 @@ input:focus::placeholder
 	&:after
 		content: ''
 		position: absolute
-		width: rem(1635px)
-		height: rem(1635px)
+		width: 1635px
+		height: 1635px
 		border-radius: 50%
 		opacity: 0.9
 		background: radial-gradient(50% 50% at 50% 50%, #A5FAFF 0%, rgba(165, 250, 255, 0) 100%)
-		top: rem(-817px)
-		left: rem(-615px)
+		top: -817px
+		left: -615px
 	&:before
 		content: ''
 		position: absolute
-		width: rem(1459px)
-		height: rem(1459px)
-		bottom: rem(-606px)
-		right: rem(-730px)
+		width: 1459px
+		height: 1459px
+		bottom: -606px
+		right: -730px
 		border-radius: 50%
 		opacity: 0.7
 		background: radial-gradient(50% 50% at 50% 50%, #85C4FF 0%, rgba(133, 196, 255, 0) 100%)
 	.section-title
-		margin-bottom: rem(45px)
+		margin-bottom: 45px
 
 .tabs-nav-block
 	display: flex
@@ -1503,7 +1496,7 @@ input:focus::placeholder
 	&:after
 		content: ''
 		position: absolute
-		bottom: rem(20px)
+		bottom: 20px
 		left: 0
 		width: 100%
 		height: 1px
@@ -1515,15 +1508,15 @@ input:focus::placeholder
 	margin-right: auto
 	overflow: hidden
 	max-width: 100%
-	padding: 0 rem(40px) rem(20px)
+	padding: 0 40px 20px
 
 .tabs-nav-link
 	display: inline-block
-	padding-bottom: rem(20px)
+	padding-bottom: 20px
 	font-weight: 500
 	color: $dark !important
 	text-decoration: none !important
-	margin-right: rem(68px)
+	margin-right: 68px
 	transition: $time
 	&:not(.active):hover
 		color: $accent !important
@@ -1533,39 +1526,39 @@ input:focus::placeholder
 .switch-border
 	position: absolute
 	left: 0
-	bottom: rem(13px)
-	width: rem(104px)
-	height: rem(8px)
-	border-radius: rem(10px)
+	bottom: 13px
+	width: 104px
+	height: 8px
+	border-radius: 10px
 	background-color: #fff
 	transition: all .4s ease
 	&:after
 		content: ''
 		background-color: #fff
 		position: absolute
-		width: rem(11px)
-		height: rem(11px)
-		border-radius: rem(2px)
+		width: 11px
+		height: 11px
+		border-radius: 2px
 		transform: rotate(45deg)
 		left: 50%
-		margin-left: rem(-5.5px)
-		bottom: rem(-4.5px)
+		margin-left: -5.5px
+		bottom: -4.5px
 
 .tabs-nav-slider
 	.owl-nav
 		button
-			top: rem(-2px)
+			top: -2px
 			background-color: transparent !important
-			background-size: rem(18px) !important
-			width: rem(30px)
-			height: rem(30px)
+			background-size: 18px !important
+			width: 30px
+			height: 30px
 			opacity: 0.5
 			&.owl-prev
 				background-image: url(../img/icons/angle-left-black-2.svg) !important
-				left: rem(-49px)
+				left: -49px
 			&.owl-next
 				background-image: url(../img/icons/angle-right-black-2.svg) !important
-				right: rem(-49px)
+				right: -49px
 			&.disabled
 				opacity: 0.1
 	.owl-item:last-child
@@ -1576,23 +1569,23 @@ input:focus::placeholder
 	transition: opacity .3s ease
 	.owl-nav
 		button
-			top: calc(50% - #{rem(64px)})
+			top: calc(50% - 64px)
 
 .tabs-items
-	margin-top: rem(30px)
+	margin-top: 30px
 
 .tabs-item
 	display: none
 
 .s-try-print
-	padding: rem(87px) 0
+	padding: 87px 0
 
 .print-block
-	border-radius: rem(20px)
+	border-radius: 20px
 	background: linear-gradient(0deg, #F7F8FB, #F7F8FB), linear-gradient(180.95deg, #F7F8FB 32.91%, #EFF2F9 55.46%, #F7F8FB 81.59%)
 	position: relative
 	overflow: hidden
-	padding: rem(60px) rem(170px) rem(82px)
+	padding: 60px 170px 82px
 	&:after
 		content: ''
 		position: absolute
@@ -1667,36 +1660,36 @@ input:focus::placeholder
 
 .print-tshirt-content
 	.h2
-		font-size: rem(50px)
-		max-width: rem(550px)
+		font-size: 50px
+		max-width: 550px
 		line-height: 1.18
-		margin-bottom: rem(42px)
+		margin-bottom: 42px
 	ol
 		counter-reset: counter1
 		list-style-type: none
-		padding: 0 0 rem(12px)
+		padding: 0 0 12px
 		margin: 0
-		max-width: rem(390px)
+		max-width: 390px
 		li
 			position: relative
 			display: flex
-			margin-bottom: rem(30px)
+			margin-bottom: 30px
 			&:before
 				content: counter(counter1)
 				counter-increment: counter1
-				width: rem(47px)
-				height: rem(47px)
+				width: 47px
+				height: 47px
 				top: 0
 				left: 0
 				border-radius: 50%
 				background-color: #fff
-				font-size: rem(20px)
+				font-size: 20px
 				font-weight: bold
-				line-height: rem(47px)
+				line-height: 47px
 				text-align: center
 				flex-shrink: 0
 				display: inline-block
-				margin-right: rem(19px)
+				margin-right: 19px
 			span
 				margin: auto 0
 
@@ -1704,15 +1697,15 @@ input:focus::placeholder
 	display: flex
 	align-items: center
 	flex-wrap: wrap
-	margin-bottom: rem(7px)
+	margin-bottom: 7px
 
 .print-stencils-item
-	width: rem(73px)
-	height: rem(73px)
+	width: 73px
+	height: 73px
 	flex-shrink: 0
-	margin: 0 rem(14px) rem(14px) 0
+	margin: 0 14px 14px 0
 	background-color: #fff
-	padding: rem(10px)
+	padding: 10px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -1724,9 +1717,9 @@ input:focus::placeholder
 		object-fit: contain
 
 .print-custom-text
-	margin: 0 0 rem(29px)
+	margin: 0 0 29px
 	font-weight: 500
-	font-size: rem(14px)
+	font-size: 14px
 	color: #828282
 	display: block
 	cursor: pointer
@@ -1737,10 +1730,10 @@ input:focus::placeholder
 		&:after
 			content: ''
 			position: absolute
-			top: rem(3px)
-			right: rem(-21px)
-			width: rem(14px)
-			height: rem(14px)
+			top: 3px
+			right: -21px
+			width: 14px
+			height: 14px
 			background-image: url(../img/icons/picture.svg)
 			background-position: center
 			background-size: contain
@@ -1755,10 +1748,10 @@ input:focus::placeholder
 	height: 0.01px
 
 .s-about
-	padding-top: rem(39px)
-	padding-bottom: rem(70px)
+	padding-top: 39px
+	padding-bottom: 70px
 	.section-title
-		margin-bottom: rem(120px)
+		margin-bottom: 120px
 
 .about-row
 	display: flex
@@ -1766,7 +1759,7 @@ input:focus::placeholder
 .about-left
 	width: 39%
 	flex-shrink: 0
-	padding-right: rem(15px)
+	padding-right: 15px
 
 .about-right
 	width: 61%
@@ -1774,14 +1767,14 @@ input:focus::placeholder
 
 .accordion
 	position: relative
-	padding-left: rem(51px)
+	padding-left: 51px
 	&:before
 		content: ''
 		position: absolute
 		top: 0
 		left: 0
-		width: rem(8px)
-		border-radius: rem(10px)
+		width: 8px
+		border-radius: 10px
 		background-color: #F2F2F2
 		opacity: 0.4
 		height: 100%
@@ -1789,27 +1782,27 @@ input:focus::placeholder
 .accordion-switch
 	position: absolute
 	display: inline-block
-	width: rem(8px)
+	width: 8px
 	left: 0
 	top: 0
-	height: rem(200px)
-	border-radius: rem(10px)
+	height: 200px
+	border-radius: 10px
 	background-color: #FFDC9E
 	transition: all .4s ease
 	&:after
 		content: ''
 		position: absolute
-		width: rem(11px)
-		height: rem(11px)
-		border-radius: rem(2px)
+		width: 11px
+		height: 11px
+		border-radius: 2px
 		transform: rotate(45deg)
 		top: 50%
-		margin-top: rem(-5.5px)
-		right: rem(-4.5px)
+		margin-top: -5.5px
+		right: -4.5px
 		background-color: #FFDC9E
 
 .accordion-item
-	margin-bottom: rem(4px)
+	margin-bottom: 4px
 	&.active
 		.accordion-title
 			color: $dark
@@ -1819,55 +1812,55 @@ input:focus::placeholder
 	display: none
 
 .accordion-title
-	margin-bottom: rem(29px)
+	margin-bottom: 29px
 	color: $mute
 	font-weight: bold
-	font-size: rem(27px)
+	font-size: 27px
 	line-height: 1.185
 	cursor: pointer
 	transition: $time
 
 .accordion-body
-	font-size: rem(20px)
+	font-size: 20px
 	line-height: 1.2
 	color: $dark
 	display: none
-	margin-bottom: rem(68px)
+	margin-bottom: 68px
 	p
-		margin-bottom: rem(22px)
+		margin-bottom: 22px
 	a
 		color: $accent !important
 		text-decoration: none !important
 		transition: $time
 		display: inline-block
-		font-size: rem(16px)
+		font-size: 16px
 		&:hover
-			transform: translateX(rem(8px))
+			transform: translateX(8px)
 
 .accordion-slider
 	img
-		border-radius: rem(20px)
+		border-radius: 20px
 		width: 100%
 	.owl-nav
 		button
 			top: auto
-			bottom: rem(50px)
-			width: rem(44px)
-			height: rem(44px)
+			bottom: 50px
+			width: 44px
+			height: 44px
 			background-color: #fff !important
-			background-size: rem(16px) !important
+			background-size: 16px !important
 			background-position: center !important
 			&.owl-prev
-				left: rem(50px)
+				left: 50px
 				background-image: url(../img/icons/arrow-left-black.svg) !important
 			&.owl-next
-				right: rem(50px)
+				right: 50px
 				background-image: url(../img/icons/arrow-right-black.svg) !important
 			&.disabled
 				opacity: 0.4
 
 .s-socials
-	padding: rem(70px) 0
+	padding: 70px 0
 
 .socials-item
 	height: 100%
@@ -1876,19 +1869,19 @@ input:focus::placeholder
 	color: #fff
 
 .socials-item-title
-	margin-bottom: rem(36px)
-	font-size: rem(25px)
+	margin-bottom: 36px
+	font-size: 25px
 	font-weight: bold
 	color: $dark
 
 .socials-item-block
-	border-radius: rem(10px)
+	border-radius: 10px
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
 	flex-grow: 1
 	display: flex
-	padding: rem(20px) rem(40px) rem(42px)
+	padding: 20px 40px 42px
 	position: relative
 	overflow: hidden
 	&:hover
@@ -1904,34 +1897,34 @@ input:focus::placeholder
 	height: 100%
 
 .socials-item-img
-	margin-right: rem(35px)
+	margin-right: 35px
 	img
-		width: rem(67px)
+		width: 67px
 		transition: $time
 
 .socials-item-info
-	margin-top: rem(13px)
+	margin-top: 13px
 	.h5
-		font-size: rem(22px)
+		font-size: 22px
 		font-weight: bold
 		line-height: 1.18
-		margin-bottom: rem(14px)
+		margin-bottom: 14px
 	p
 		margin: 0
-		font-size: rem(20px)
+		font-size: 20px
 
 .footer
 	overflow: hidden
 	position: relative
-	padding: rem(50px) 0 rem(95px)
+	padding: 50px 0 95px
 	border-top: 2px solid #FFF6E6
 
 .footer-row
 	display: flex
 	flex-wrap: wrap
-	margin: 0 rem(-10px)
+	margin: 0 -10px
 	> div
-		padding: 0 rem(10px)
+		padding: 0 10px
 		width: 100%
 		display: flex
 		flex-direction: column
@@ -1941,29 +1934,29 @@ input:focus::placeholder
 	flex: 0 0 26%
 
 .footer-logo
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 
 .footer-copyright
 	margin-top: auto
-	font-size: rem(14px)
+	font-size: 14px
 	color: #BDBDBD
 
 .footer-nav
 	max-width: 17%
 	flex: 0 0 17%
-	margin-top: rem(11px)
+	margin-top: 11px
 	.h5
-		font-size: rem(16px)
+		font-size: 16px
 		color: $dark
-		margin-bottom: rem(7px)
+		margin-bottom: 7px
 	nav
 		display: flex
 		flex-direction: column
 		align-items: flex-start
-		font-size: rem(16px)
+		font-size: 16px
 		a
 			color: #a8a8a8
-			margin-bottom: rem(9px)
+			margin-bottom: 9px
 			text-decoration: none !important
 			transition: $time
 			&:hover
@@ -1972,7 +1965,7 @@ input:focus::placeholder
 .footer-contacts
 	max-width: 23%
 	flex: 0 0 23%
-	margin-top: rem(11px)
+	margin-top: 11px
 
 .footer-phone
 	font-weight: bold
@@ -1984,15 +1977,15 @@ input:focus::placeholder
 			color: $accent
 
 .footer-worktime
-	font-size: rem(14px)
+	font-size: 14px
 	color: $mute
 
 .footer-soc-wrapper
-	margin-top: rem(38px)
+	margin-top: 38px
 	.h6
-		font-size: rem(14px)
+		font-size: 14px
 		color: $mute
-		margin-bottom: rem(8px)
+		margin-bottom: 8px
 
 .footer-soc
 	display: flex
@@ -2037,9 +2030,9 @@ input:focus::placeholder
 	position: relative
 	z-index: 1
 	max-width: 100%
-	width: rem(468px)
+	width: 468px
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	overflow-y: auto
 	max-height: 100%
 	transition: opacity .4s ease, transform .4s ease
@@ -2048,41 +2041,41 @@ input:focus::placeholder
 
 .popup-close
 	position: absolute
-	width: rem(32px)
-	height: rem(32px)
-	top: rem(22px)
-	right: rem(22px)
+	width: 32px
+	height: 32px
+	top: 22px
+	right: 22px
 	background-image: url(../img/icons/close.svg)
 	background-repeat: no-repeat
 	background-position: center
-	background-size: rem(16px)
+	background-size: 16px
 	cursor: pointer
 
 .popup-content
-	padding: rem(42px) rem(50px) rem(46px)
+	padding: 42px 50px 46px
 
 .popup-title
-	margin-bottom: rem(40px)
+	margin-bottom: 40px
 	.h3
-		font-size: rem(30px)
+		font-size: 30px
 	p
-		margin: rem(12px) 0 0
-		font-size: rem(16px)
+		margin: 12px 0 0
+		font-size: 16px
 
 .auth-form-nav
 	display: flex
 	justify-content: space-between
 	border: 1px solid rgba(#CFCFCF, .6)
-	border-radius: rem(10px)
-	margin-bottom: rem(35px)
+	border-radius: 10px
+	margin-bottom: 35px
 
 .auth-form-nav-link
 	position: relative
-	height: rem(52px)
-	line-height: rem(52px)
+	height: 52px
+	line-height: 52px
 	margin: -1px
 	display: inline-block
-	border-radius: rem(10px)
+	border-radius: 10px
 	color: $dark !important
 	text-decoration: none !important
 	box-shadow: -4px 4px 26px rgba(147, 147, 147, 0)
@@ -2101,22 +2094,22 @@ input:focus::placeholder
 
 .form-group
 	position: relative
-	margin-bottom: rem(18px)
+	margin-bottom: 18px
 
 .form-label
 	display: block
-	margin: 0 0 rem(6px)
-	font-size: rem(14px)
+	margin: 0 0 6px
+	font-size: 14px
 	color: #828282
 
 .form-control
 	width: 100%
-	height: rem(52px)
+	height: 52px
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	border: 1px solid #E6E6E6
-	padding: 0 rem(23px)
-	font-size: rem(16px)
+	padding: 0 23px
+	font-size: 16px
 	outline: none !important
 	transition: border-color .3s ease
 	&:focus
@@ -2126,32 +2119,31 @@ input:focus::placeholder
 		color: #EB5757 !important
 
 p.form-danger
-	margin: rem(4px) 0 0
+	margin: 4px 0 0
 	font-size: 12px
 	color: #EB5757
 
 
 textarea.form-control
-	padding-top: rem(13px)
-	padding-bottom: rem(7px)
+	padding-top: 13px
 	resize: none
-	max-height: rem(200px)
+	max-height: 200px
 	overflow-y: auto !important
 
 .form-submit
-	margin-top: rem(35px)
+	margin-top: 35px
 
 .form-forgot-pass
 	display: flex
 	justify-content: space-between
-	margin-top: rem(18px)
-	font-size: rem(16px)
+	margin-top: 18px
+	font-size: 16px
 
 .forgot-pass-link
 	text-decoration: none !important
 	transition: $time
 	color: $dark
-	margin-right: rem(20px)
+	margin-right: 20px
 	&:hover
 		color: $accent
 
@@ -2162,50 +2154,50 @@ textarea.form-control
 	color: $accent !important
 
 .question-popup-content
-	padding-top: rem(70px)
-	padding-bottom: rem(70px)
+	padding-top: 70px
+	padding-bottom: 70px
 	.popup-title
 		text-align: center
-		margin-bottom: rem(28px)
+		margin-bottom: 28px
 		.h5
-			font-size: rem(27px)
+			font-size: 27px
 
 .question-popup-content-btns
 	display: flex
 	justify-content: center
 	.btn
-		margin: 0 rem(7.5px)
+		margin: 0 7.5px
 
 .select-city-popup-content
 	.popup-title
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 
 .search-city-search
 	position: relative
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	input
-		padding-right: rem(62px)
+		padding-right: 62px
 
 .search-icon
 	position: absolute
 	top: 0
 	right: 0
-	width: rem(52px)
-	height: rem(52px)
-	border-radius: rem(10px)
+	width: 52px
+	height: 52px
+	border-radius: 10px
 	background-image: url(../img/icons/search.svg)
 	background-position: center
 	background-repeat: no-repeat
-	background-size: rem(17px)
+	background-size: 17px
 
 .search-city-results
-	max-height: rem(300px)
-	padding-right: rem(10px)
+	max-height: 300px
+	padding-right: 10px
 	overflow: hidden auto
 	display: flex
 	flex-wrap: wrap
-	margin-right: rem(-10px)
-	margin-left: rem(-10px)
+	margin-right: -10px
+	margin-left: -10px
 	&::-webkit-scrollbar
 		width: 4px
 		height: 4px
@@ -2217,12 +2209,12 @@ textarea.form-control
 		background-color: $accent
 
 .search-city-results-item
-	margin-bottom: rem(12px)
-	font-size: rem(16px)
+	margin-bottom: 12px
+	font-size: 16px
 	width: 100%
 	flex: 0 0 50%
 	max-width: 50%
-	padding: 0 rem(10px)
+	padding: 0 10px
 	a
 		color: $dark
 		text-decoration: none !important
@@ -2237,20 +2229,20 @@ textarea.form-control
 	display: none
 
 .products-category-mob-more
-	margin-top: rem(30px)
+	margin-top: 30px
 	text-align: center
 	display: none
 
 .account-btns
 	position: fixed
-	top: rem(143px)
-	right: rem(28px)
+	top: 143px
+	right: 28px
 	display: flex
 	flex-direction: column
 	align-items: center
 	background-color: #fff
 	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
-	border-radius: rem(12px) !important
+	border-radius: 12px !important
 	z-index: 5
 	&.opened
 		z-index: 10
@@ -2260,62 +2252,62 @@ textarea.form-control
 			border-bottom-left-radius: 0 !important
 
 .account-btn
-	width: rem(76px)
+	width: 76px
 	display: flex
 	align-items: center
 	justify-content: center
-	padding: rem(21px) 0
+	padding: 21px 0
 	position: relative
 	color: #fff !important
 	text-decoration: none !important
 	transition: opacity .3s ease, background .3s ease
-	border-radius: rem(12px)
+	border-radius: 12px
 	background-color: #fff
 	&:not(.active):not(.mute):hover
 		opacity: 0.7
 	img
-		max-width: rem(29px)
-		max-height: rem(29px)
+		max-width: 29px
+		max-height: 29px
 		object-fit: contain
 	&.active
 		background-color: #fff
 	&.mute
 		background-color: #F1F1F1
-		border-radius: rem(12px) 0 0 rem(12px)
+		border-radius: 12px 0 0 12px
 
 .account-btn-qnt
 	position: absolute
-	width: rem(20px)
-	height: rem(20px)
+	width: 20px
+	height: 20px
 	border-radius: 50%
 	z-index: 1
 	background-color: $accent
-	top: rem(15px)
-	right: rem(10px)
-	font-size: rem(14px)
+	top: 15px
+	right: 10px
+	font-size: 14px
 	font-weight: bold
-	line-height: rem(20px)
+	line-height: 20px
 	text-align: center
 
 .account-btns-item
 	&:first-child .account-btn
-		border-top-right-radius: rem(12px) !important
+		border-top-right-radius: 12px !important
 	&:last-child .account-btn
-		border-bottom-right-radius: rem(12px) !important
+		border-bottom-right-radius: 12px !important
 
 .acc-dropdown
 	position: absolute
 	right: 100%
 	background-color: #fff
-	width: rem(810px)
+	width: 810px
 	top: 0
 	overflow: hidden
-	border-radius: rem(12px) 0 rem(12px) rem(12px)
+	border-radius: 12px 0 12px 12px
 	display: none
 
 .acc-dropdown-container
-	padding: rem(34px) rem(40px) rem(40px) rem(61px)
-	max-height: calc(100vh - #{rem(190px)})
+	padding: 34px 40px 40px 61px
+	max-height: calc(100vh - 190px)
 	overflow: hidden auto
 	&::-webkit-scrollbar
 		width: 3px
@@ -2330,61 +2322,61 @@ textarea.form-control
 	position: absolute
 	top: 0
 	left: 0
-	width: rem(35px)
+	width: 35px
 	cursor: pointer
 	height: 100%
 	background-image: url(../img/icons/angle-right-3.svg)
-	background-size: rem(8px)
+	background-size: 8px
 	background-position: center
 	background-repeat: no-repeat
 	background-color: #F8F9FA
 
 .acc-dropdown-container
 	.h3
-		font-size: rem(20px)
+		font-size: 20px
 		span
-			font-size: rem(14px)
+			font-size: 14px
 			color: #BDBDBD
 			font-family: $font
-			margin-left: rem(7px)
+			margin-left: 7px
 
 .acc-dropdown-header
 	display: flex
 	justify-content: space-between
-	margin-bottom: rem(29px)
+	margin-bottom: 29px
 	align-items: flex-start
 	.h3
-		margin-right: rem(20px)
+		margin-right: 20px
 
 .acc-dropdown-close
-	width: rem(16px)
-	height: rem(16px)
+	width: 16px
+	height: 16px
 	background-image: url(../img/icons/close.svg)
 	flex-shrink: 0
 	background-size: contain
 	background-repeat: no-repeat
 	background-position: center
-	margin-top: rem(6px)
+	margin-top: 6px
 	cursor: pointer
 
 .product-list-view
 	display: flex
-	padding: rem(14px) 0
+	padding: 14px 0
 	border-bottom: 1px solid #E0E0E0
 
 .product-list-view-img
-	margin-right: rem(12px)
+	margin-right: 12px
 	img
-		width: rem(63px)
+		width: 63px
 
 .product-list-view-name
 	flex-grow: 1
-	padding-right: rem(27px)
+	padding-right: 27px
 	.h6
-		font-size: rem(16px)
+		font-size: 16px
 		line-height: 1.2
 		&:not(:last-child)
-			margin-bottom: rem(3px)
+			margin-bottom: 3px
 		a
 			color: $dark
 			text-decoration: none !important
@@ -2393,26 +2385,26 @@ textarea.form-control
 				color: $accent
 	.qnt
 		color: #BDBDBD
-		font-size: rem(16px)
+		font-size: 16px
 	.add-to-cart-btn
-		margin-top: rem(4px)
+		margin-top: 4px
 
 .number-group
 	display: flex
 	flex-shrink: 0
-	width: rem(94px)
-	height: rem(28px)
-	border-radius: rem(4px)
+	width: 94px
+	height: 28px
+	border-radius: 4px
 	border: 1px solid #E0E0E0
 	button
 		background-color: transparent
 		border: none
 		outline: none !important
-		width: rem(30px)
+		width: 30px
 		flex-shrink: 0
-		font-size: rem(20px)
+		font-size: 20px
 		color: $dark
-		line-height: rem(19px)
+		line-height: 19px
 		padding: 0
 		margin: 0
 		position: relative
@@ -2426,25 +2418,25 @@ textarea.form-control
 		&:after
 			content: ''
 			position: absolute
-			height: rem(2px)
-			width: rem(10px)
+			height: 2px
+			width: 10px
 			background-color: $dark
 			top: 50%
-			margin-top: rem(-1px)
+			margin-top: -1px
 			left: 50%
-			margin-left: rem(-5px)
+			margin-left: -5px
 			transition: $time
 		&.number-plus
 			&:before
 				content: ''
 				position: absolute
-				width: rem(2px)
-				height: rem(10px)
+				width: 2px
+				height: 10px
 				background-color: $dark
 				top: 50%
 				left: 50%
-				margin-top: rem(-5px)
-				margin-left: rem(-1px)
+				margin-top: -5px
+				margin-left: -1px
 				transition: $time
 
 .number-input
@@ -2454,32 +2446,32 @@ textarea.form-control
 	text-align: center
 	outline: none !important
 	font-weight: 500
-	font-size: rem(14px)
+	font-size: 14px
 
 .product-list-view-qnt
-	margin-right: rem(18px)
-	min-width: rem(94px)
+	margin-right: 18px
+	min-width: 94px
 
 .product-list-view-price
 	width: 100px
 	flex-shrink: 0
 	text-align: right
 	line-height: 1.1
-	margin-right: rem(20px)
+	margin-right: 20px
 	.current-price
-		font-size: rem(20px)
-		margin: 0 0 rem(8px)
+		font-size: 20px
+		margin: 0 0 8px
 	.old-price
-		font-size: rem(14px)
+		font-size: 14px
 		color: #a8a8a8
 
 .product-list-view-btns
 	display: flex
 	flex-direction: column
-	min-width: rem(16px)
-	padding-top: rem(3px)
+	min-width: 16px
+	padding-top: 3px
 	a
-		margin-bottom: rem(12px)
+		margin-bottom: 12px
 		flex-shrink: 0
 		display: inline-flex
 		align-items: center
@@ -2497,8 +2489,8 @@ textarea.form-control
 			background-position: center
 			transition: $time
 			transform: scale(0)
-			width: rem(16px)
-			height: rem(16px)
+			width: 16px
+			height: 16px
 		&.active
 			&:after
 				transform: scale(1)
@@ -2507,18 +2499,18 @@ textarea.form-control
 		&:not(.active):hover
 			opacity: 0.6
 		img
-			width: rem(16px)
-			height: rem(16px)
+			width: 16px
+			height: 16px
 			object-fit: contain
 			transition: $time
 		&:last-child
 			margin-bottom: 0
 
 .acc-dropdown-products
-	max-height: rem(275px)
+	max-height: 275px
 	overflow: hidden auto
-	padding-right: rem(29px)
-	margin-bottom: rem(35px)
+	padding-right: 29px
+	margin-bottom: 35px
 	&::-webkit-scrollbar
 		width: 3px
 		height: 3px
@@ -2531,30 +2523,30 @@ textarea.form-control
 .acc-dropdown-total
 	text-align: right
 	font-weight: 500
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	span
 		font-weight: bold
-		font-size: rem(22px)
-		margin-left: rem(10px)
+		font-size: 22px
+		margin-left: 10px
 
 .acc-dropdown-btns
 	display: flex
 	justify-content: flex-end
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 
 .acc-dropdown-btn
-	margin-right: rem(19px)
+	margin-right: 19px
 	&:last-child
 		margin-right: 0
 	p
 		text-align: center
-		margin: rem(8px) 0 0
+		margin: 8px 0 0
 		color: #a6a6a6
-		font-size: rem(13px)
+		font-size: 13px
 
 .acc-dropdown-add
 	.h3
-		margin-bottom: rem(20px)
+		margin-bottom: 20px
 
 .acc-dropdown-add-item
 	.product-item
@@ -2562,48 +2554,48 @@ textarea.form-control
 		&:after
 			display: none
 	.product-img
-		margin-bottom: rem(12px)
-		padding-top: rem(20px)
+		margin-bottom: 12px
+		padding-top: 20px
 		img
-			width: rem(83px) !important
-			height: rem(83px) !important
+			width: 83px !important
+			height: 83px !important
 	.product-sale-stick
-		height: rem(51px)
-		width: rem(46px)
-		font-size: rem(12px)
+		height: 51px
+		width: 46px
+		font-size: 12px
 		top: 0
 		right: 0
 		white-space: nowrap
-		padding-top: rem(24px)
+		padding-top: 24px
 	.product-name
-		font-size: rem(13px)
+		font-size: 13px
 		line-height: 1.2
 
 .product-price-sec
 	line-height: 1.1
 	display: flex
 	align-items: flex-end
-	height: rem(35px)
-	margin-bottom: rem(5px)
+	height: 35px
+	margin-bottom: 5px
 
 .product-price-sec-left
-	padding-right: rem(5px)
+	padding-right: 5px
 	flex-grow: 1
 	.old-price
-		font-size: rem(12px)
+		font-size: 12px
 		color: #BDBDBD
 	.current-price
-		font-size: rem(18px)
+		font-size: 18px
 
 .add-to-cart-btn
 	display: inline-block
-	border-radius: rem(4px)
-	width: rem(26px)
-	height: rem(26px)
+	border-radius: 4px
+	width: 26px
+	height: 26px
 	border: 1px solid #E0E0E0
 	transition: $time
 	background-image: url(../img/icons/cart-orange.svg)
-	background-size: rem(15px)
+	background-size: 15px
 	background-repeat: no-repeat
 	background-position: top 50% left calc(50% - 1px)
 	position: relative
@@ -2618,9 +2610,9 @@ textarea.form-control
 		right: -1px
 		bottom: -1px
 		background-color: $accent
-		border-radius: rem(4px)
+		border-radius: 4px
 		background-image: url(../img/icons/cart-white.svg)
-		background-size: rem(15px)
+		background-size: 15px
 		background-repeat: no-repeat
 		background-position: top 50% left calc(50% - 1px)
 		transform: scale(0)
@@ -2636,15 +2628,15 @@ textarea.form-control
 	&:hover
 		color: $accent
 	&:not(:last-child)
-		margin-right: rem(42px)
+		margin-right: 42px
 	img
-		width: rem(18px)
+		width: 18px
 		flex-shrink: 0
-		margin-right: rem(8px)
+		margin-right: 8px
 
 .breadcrumbs
-	margin-top: rem(45px)
-	margin-bottom: rem(30px)
+	margin-top: 45px
+	margin-bottom: 30px
 	ul
 		list-style-type: none
 		padding: 0
@@ -2652,12 +2644,12 @@ textarea.form-control
 		display: flex
 		overflow: hidden
 		li
-			font-size: rem(15px)
+			font-size: 15px
 			color: #BDBDBD
 			white-space: nowrap
 			&:not(:last-child):after
 				content: '—'
-				margin: 0 rem(4px)
+				margin: 0 4px
 				color: #757479
 			a
 				color: #757479
@@ -2674,25 +2666,25 @@ textarea.form-control
 				text-overflow: ellipsis
 
 .page-title
-	margin-bottom: rem(73px)
+	margin-bottom: 73px
 	h1, .h1
-		font-size: rem(40px)
+		font-size: 40px
 		margin: 0
 
 .catalog-sidebar
-	margin-bottom: rem(40px)
-	padding: rem(38px)
-	border-radius: rem(10px)
+	margin-bottom: 40px
+	padding: 38px
+	border-radius: 10px
 	border: 1px solid #EAEAEA
 	position: relative
 
 .catalog-sidebar-title
-	font-size: rem(22px)
+	font-size: 22px
 	font-weight: bold
-	margin-bottom: rem(10px)
+	margin-bottom: 10px
 
 .filter-item
-	padding: rem(30px) 0 rem(12px)
+	padding: 30px 0 12px
 	&:not(:last-child)
 		border-bottom: 1px solid #E0E0E0
 	&.opened
@@ -2702,89 +2694,89 @@ textarea.form-control
 
 .filter-title
 	position: relative
-	font-size: rem(20px)
+	font-size: 20px
 	font-weight: 500
-	padding-right: rem(35px)
+	padding-right: 35px
 	cursor: pointer
-	margin-bottom: rem(18px)
+	margin-bottom: 18px
 	&:after
 		content: ''
 		position: absolute
-		top: rem(3px)
+		top: 3px
 		right: 0
-		width: rem(25px)
-		height: rem(25px)
+		width: 25px
+		height: 25px
 		background-image: url(../img/icons/angle-down-black.svg)
-		background-size: rem(19px)
+		background-size: 19px
 		background-repeat: no-repeat
 		background-position: center
 		transition: $time
 
 .ui-slider-horizontal
-	height: rem(4px)
+	height: 4px
 
 .ui-corner-all, .ui-corner-right, .ui-corner-top, .ui-corner-tr
-	border-radius: rem(20px)
+	border-radius: 20px
 
 .ui-widget.ui-widget-content
 	border: none !important
 
 .ui-widget-content
-	background-color: #E0E0E0
-
-.ui-widget-header
 	background-color: #FFCB72
 
+.ui-widget-header
+	background-color: #E0E0E0
+
 .ui-slider .ui-slider-handle
-	width: rem(18px)
-	height: rem(18px)
+	width: 18px
+	height: 18px
 	outline: none !important
 
 .ui-corner-all, .ui-corner-right, .ui-corner-top, .ui-corner-tr
-	border-radius: rem(9px)
+	border-radius: 9px
 
 .ui-button, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, html .ui-button.ui-state-disabled:active, html .ui-button.ui-state-disabled:hover
 	border: none !important
 	background-color: $accent
 
 .ui-slider-horizontal .ui-slider-handle
-	top: rem(-7px)
-	margin-left: rem(-9px)
+	top: -7px
+	margin-left: -9px
 
 .slider-range-item
-	padding-top: rem(10px)
+	padding-top: 10px
 
 .slider-range
-	margin-bottom: rem(23px)
+	margin-bottom: 23px
 
 .slider-range-inputs
 	display: flex
 	justify-content: space-between
 
 .slider-range-inp
-	width: calc(50% - #{rem(10px)})
+	width: calc(50% - 10px)
 	flex-shrink: 0
 	position: relative
 	span
 		position: absolute
 		color: #a8a8a8
-		font-size: rem(16px)
-		line-height: rem(42px)
+		font-size: 16px
+		line-height: 42px
 		top: 0
-		left: rem(16px)
+		left: 16px
 	.form-control
-		height: rem(40px)
-		font-size: rem(16px)
+		height: 40px
+		font-size: 16px
 		color: #a8a8a8
-		padding-left: rem(36px)
+		padding-left: 36px
 
 .filter-body
-	margin-bottom: rem(18px)
+	margin-bottom: 18px
 
 .checkbox-item
-	font-size: rem(16px)
+	font-size: 16px
 	&:not(:last-child)
-		margin-bottom: rem(14px)
+		margin-bottom: 14px
 	label
 		display: inline-block
 		margin: 0
@@ -2808,16 +2800,16 @@ textarea.form-control
 		span
 			display: block
 			cursor: pointer
-			padding-left: rem(28px)
+			padding-left: 28px
 			position: relative
 			&:before
 				content: ''
 				position: absolute
 				top: 0
 				left: 0
-				width: rem(20px)
-				height: rem(20px)
-				border-radius: rem(3px)
+				width: 20px
+				height: 20px
+				border-radius: 3px
 				border: 1px solid #BDBDBD
 				transition: $time
 				z-index: 0
@@ -2826,20 +2818,20 @@ textarea.form-control
 				position: absolute
 				top: 0
 				left: 0
-				width: rem(20px)
-				height: rem(20px)
-				border-radius: rem(3px)
+				width: 20px
+				height: 20px
+				border-radius: 3px
 				background-color: $accent
 				z-index: 1
 				background-image: url(../img/icons/checkmark.svg)
-				background-size: rem(18px)
+				background-size: 18px
 				background-repeat: no-repeat
 				background-position: center
 				transform: scale(0)
 				transition: $time
 
 .filter-submit
-	margin-bottom: rem(23px)
+	margin-bottom: 23px
 
 .filter-clear
 	text-align: center
@@ -2847,10 +2839,10 @@ textarea.form-control
 .filter-clear-btn
 	display: inline-block
 	position: relative
-	font-size: rem(16px)
+	font-size: 16px
 	color: #a8a8a8 !important
 	text-decoration: none !important
-	padding-right: rem(24px)
+	padding-right: 24px
 	&:hover:after
 		transform: scale(1.1)
 	&:after
@@ -2858,8 +2850,8 @@ textarea.form-control
 		position: absolute
 		top: 1px
 		right: 0
-		width: rem(20px)
-		height: rem(20px)
+		width: 20px
+		height: 20px
 		background-image: url(../img/icons/close-small.svg)
 		background-repeat: no-repeat
 		background-position: center
@@ -2869,16 +2861,16 @@ textarea.form-control
 .filter-help-btn
 	position: absolute
 	left: 100%
-	margin-left: rem(16px)
+	margin-left: 16px
 	top: 0
 	white-space: nowrap
 	cursor: pointer
-	font-size: rem(16px)
+	font-size: 16px
 	color: #fff
-	height: rem(38px)
-	line-height: rem(38px)
-	padding: 0 rem(13px) 0 rem(11px)
-	border-radius: rem(7px)
+	height: 38px
+	line-height: 38px
+	padding: 0 13px 0 11px
+	border-radius: 7px
 	z-index: 5
 	background-color: $accent
 	opacity: 0
@@ -2889,99 +2881,99 @@ textarea.form-control
 		visibility: visible
 	&:after
 		content: ''
-		width: rem(13px)
-		height: rem(13px)
+		width: 13px
+		height: 13px
 		position: absolute
-		border-radius: rem(2px)
-		left: rem(-3px)
+		border-radius: 2px
+		left: -3px
 		top: 50%
-		margin-top: rem(-6.5px)
+		margin-top: -6.5px
 		z-index: -1
 		background-color: $accent
 		transform: rotate(45deg)
 
 .border-block
 	border: 1px solid #EFEFEF
-	border-radius: rem(20px)
+	border-radius: 20px
 	position: relative
-	margin-bottom: rem(57px)
+	margin-bottom: 57px
 
 .border-block-title
-	margin-top: rem(-22px)
-	padding: 0 rem(45px)
+	margin-top: -22px
+	padding: 0 45px
 	.h2
-		font-size: rem(30px)
-		padding: 0 rem(7px)
+		font-size: 30px
+		padding: 0 7px
 		background-color: #fff
 		display: inline-block
 
 .border-block-content
-	padding: rem(30px) rem(45px) rem(45px)
+	padding: 30px 45px 45px
 	// overflow: hidden
 
 .sale-products-slider
-	padding-right: rem(180px)
-	margin-bottom: rem(-30px)
-	margin-right: rem(-45px)
-	margin-left: rem(-45px)
+	padding-right: 180px
+	margin-bottom: -30px
+	margin-right: -45px
+	margin-left: -45px
 	width: auto !important
 	.owl-nav button
 		top: 50%
-		margin-top: rem(-52px)
+		margin-top: -52px
 	.owl-stage
-		padding-left: rem(45px)
+		padding-left: 45px
 	.owl-stage-outer
 		// overflow: visible
-		margin-right: rem(-180px)
+		margin-right: -180px
 	.product-item
-		padding-top: rem(20px)
+		padding-top: 20px
 		&:after
 			display: none
 
 .product-item.product-item-small
 	.product-img img
-		width: rem(155px) !important
-		height: rem(155px) !important
+		width: 155px !important
+		height: 155px !important
 	.product-sale-time
-		margin-bottom: rem(24px)
+		margin-bottom: 24px
 	.product-price
 		display: block
 	.current-price
-		font-size: rem(22px)
+		font-size: 22px
 	.old-price
 		color: #BDBDBD
-		font-size: rem(14px)
+		font-size: 14px
 	.product-name
-		font-size: rem(16px)
+		font-size: 16px
 	.product-sale-stick
-		width: rem(57px)
-		height: rem(64px)
-		font-size: rem(14px)
-		padding-top: rem(31px)
+		width: 57px
+		height: 64px
+		font-size: 14px
+		padding-top: 31px
 
 .catalog-header
 	display: flex
 	align-items: flex-start
-	margin-bottom: rem(63px)
+	margin-bottom: 63px
 	.h2
-		margin-right: rem(20px)
+		margin-right: 20px
 		flex-grow: 1
-		font-size: rem(30px)
+		font-size: 30px
 
 .catalog-sort
 	display: flex
-	margin-top: rem(10px)
+	margin-top: 10px
 
 .catalog-sort-item
 	display: inline-flex
-	margin-right: rem(40px)
+	margin-right: 40px
 	&:nth-last-child(2)
 		margin-right: 0
 
 .catalog-sort-name
-	margin-right: rem(10px)
+	margin-right: 10px
 	color: #828282
-	font-size: rem(16px)
+	font-size: 16px
 	white-space: nowrap
 
 .catalog-sort-block
@@ -2998,16 +2990,16 @@ textarea.form-control
 	position: relative
 	cursor: pointer
 	color: #17212C
-	font-size: rem(16px)
+	font-size: 16px
 	font-weight: 500
-	padding-right: rem(20px)
+	padding-right: 20px
 	white-space: nowrap
 	&:after
 		content: ''
-		width: rem(14px)
-		height: rem(15px)
+		width: 14px
+		height: 15px
 		position: absolute
-		top: rem(4px)
+		top: 4px
 		right: 0
 		background-image: url(../img/icons/angle-down.svg)
 		background-repeat: no-repeat
@@ -3017,23 +3009,23 @@ textarea.form-control
 
 .catalog-sort-dropdown
 	position: absolute
-	top: calc(100% + #{rem(7px)})
+	top: calc(100% + 7px)
 	right: 0
 	z-index: 3
 	background-color: #fff
-	border-radius: rem(10px)
-	padding: rem(10px) 0
+	border-radius: 10px
+	padding: 10px 0
 	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.17)
 	opacity: 0
 	visibility: hidden
 	transform: translateY(-8px)
 	transition: $time
-	font-size: rem(14px)
+	font-size: 14px
 	text-align: right
 	white-space: nowrap
 
 .catalog-sort-option
-	padding: 5px rem(10px)
+	padding: 5px 10px
 	line-height: 1.1
 	cursor: pointer
 	transition: $time
@@ -3047,13 +3039,13 @@ textarea.form-control
 		display: flex
 		justify-content: center
 		.owl-dot
-			width: rem(6px)
-			height: rem(6px)
+			width: 6px
+			height: 6px
 			border-radius: 50%
 			outline: none !important
 			background-color: #c4c4c4 !important
-			margin: 0 rem(4px)
-			margin-top: rem(20px)
+			margin: 0 4px
+			margin-top: 20px
 			&.active
 				background-color: $accent !important
 	.owl-stage-outer
@@ -3064,15 +3056,15 @@ textarea.form-control
 	top: 0
 	left: 0
 	white-space: nowrap
-	height: rem(30px)
-	line-height: rem(30px)
+	height: 30px
+	line-height: 30px
 	color: #fff
 	background-color: #ccc
-	font-size: rem(12px)
+	font-size: 12px
 	text-transform: uppercase
 	font-weight: 500
-	padding: 0 rem(11px)
-	border-radius: rem(6px)
+	padding: 0 11px
+	border-radius: 6px
 	z-index: 2
 	display: inline-block
 	&.lightblue
@@ -3086,34 +3078,34 @@ textarea.form-control
 	position: absolute
 	bottom: 0
 	left: 0
-	width: rem(52px)
-	height: rem(52px)
+	width: 52px
+	height: 52px
 	background-color: #fff
 	z-index: 1
 	border-radius: 50%
 	box-shadow: -4px 7px 25px -3px rgba(111, 101, 101, 0.17)
 	background-image: url(../img/icons/play.svg)
-	background-size: rem(15.17px)
+	background-size: 15.17px
 	background-repeat: no-repeat
-	background-position: top 50% left calc(50% + #{rem(3px)})
+	background-position: top 50% left calc(50% + 3px)
 	background-repeat: no-repeat
 	transition: $time
 	&:hover
 		transform: scale(1.1)
 
 .catalog-item
-	margin-bottom: rem(50px)
-	height: calc(100% - #{rem(50px)})
+	margin-bottom: 50px
+	height: calc(100% - 50px)
 	.product-img
-		padding-top: rem(15px)
+		padding-top: 15px
 		img
-			width: rem(295px) !important
+			width: 295px !important
 			max-width: 100%
-			height: rem(333px)
+			height: 333px
 	.product-name
-		margin-bottom: rem(10px)
+		margin-bottom: 10px
 	.product-price
-		margin-bottom: rem(20px)
+		margin-bottom: 20px
 		flex-wrap: wrap
 		margin-top: auto
 	.current-price
@@ -3121,23 +3113,23 @@ textarea.form-control
 	.old-price
 		color: #BDBDBD
 		width: 100%
-		min-height: rem(22.22px)
+		min-height: 22.22px
 	.product-btns
 		margin-top: 0
 
 .product-available
-	font-size: rem(14px)
-	padding-left: rem(17px)
+	font-size: 14px
+	padding-left: 17px
 	color: #27AE60
 	position: relative
-	margin-bottom: rem(5px)
+	margin-bottom: 5px
 	&:before
 		content: ''
 		position: absolute
 		left: 0
-		top: rem(3px)
-		width: rem(14px)
-		height: rem(14px)
+		top: 3px
+		width: 14px
+		height: 14px
 		background-image: url(../img/icons/checkmark-green.svg)
 		background-size: contain
 		background-repeat: no-repeat
@@ -3149,27 +3141,27 @@ textarea.form-control
 
 .price-discount
 	white-space: nowrap
-	height: rem(23px)
-	line-height: rem(23px)
+	height: 23px
+	line-height: 23px
 	color: #fff
-	border-radius: rem(5px)
-	padding: 0 rem(4px)
+	border-radius: 5px
+	padding: 0 4px
 	background: linear-gradient(320.25deg, #F14545 11.43%, #FF7121 86.47%)
-	margin-left: rem(5px)
+	margin-left: 5px
 	font-weight: 500
-	font-size: rem(14px)
+	font-size: 14px
 
 .s-catalog
 	position: relative
-	padding-bottom: rem(70px)
+	padding-bottom: 70px
 	&:after
 		content: ''
 		position: absolute
 		z-index: -1
-		bottom: rem(-267px)
+		bottom: -267px
 		left: 0
-		width: rem(960px)
-		height: rem(1208px)
+		width: 960px
+		height: 1208px
 		background-image: url(../img/catalog-texture-bg.png)
 		background-size: contain
 		background-repeat: no-repeat
@@ -3179,24 +3171,24 @@ textarea.form-control
 	display: flex
 	justify-content: space-between
 	align-items: center
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 
 .pagination-nav
 	display: flex
 	align-items: flex-start
 	a
-		width: rem(40px)
-		height: rem(40px)
+		width: 40px
+		height: 40px
 		text-align: center
-		line-height: rem(38px)
-		border-radius: rem(7px)
-		font-size: rem(18px)
+		line-height: 38px
+		border-radius: 7px
+		font-size: 18px
 		font-weight: 500
 		color: $accent !important
 		text-decoration: none !important
 		border: 1px solid transparent
 		transition: $time
-		margin-right: rem(20px)
+		margin-right: 20px
 		&:hover
 			border-color: $accent
 		&.active
@@ -3207,30 +3199,30 @@ textarea.form-control
 .pagination-next-page
 	a
 		color: #a8a8a8 !important
-		padding-right: rem(23px)
+		padding-right: 23px
 		text-decoration: none !important
 		position: relative
 		&:after
 			content: ''
 			position: absolute
-			top: rem(7px)
+			top: 7px
 			right: 0
-			width: rem(15px)
-			height: rem(15px)
+			width: 15px
+			height: 15px
 			background-image: url(../img/icons/angle-right-gray.svg)
-			background-size: rem(10px) auto
+			background-size: 10px auto
 			background-repeat: no-repeat
 			background-position: center
 			transition: $time
 		&:hover:after
-			transform: translateX(rem(5px))
+			transform: translateX(5px)
 
 .seo-text
 	line-height: 1.2
-	max-width: rem(906px)
+	max-width: 906px
 	h3
 		font-family: $font
-		font-size: rem(24px)
+		font-size: 24px
 		margin-bottom: .5rem
 		font-weight: 500
 	p
@@ -3243,18 +3235,18 @@ textarea.form-control
 			text-decoration: none
 
 .category-slider
-	margin-bottom: rem(69px)
+	margin-bottom: 69px
 	.owl-nav
 		button
 			top: 50%
-			margin-top: rem(-32px)
+			margin-top: -32px
 
 .category-small-item
-	padding: rem(24px) rem(24px) rem(24px) rem(30px)	
+	padding: 24px 24px 24px 30px	
 	background-color: #F7F8FB
-	border-radius: rem(10px)
+	border-radius: 10px
 	display: flex
-	background-size: rem(319px) auto
+	background-size: 319px auto
 	background-repeat: no-repeat
 	background-position: top 0 right 0
 	height: 100%
@@ -3266,33 +3258,33 @@ textarea.form-control
 		background-image: url(../img/category-small-bg-3.png)
 
 .category-small-left
-	padding-right: rem(15px)
+	padding-right: 15px
 
 .category-small-header
 	display: flex
-	margin-bottom: rem(10px)
+	margin-bottom: 10px
 	.h3
-		margin-right: rem(8px)
-		font-size: rem(24px)
+		margin-right: 8px
+		font-size: 24px
 		font-weight: bold
 		font-family: $font
-		margin-top: rem(2px)
+		margin-top: 2px
 	span
-		width: rem(40px)
-		height: rem(40px)
+		width: 40px
+		height: 40px
 		border-radius: 50%
 		color: #fff
 		background-color: $accent
-		line-height: rem(40px)
+		line-height: 40px
 		text-align: center
 		flex-shrink: 0
-		font-size: rem(16px)
+		font-size: 16px
 		font-weight: 500
 
 .category-small-list-item
 	a
 		font-weight: 500
-		font-size: rem(14px)
+		font-size: 14px
 		color: #a8a8a8
 		text-decoration: none !important
 		transition: $time
@@ -3302,15 +3294,15 @@ textarea.form-control
 .category-small-right
 	display: flex
 	flex-direction: column
-	min-width: rem(110px)
+	min-width: 110px
 	margin-left: auto
 
 .category-small-img
 	flex-grow: 1
-	margin-bottom: rem(15px)
+	margin-bottom: 15px
 	img
-		width: rem(78px) !important
-		height: rem(67px)
+		width: 78px
+		height: 67px
 		object-fit: contain
 
 .catalog-sidebar-close
@@ -3321,13 +3313,13 @@ textarea.form-control
 
 .product-page-left
 	width: 100%
-	max-width: rem(756px)
+	max-width: 756px
 	margin-left: auto
 	margin-right: auto
 	position: relative
 
 .product-page-img
-	margin-top: rem(34px)
+	margin-top: 34px
 	.fotorama__wrap
 		width: 100% !important
 	.fotorama__stage__shaft
@@ -3335,7 +3327,7 @@ textarea.form-control
 			width: auto !important
 			max-width: 80% !important
 			height: auto !important
-			max-height: rem(544px) !important
+			max-height: 544px !important
 			object-fit: contain
 			top: 0 !important
 			left: 0 !important
@@ -3379,9 +3371,9 @@ textarea.form-control
 		background-color: #fff
 		margin: 0
 		background-image: url(../img/icons/play.svg)
-		background-size: rem(21px)
+		background-size: 21px
 		background-repeat: no-repeat
-		background-position: top 50% left calc(50% + #{rem(2px)})
+		background-position: top 50% left calc(50% + 2px)
 	.fotorama__stage__frame
 		.fotorama__video-play
 			background-color: #fff
@@ -3389,20 +3381,20 @@ textarea.form-control
 			background-image: url(../img/icons/play.svg)
 			background-size: 21px
 			background-repeat: no-repeat
-			background-position: top 50% left calc(50% + #{rem(2px)})
+			background-position: top 50% left calc(50% + 2px)
 	.fotorama__nav-wrap
-		margin-top: rem(30px)
+		margin-top: 30px
 
 .gallery-thumbs-nav
 	a
 		display: inline-block
 		position: absolute
-		bottom: rem(50px)
-		width: rem(36px)
-		height: rem(36px)
+		bottom: 50px
+		width: 36px
+		height: 36px
 		border-radius: 50%
 		border: 1px solid $accent
-		background-size: rem(18px)
+		background-size: 18px
 		background-repeat: no-repeat
 		background-position: center
 		transition: $time
@@ -3418,15 +3410,15 @@ textarea.form-control
 			right: 0
 
 .product-main-stick
-	margin-bottom: rem(11px)
+	margin-bottom: 11px
 	.stick
 		position: static
 		display: inline-block
 
 .product-main-name
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	h1, .h1
-		font-size: rem(40px)
+		font-size: 40px
 		line-height: 1.18
 		margin: 0
 		font-family: $font
@@ -3449,7 +3441,7 @@ textarea.form-control
 				opacity: 0
 	span
 		position: relative
-		margin-right: rem(12px)
+		margin-right: 12px
 		display: inline-flex
 		align-items: center
 		&:after
@@ -3457,33 +3449,33 @@ textarea.form-control
 			position: absolute
 			top: 50%
 			left: 50%
-			margin-left: rem(-11px)
-			margin-top: rem(-10px)
+			margin-left: -11px
+			margin-top: -10px
 			background-image: url(../img/icons/heart-accent.svg)
 			background-size: contain
 			background-repeat: no-repeat
 			background-position: center
 			transition: $time
 			transform: scale(0)
-			width: rem(22px)
-			height: rem(20px)
+			width: 22px
+			height: 20px
 	img
-		width: rem(22px)
+		width: 22px
 		flex-shrink: 0
 		transition: $time
 
 .product-main-liked
 	display: flex
-	margin-bottom: rem(50px)
+	margin-bottom: 50px
 	align-items: center
 	a
-		margin-right: rem(20px)
+		margin-right: 20px
 
 .product-main-descr
 	line-height: 1.22
-	margin-bottom: rem(50px)
+	margin-bottom: 50px
 	a
-		font-size: rem(16px)
+		font-size: 16px
 		transition: $time
 		color: $accent !important
 		&:hover
@@ -3493,25 +3485,25 @@ textarea.form-control
 	display: flex
 	align-items: center
 	flex-wrap: wrap
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 	.current-price
-		font-size: rem(38px)
-		margin-right: rem(23px)
+		font-size: 38px
+		margin-right: 23px
 	.old-price
-		font-size: rem(18px)
+		font-size: 18px
 		color: #BDBDBD
 	.product-available
-		margin-top: rem(15px)
+		margin-top: 15px
 		display: none
 
 .cashback
-	font-size: rem(16px)
+	font-size: 16px
 	font-weight: 500
 	color: #459BFF
 	margin-left: auto
 
 .price-link
-	margin-top: rem(5px)
+	margin-top: 5px
 	width: 100%
 	a
 		color: #8E8E8E
@@ -3524,33 +3516,33 @@ textarea.form-control
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	margin-bottom: rem(48px)
+	margin-bottom: 48px
 	.btn
 		flex-shrink: 0
-		padding: 0 rem(20px)
+		padding: 0 20px
 
 .buy-product-btn
 	width: 100%
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 
 .one-click-buy-btn
-	width: calc(50% - #{rem(6px)})
-	margin-bottom: rem(12px)
+	width: calc(50% - 6px)
+	margin-bottom: 12px
 
 .product-main-gift
 	display: flex
 	align-items: center
-	padding: rem(20px)
-	border-radius: rem(10px)
+	padding: 20px
+	border-radius: 10px
 	background-color: #FFF6E6
 	color: #17212C
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 
 .product-main-gift-img
 	width: 100px
 	height: 100px
 	flex-shrink: 0
-	margin-right: rem(18px)
+	margin-right: 18px
 	background-color: #fff
 	border-radius: 50%
 	overflow: hidden
@@ -3569,7 +3561,7 @@ textarea.form-control
 	font-weight: 500
 
 .product-main
-	margin-bottom: rem(100px)
+	margin-bottom: 100px
 
 .s-interested
 	.products-category
@@ -3577,41 +3569,41 @@ textarea.form-control
 			margin-top: 0
 
 .products-slider-with-category
-	padding-right: rem(120px)
-	padding-left: rem(50px)
+	padding-right: 120px
+	padding-left: 50px
 	.owl-stage-outer
-		margin-right: rem(-120px)
+		margin-right: -120px
 
 .product-card
 	display: flex
 	align-items: center
-	padding: rem(23px) rem(40px)
+	padding: 23px 40px
 	background-color: #fff
 	border: 1px solid #E6E6E6
-	border-radius: rem(10px)
-	max-width: rem(985px)
-	margin-bottom: rem(46px)
+	border-radius: 10px
+	max-width: 985px
+	margin-bottom: 46px
 	.product-list-view
 		padding: 0
 		border: none
 		align-items: center
 	.product-list-view-price
-		margin-right: rem(105px)
+		margin-right: 105px
 		text-align: left
 		.old-price
 			color: #BDBDBD
-			font-size: rem(14px)
+			font-size: 14px
 		.current-price
-			font-size: rem(18px)
+			font-size: 18px
 
 .back-to-product
-	margin-right: rem(75px)
+	margin-right: 75px
 
 .go-back-link
 	display: inline-block
 	position: relative
 	white-space: nowrap
-	padding-left: rem(23px)
+	padding-left: 23px
 	color: #17212C !important
 	text-decoration: none !important
 	&:hover:before
@@ -3619,9 +3611,9 @@ textarea.form-control
 	&:before
 		content: ''
 		position: absolute
-		width: rem(13px)
-		height: rem(8px)
-		top: rem(9px)
+		width: 13px
+		height: 8px
+		top: 9px
 		left: 0
 		background-size: contain
 		background-repeat: no-repeat
@@ -3633,29 +3625,29 @@ textarea.form-control
 	h2
 		font-weight: bold
 		font-family: $font
-		font-size: rem(37px)
-		margin-bottom: rem(50px)
+		font-size: 37px
+		margin-bottom: 50px
 
 .descr-title
-	margin-bottom: rem(12px)
+	margin-bottom: 12px
 	font-weight: 500
 
 .descr-list
-	margin-bottom: rem(36px)
+	margin-bottom: 36px
 
 .descr-item
 	display: flex
-	max-width: rem(965px)
-	font-size: rem(16px)
+	max-width: 965px
+	font-size: 16px
 	&:not(:last-child)
-		margin-bottom: rem(14px)
+		margin-bottom: 14px
 	span
 		color: #a8a8a8
 		display: flex
 		align-items: flex-end
 		&:last-child
 			color: #17212C
-			margin-left: rem(10px)
+			margin-left: 10px
 			width: 40%
 			flex-shrink: 0
 		&:first-child
@@ -3666,57 +3658,57 @@ textarea.form-control
 				display: block
 				height: 1px
 				flex-grow: 1
-				margin-left: rem(10px)
+				margin-left: 10px
 				border-top: 1px dashed #E0E0E0
-				margin-bottom: rem(5px)
+				margin-bottom: 5px
 
 .mute-block
-	margin-bottom: rem(50px)
-	max-width: rem(892px)
-	font-size: rem(14px)
+	margin-bottom: 50px
+	max-width: 892px
+	font-size: 14px
 	color: #BDBDBD
 
 .product-description-page
 	display: none
 
 .one-click-block
-	width: rem(555px)
+	width: 555px
 
 .one-click-block
 	.popup-title
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 
 .one-click-form
 	.product-list-view
 		padding: 0
 		border: none
 		align-items: center
-		margin-bottom: rem(29px)
+		margin-bottom: 29px
 	.form-submit
 		text-align: center
 
 .one-click-delivery
-	padding: rem(14px) rem(5px) rem(14px) rem(23px)
-	font-size: rem(16px)
-	border-radius: rem(10px)
+	padding: 14px 5px 14px 23px
+	font-size: 16px
+	border-radius: 10px
 	background-color: #FFF6E6
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 
 .form-checkbox
 	.checkbox-item
-		font-size: rem(14px)
+		font-size: 14px
 		color: #828282
 		span
-			padding-top: rem(1px)
+			padding-top: 1px
 
 .info-popup
-	width: rem(555px)
+	width: 555px
 	.popup-title
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 
 .info-popup-text
-	font-size: rem(16px)
-	margin-bottom: rem(40px)
+	font-size: 16px
+	margin-bottom: 40px
 
 .info-popup-btn
 	text-align: center
@@ -3728,20 +3720,20 @@ textarea.form-control
 	display: inline-block
 	position: relative
 	font-weight: 500
-	font-size: rem(20px)
+	font-size: 20px
 	color: $accent !important
 	transition: $time
 	text-decoration: none !important
-	padding-right: rem(30px)
+	padding-right: 30px
 	&:hover:after
-		transform: translateX(rem(5px))
+		transform: translateX(5px)
 	&:after
 		content: ''
 		position: absolute
-		top: rem(6px)
+		top: 6px
 		right: 0
-		width: rem(18px)
-		height: rem(18px)
+		width: 18px
+		height: 18px
 		background-image: url(../img/icons/angle-right-orange.svg)
 		background-size: contain
 		background-repeat: no-repeat
@@ -3749,25 +3741,25 @@ textarea.form-control
 		transition: $time
 
 .basket-item
-	padding-bottom: rem(40px)
+	padding-bottom: 40px
 	display: flex
 	&:not(:last-child)
-		margin-bottom: rem(40px)
+		margin-bottom: 40px
 		border-bottom: 1px solid #E0E0E0
 
 .basket-item-img
-	margin-right: rem(40px)
+	margin-right: 40px
 	img
-		width: rem(172px)
-		height: rem(166px)
+		width: 172px
+		height: 166px
 		object-fit: contain
 
 .basket-item-name
 	margin-right: auto
-	padding-right: rem(20px)
+	padding-right: 20px
 	.h5
-		font-size: rem(22px)
-		margin-bottom: rem(14px)
+		font-size: 22px
+		margin-bottom: 14px
 		line-height: 1.2
 		a
 			color: #000
@@ -3778,26 +3770,26 @@ textarea.form-control
 
 .basket-item-price
 	text-align: right
-	margin-right: rem(52px)
+	margin-right: 52px
 	.current-price
-		font-size: rem(18px)
+		font-size: 18px
 		margin-right: 0
 	.old-price
-		font-size: rem(14px)
+		font-size: 14px
 		color: #a8a8a8
 		font-weight: normal
 
 .basket-item-qnt
 	.number-group
-		height: rem(33px)
+		height: 33px
 
 .basket-item-total
-	min-width: rem(160px)
-	padding-left: rem(10px)
+	min-width: 160px
+	padding-left: 10px
 	text-align: right
 	.current-price
-		margin: 0	0 rem(18px)
-		font-size: rem(28px)
+		margin: 0	0 18px
+		font-size: 28px
 		line-height: 1
 	.basket-item-remove
 		opacity: 0.6
@@ -3805,21 +3797,21 @@ textarea.form-control
 		&:hover
 			opacity: 1
 		img
-			width: rem(22px)
+			width: 22px
 
 .gift-block
 	border-top: 1px solid #E0E0E0
-	padding-top: rem(40px)
-	padding-bottom: rem(40px)
+	padding-top: 40px
+	padding-bottom: 40px
 
 .gift-header
 	display: flex
 	align-items: center
 	justify-content: space-between
-	margin-bottom: rem(35px)
+	margin-bottom: 35px
 	.h4
 		font-weight: bold
-		font-size: rem(22px)
+		font-size: 22px
 		color: #17212C
 		&.active
 			background: linear-gradient(320.25deg, #F14545 11.43%, #FF7121 86.47%)
@@ -3827,12 +3819,12 @@ textarea.form-control
 			-webkit-text-fill-color: transparent
 			color: #FF7121
 	.current-price
-		font-size: rem(28px)
+		font-size: 28px
 
 .gift-item
-	padding: rem(30px)
+	padding: 30px
 	position: relative
-	border-radius: rem(10px)
+	border-radius: 10px
 	border: 1px solid #c4c4c4
 	height: 100%
 	display: flex
@@ -3843,8 +3835,8 @@ textarea.form-control
 
 .gift-checkbox
 	position: absolute
-	top: rem(16px)
-	left: rem(15px)
+	top: 16px
+	left: 15px
 	input
 		opacity: 0
 		visibility: hidden
@@ -3854,8 +3846,8 @@ textarea.form-control
 			transform: scale(1)
 	span
 		display: inline-block
-		width: rem(30px)
-		height: rem(30px)
+		width: 30px
+		height: 30px
 		border-radius: 50%
 		border: 1px solid #BDBDBD
 		cursor: pointer
@@ -3871,33 +3863,33 @@ textarea.form-control
 			border-radius: 50%
 			background-color: $accent
 			background-image: url(../img/icons/checkmark-white.svg)
-			background-size: rem(16.36px)
+			background-size: 16.36px
 			background-repeat: no-repeat
 			background-position: center
 			transition: $time
 			transform: scale(0)
 
 .gift-img
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	img
-		height: rem(164px)
+		height: 164px
 		width: 100%
 		object-fit: contain
 
 .gift-title
-	font-size: rem(16px)
+	font-size: 16px
 	font-weight: 500
-	margin-bottom: rem(6px)
+	margin-bottom: 6px
 
 .gift-qnt
 	color: #BDBDBD
-	font-size: rem(16px)
+	font-size: 16px
 
 .gift-color-title
-	font-size: rem(16px)
+	font-size: 16px
 	color: #828282
 	margin-top: auto
-	margin-bottom: rem(6px)
+	margin-bottom: 6px
 
 .gift-color
 	display: none
@@ -3906,18 +3898,18 @@ textarea.form-control
 	position: relative
 	margin: 0
 	display: inline-block
-	width: rem(19px)
-	height: rem(19px)
+	width: 19px
+	height: 19px
 	border-radius: 50%
 	flex-shrink: 0
 	cursor: pointer
-	margin-right: rem(10px)
+	margin-right: 10px
 	&.with-border
 		border: 1px solid #E0E0E0
 		span
 			background-color: #000
-			top: rem(4px)
-			left: rem(4px)
+			top: 4px
+			left: 4px
 	input
 		position: absolute
 		z-index: -1
@@ -3928,37 +3920,37 @@ textarea.form-control
 	span
 		position: absolute
 		background-color: #fff
-		width: rem(9px)
-		height: rem(9px)
-		top: rem(5px)
-		left: rem(5px)
+		width: 9px
+		height: 9px
+		top: 5px
+		left: 5px
 		border-radius: 50%
 		transition: $time
 		transform: scale(0)
 
 .gifts-slider
-	padding-right: rem(125px)
+	padding-right: 125px
 	.owl-stage-outer
-		margin-right: rem(-125px)
+		margin-right: -125px
 	.owl-nav
 		button
 			top: 50%
-			margin-top: rem(-32px)
+			margin-top: -32px
 
 .basket-sidebar
 	position: sticky
-	top: rem(40px)
-	border-radius: rem(10px)
+	top: 40px
+	border-radius: 10px
 	box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.05)
-	margin-left: rem(20px)
-	padding: rem(40px)
+	margin-left: 20px
+	padding: 40px
 	z-index: 2
 
 .basket-qnt
 	display: flex
 	align-items: center
-	font-size: rem(22px)
-	margin-bottom: rem(22px)
+	font-size: 22px
+	margin-bottom: 22px
 	span
 		margin-left: auto
 		font-weight: 500
@@ -3966,26 +3958,26 @@ textarea.form-control
 .basket-total
 	display: flex
 	font-weight: 500
-	font-size: rem(22px)
-	margin-bottom: rem(31px)
+	font-size: 22px
+	margin-bottom: 31px
 	span
 		margin-left: auto
-		font-size: rem(27px)
+		font-size: 27px
 		font-weight: bold
 
 .free-delivery
 	display: flex
 	align-items: center
-	padding: rem(22px)
-	border-radius: rem(10px)
+	padding: 22px
+	border-radius: 10px
 	background-color: #FFF6E6
 	color: #17212C
-	margin-bottom: rem(45px)
+	margin-bottom: 45px
 
 .free-delivery-img
-	margin-right: rem(20px)
-	width: rem(70px)
-	height: rem(70px)
+	margin-right: 20px
+	width: 70px
+	height: 70px
 	background-color: #fff
 	border-radius: 50%
 	display: flex
@@ -3993,7 +3985,7 @@ textarea.form-control
 	align-items: center
 	flex-shrink: 0
 	img
-		width: rem(34px)
+		width: 34px
 		flex-shrink: 0
 
 .free-delivery-content
@@ -4004,52 +3996,52 @@ textarea.form-control
 
 .basket-cashback
 	display: flex
-	margin-bottom: rem(23px)
+	margin-bottom: 23px
 	.checkbox-item
-		font-size: rem(20px)
+		font-size: 20px
 		font-weight: 500
 		color: #585858
-		margin-right: rem(11px)
+		margin-right: 11px
 		flex-grow: 1
-		margin: 0 rem(10px) 0 0 !important
+		margin: 0 10px 0 0 !important
 		label
 			span
 				&:after,
 				&:before
-					top: rem(4px)
+					top: 4px
 
 .basket-cashback-qnt
 	position: relative
 	display: inline-block
-	border-radius: rem(7px)
-	padding: 0 rem(10px)
-	height: rem(28px)
-	line-height: rem(28px)
+	border-radius: 7px
+	padding: 0 10px
+	height: 28px
+	line-height: 28px
 	background-color: #459BFF
 	color: #fff
 	font-weight: bold
-	font-size: rem(18px)
+	font-size: 18px
 	white-space: nowrap
 	overflow: hidden
 	&:after
 		content: ''
 		position: absolute
-		width: rem(67px)
-		height: rem(67px)
+		width: 67px
+		height: 67px
 		border-radius: 50%
 		background: radial-gradient(50% 50% at 50% 50%, #B3FFF1 0%, rgba(179, 255, 241, 0) 100%)
-		bottom: rem(3px)
-		left: rem(28px)
+		bottom: 3px
+		left: 28px
 		z-index: 0
 	&:before
 		content: ''
 		position: absolute
-		width: rem(59px)
-		height: rem(59px)
+		width: 59px
+		height: 59px
 		background: radial-gradient(50% 50% at 50% 50%, #001AFF 0%, rgba(0, 26, 255, 0) 100%)
 		border-radius: 50%
-		top: rem(5px)
-		right: rem(33px)
+		top: 5px
+		right: 33px
 		z-index: 0
 	span
 		position: relative
@@ -4059,20 +4051,20 @@ textarea.form-control
 .basket-btns
 	.btn
 		&:not(:last-child)
-			margin-bottom: rem(24px)
+			margin-bottom: 24px
 
 .s-also-buy
-	padding: rem(70px) 0
+	padding: 70px 0
 
 .section-title-2
-	margin-bottom: rem(40px)
+	margin-bottom: 40px
 	.h3
-		font-size: rem(30px)
+		font-size: 30px
 
 .nav-tabs-wrapper
 	overflow: auto hidden
-	padding: rem(30px)
-	margin: rem(-30px) rem(-30px) rem(31px)
+	padding: 30px
+	margin: -30px -30px 31px
 	position: relative
 	z-index: 2
 
@@ -4081,21 +4073,21 @@ textarea.form-control
 	align-items: center
 	background-color: #fff
 	border: 1px solid #CFCFCF
-	border-radius: rem(10px)
+	border-radius: 10px
 	white-space: nowrap
 
 .switch-nav-link
 	display: inline-block
 	transition: $time
 	margin: -1px
-	height: rem(53px)
-	line-height: rem(53px)
+	height: 53px
+	line-height: 53px
 	z-index: 1
 	position: relative
-	padding: 0 rem(25px)
+	padding: 0 25px
 	color: $dark !important
 	text-decoration: none !important
-	border-radius: rem(10px)
+	border-radius: 10px
 	&:not(.active):hover
 		color: $accent !important
 	&.active
@@ -4107,69 +4099,69 @@ textarea.form-control
 
 .also-buy-slider
 	.owl-stage-outer
-		padding: rem(50px)
-		margin: rem(-50px)
+		padding: 50px
+		margin: -50px
 
 .also-buy-slider
 	.owl-nav button
 		top: 50%
-		margin-top: rem(-70px)
+		margin-top: -70px
 	.product-img
 		img
-			width: rem(154px) !important
-			height: rem(154px)
+			width: 154px !important
+			height: 154px
 	.product-sale-time
-		margin-bottom: rem(24px)
+		margin-bottom: 24px
 	.product-price
 		display: block
 		.current-price
-			font-size: rem(22px)
-			margin: 0 0 rem(4px)
+			font-size: 22px
+			margin: 0 0 4px
 		.old-price
-			font-size: rem(14px)
+			font-size: 14px
 			color: #bdbdbd
 	.product-name
-		font-size: rem(16px)
+		font-size: 16px
 
 .s-also-buy
 	overflow: hidden
 
 .select-color-popup
-	width: rem(455px)
+	width: 455px
 
 .selected-item
-	margin-bottom: rem(33px)
+	margin-bottom: 33px
 	display: flex
 
 .selected-item-img
-	margin-right: rem(16px)
+	margin-right: 16px
 	img
-		width: rem(66px)
+		width: 66px
 
 .selected-item-content
 	.h6
 		font-weight: 500
-		margin-bottom: rem(4px)
+		margin-bottom: 4px
 		color: #B3B3B3
 
 .selected-item-name
-	font-size: rem(16px)
+	font-size: 16px
 	line-height: 1.25
 
 .selected-item-colors-item
 	cursor: pointer
-	border-radius: rem(7px)
+	border-radius: 7px
 	border: 1px solid #CFCFCF
 	display: flex
 	align-items: center
-	height: rem(52px)
-	padding: 0 rem(12px)
+	height: 52px
+	padding: 0 12px
 	position: relative
-	font-size: rem(12px)
-	padding-right: rem(40px)
+	font-size: 12px
+	padding-right: 40px
 	transition: $time
 	&:not(:last-child)
-		margin-bottom: rem(8px)
+		margin-bottom: 8px
 	&.selected
 		border-color: #FFA200
 		&:after
@@ -4177,10 +4169,10 @@ textarea.form-control
 	&:after
 		content: ''
 		position: absolute
-		width: rem(20px)
-		height: rem(20px)
-		top: rem(15px)
-		right: rem(15px)
+		width: 20px
+		height: 20px
+		top: 15px
+		right: 15px
 		background-image: url(../img/icons/checkmark-orange.svg)
 		background-repeat: no-repeat
 		background-position: center
@@ -4189,10 +4181,10 @@ textarea.form-control
 		transform: scale(0)
 
 .selected-item-color
-	width: rem(28px)
-	height: rem(28px)
+	width: 28px
+	height: 28px
 	border-radius: 50%
-	margin-right: rem(12px)
+	margin-right: 12px
 	flex-shrink: 0
 	&.with-border
 		border: 1px solid #F5F5F5
@@ -4201,79 +4193,79 @@ textarea.form-control
 	display: none
 
 .gift-selected-color
-	font-size: rem(14px)
+	font-size: 14px
 	color: #BDBDBD
 	display: none
 	p
 		margin: 0
 		display: flex
 	span
-		width: rem(12px)
-		height: rem(12px)
+		width: 12px
+		height: 12px
 		border-radius: 50%
 		flex-shrink: 0
-		margin-left: rem(6px)
+		margin-left: 6px
 		display: inline-block
-		margin-top: rem(5px)
+		margin-top: 5px
 		&.with-border
 			border: 1px solid #e0e0e0
 
 .checkout-acc
 	display: flex
 	align-items: center
-	padding: rem(22px) rem(49px) rem(22px) rem(26px)
+	padding: 22px 49px 22px 26px
 	background-color: #FFF6E6
-	border-radius: rem(10px)
-	margin-bottom: rem(50px)
+	border-radius: 10px
+	margin-bottom: 50px
 
 .checkout-acc-icon
 	display: flex
 	align-items: center
 	justify-content: center
 	flex-shrink: 0
-	width: rem(70px)
-	height: rem(70px)
+	width: 70px
+	height: 70px
 	background-color: #fff
 	border-radius: 50%
-	margin-right: rem(25px)
+	margin-right: 25px
 	img
-		width: rem(42px)
-		transform: translateY(rem(3px))
+		width: 42px
+		transform: translateY(3px)
 
 .checkout-acc-text
-	margin-right: rem(20px)
-	max-width: rem(490px)
+	margin-right: 20px
+	max-width: 490px
 	line-height: 1.125
 	.h5
-		font-size: rem(18px)
+		font-size: 18px
 		font-weight: 500
-		margin-bottom: rem(7px)
+		margin-bottom: 7px
 	p
 		margin: 0
-		font-size: rem(16px)
+		font-size: 16px
 
 .checkout-acc-btn
 	margin-left: auto
 
 .checkout-city
-	margin-bottom: rem(60px)
+	margin-bottom: 60px
 
 .step-title
-	font-size: rem(24px)
+	font-size: 24px
 	font-weight: bold
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 
 .checkout-city-form
-	max-width: rem(628px)
+	max-width: 628px
 	position: relative
 
 .form-group-icon
 	position: relative
 	.form-control
-		padding-right: rem(62px)
+		padding-right: 62px
 	span
-		height: rem(52px)
-		width: rem(52px)
+		height: 52px
+		width: 52px
 		right: 0
 		top: 0
 		display: flex
@@ -4282,26 +4274,26 @@ textarea.form-control
 		position: absolute
 		z-index: 1
 		img
-			width: rem(17px)
+			width: 17px
 			margin: 0 !important
 			border-radius: 0 !important
 			display: inline !important
 
 .checkout-city-dropdown
 	position: absolute
-	top: calc(100% + #{rem(8px)})
+	top: calc(100% + 8px)
 	z-index: 15
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.03)
-	padding: rem(25px)
+	padding: 25px
 	transition: transform .4s ease, opacity .4s ease
-	transform: translateY(rem(-15px))
+	transform: translateY(-15px)
 	opacity: 0
 	display: none
 	left: 0
 	width: 100%
-	max-height: rem(250px)
+	max-height: 250px
 	overflow: hidden auto
 	&.opened
 		opacity: 1
@@ -4325,31 +4317,31 @@ textarea.form-control
 .checkout-delivery-row
 	display: flex
 	justify-content: space-between
-	max-width: rem(672px)
+	max-width: 672px
 
 .checkout-delivery-item
-	width: calc(50% - #{rem(15px)})
+	width: calc(50% - 15px)
 	background-color: #FCFCFC
 	transition: $time
-	padding: rem(30px) rem(82px) rem(30px) rem(30px)
+	padding: 30px 82px 30px 30px
 	position: relative
 	line-height: 1.2
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	border-radius: rem(10px)
+	border-radius: 10px
 	img
-		max-width: rem(159px)
-		max-height: rem(35px)
+		max-width: 159px
+		max-height: 35px
 		object-fit: contain
 		object-position: center left
 	.h5
 		font-weight: 500
-		font-size: rem(20px)
-		margin-bottom: rem(5px)
+		font-size: 20px
+		margin-bottom: 5px
 	p
 		margin: 0
-		font-size: rem(14px)
+		font-size: 14px
 		color: #828282
 
 .checkout-delivery-label
@@ -4374,7 +4366,7 @@ textarea.form-control
 		left: 0
 		width: 100%
 		height: 100%
-		border-radius: rem(10px)
+		border-radius: 10px
 		border: 1px solid #FFA200
 		z-index: 1
 		transition: $time
@@ -4382,10 +4374,10 @@ textarea.form-control
 		&:after
 			content: ''
 			position: absolute
-			top: rem(32px)
-			right: rem(24px)
-			width: rem(28px)
-			height: rem(28px)
+			top: 32px
+			right: 24px
+			width: 28px
+			height: 28px
 			background-image: url(../img/icons/checkmark-orange.svg)
 			background-repeat: no-repeat
 			background-position: center
@@ -4393,68 +4385,68 @@ textarea.form-control
 
 .checkout-delivery-price
 	margin-top: auto
-	padding-top: rem(22px)
+	padding-top: 22px
 	font-weight: bold
 	color: $accent
-	font-size: rem(22px)
+	font-size: 22px
 
 .checkout-delivery-tab
 	display: none
-	margin-bottom: rem(60px)
+	margin-bottom: 60px
 
 .map-wrapper
-	margin-bottom: rem(24px)
+	margin-bottom: 24px
 	img
 		width: 100%
-		border-radius: rem(10px)
+		border-radius: 10px
 
 .delivery-form
-	max-width: rem(760px)
+	max-width: 760px
 	.step-title
-		margin-top: rem(34px)
+		margin-top: 34px
 	.form-group
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 
 .form-row
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
 	.form-group
-		width: calc(50% - #{rem(15px)})
+		width: calc(50% - 15px)
 
 .form-text-mute
-	margin-top: rem(12px)
-	font-size: rem(14px)
+	margin-top: 12px
+	font-size: 14px
 	color: #BDBDBD
 	line-height: 1.2
 
 .select2-container .select2-selection--single
-	height: rem(52px)
+	height: 52px
 	background-color: #fff
 	border: 1px solid #E6E6E6
-	border-radius: rem(10px)
+	border-radius: 10px
 	outline: none !important
 
 .select2-container--default .select2-selection--single .select2-selection__rendered
-	line-height: rem(50px)
-	font-size: rem(16px)
+	line-height: 50px
+	font-size: 16px
 	font-weight: 500
 	color: $dark
-	padding-left: rem(24px)
+	padding-left: 24px
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
-	height: rem(50px)
-	right: rem(17px)
+	height: 50px
+	right: 17px
 	b
 		border: none !important
-		width: rem(12px)
-		height: rem(12px)
+		width: 12px
+		height: 12px
 		background-image: url(../img/icons/triangle.svg)
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
-		margin-top: rem(-6px)
-		margin-left: rem(-6px)
+		margin-top: -6px
+		margin-left: -6px
 		transition: $time
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
@@ -4471,25 +4463,25 @@ textarea.form-control
 		background-color: #E0E0E0
 
 .select2-dropdown
-	border-radius: rem(10px)
+	border-radius: 10px
 	border: none
 	box-shadow: -4px 4px 36px rgba(147,147,147,.17)
-	font-size: rem(14px)
+	font-size: 14px
 
 .select2-container--default .select2-results__option--selected
 	background-color: #ededed
 
 .select2-results__option
-	padding: rem(7px) rem(14px)
+	padding: 7px 14px
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
 	background-color: $accent
 
 .pay-method
-	margin-bottom: rem(60px)
+	margin-bottom: 60px
 
 .radio-item
-	margin-bottom: rem(10px)
+	margin-bottom: 10px
 
 .radio
 	display: inline-block
@@ -4509,51 +4501,51 @@ textarea.form-control
 	span
 		display: block
 		color: $dark
-		font-size: rem(16px)
-		padding-left: rem(28px)
+		font-size: 16px
+		padding-left: 28px
 		position: relative
 		&:after
 			content: ''
 			position: absolute
-			top: rem(2px)
+			top: 2px
 			left: 0
-			width: rem(18px)
-			height: rem(18px)
+			width: 18px
+			height: 18px
 			border-radius: 50%
 			border: 1px solid #BDBDBD
 			cursor: pointer
 		&:before
 			content: ''
 			position: absolute
-			top: rem(7px)
-			left: rem(5px)
-			width: rem(8px)
-			height: rem(8px)
+			top: 7px
+			left: 5px
+			width: 8px
+			height: 8px
 			border-radius: 50%
 			background-color: $accent
 			transition: $time
 			transform: scale(0)
 
 .comment-block
-	margin-bottom: rem(60px)
-	max-width: rem(760px)
+	margin-bottom: 60px
+	max-width: 760px
 
 .checkout-submit
-	max-width: rem(416px)
+	max-width: 416px
 
 .text-mute
-	margin-top: rem(15px)
-	font-size: rem(16px)
+	margin-top: 15px
+	font-size: 16px
 	color: #BDBDBD
 	line-height: 1.1875
 
 .checkout
-	margin-bottom: rem(100px)
+	margin-bottom: 100px
 
 .checkout-cart
-	margin-bottom: rem(40px)
+	margin-bottom: 40px
 	font-weight: bold
-	font-size: rem(22px)
+	font-size: 22px
 	display: flex
 	justify-content: space-between
 	line-height: 1.1
@@ -4562,16 +4554,16 @@ textarea.form-control
 		color: $accent !important
 		transition: $time
 		font-weight: normal
-		font-size: rem(18px)
+		font-size: 18px
 
 .checkout-subtotal
 	display: flex
 	line-height: 1.1
 	align-items: flex-end
 	justify-content: space-between
-	margin-bottom: rem(16px)
+	margin-bottom: 16px
 	span
-		font-size: rem(22px)
+		font-size: 22px
 		font-weight: bold
 		&.accent
 			color: #459BFF
@@ -4582,36 +4574,36 @@ textarea.form-control
 	align-items: center
 	justify-content: space-between
 	border-top: 1px solid #E0E0E0
-	padding: rem(18px) 0
+	padding: 18px 0
 	font-weight: 500
 	color: #a8a8a8
-	font-size: rem(22px)
+	font-size: 22px
 	span
 		font-weight: bold
-		font-size: rem(27px)
+		font-size: 27px
 		color: #000
 
 .checkout-composition
-	padding: rem(23px) rem(27px) rem(21px)
-	border-radius: rem(10px)
+	padding: 23px 27px 21px
+	border-radius: 10px
 	border: 1px solid #E9E9E9
-	margin-bottom: rem(44px)
+	margin-bottom: 44px
 	.h5
-		margin-bottom: rem(15px)
+		margin-bottom: 15px
 		font-weight: bold
-		font-size: rem(20px)
+		font-size: 20px
 	.product-list-view-img img
-		width: rem(54px)
+		width: 54px
 
 
 .product-list-view
 	border: none !important
 
 .checkout-composition-list
-	max-height: rem(250px)
+	max-height: 250px
 	flex-shrink: 0
 	overflow: hidden auto
-	padding: 0 rem(10px)
+	padding: 0 10px
 	&::-webkit-scrollbar
 		width: 3px
 		height: 3px
@@ -4628,25 +4620,25 @@ textarea.form-control
 	display: none
 	.btn
 		img
-			width: rem(20px)
+			width: 20px
 
 .step-title-small
 	font-weight: 500
-	font-size: rem(16px)
-	margin-bottom: rem(16px)
+	font-size: 16px
+	margin-bottom: 16px
 
 .select-delivery-service
 	display: flex
 	flex-wrap: wrap
-	margin: 0 rem(-15px) rem(100px)
+	margin: 0 -15px 100px
 
 .delivery-servive
 	width: 100%
 	flex: 0 0 33.33333%
 	max-width: 33.3333%
-	padding: 0 rem(15px)
-	margin-bottom: rem(24px)
-	height: calc(100% - #{rem(24px)})
+	padding: 0 15px
+	margin-bottom: 24px
+	height: calc(100% - 24px)
 	.checkout-delivery-item
 		width: 100%
 
@@ -4663,25 +4655,25 @@ textarea.form-control
 .header-user
 	display: flex
 	align-items: center
-	max-width: rem(255px)
+	max-width: 255px
 	white-space: nowrap
 	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
 	background-color: #fff
-	border-radius: rem(7px)
-	height: rem(52px)
-	line-height: rem(52px)
-	padding: 0 rem(15px) 0 rem(18px)
+	border-radius: 7px
+	height: 52px
+	line-height: 52px
+	padding: 0 15px 0 18px
 	cursor: pointer
 	img
-		width: rem(32px)
-		height: rem(32px)
+		width: 32px
+		height: 32px
 		border-radius: 50%
 		object-fit: cover
 		flex-shrink: 0
-		margin-right: rem(10px)
+		margin-right: 10px
 
 .header-user-name
-	font-size: rem(18px)
+	font-size: 18px
 	transition: $time
 	color: $dark
 	overflow-x: hidden
@@ -4690,13 +4682,13 @@ textarea.form-control
 .header-user-dropdown
 	position: absolute
 	right: 0
-	top: calc(100% + #{rem(8px)})
-	min-width: rem(315px)
+	top: calc(100% + 8px)
+	min-width: 315px
 	background-color: #fff
-	border-radius: rem(7px)
+	border-radius: 7px
 	z-index: 6
 	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
-	padding: rem(25px) rem(15px) rem(30px)
+	padding: 25px 15px 30px
 	transition: all .4s ease
 	opacity: 0
 	visibility: hidden
@@ -4720,9 +4712,9 @@ textarea.form-control
 		background-color: #FFFBF5
 
 .header-user-icon
-	width: rem(22px)
-	height: rem(22px)
-	margin-right: rem(10px)
+	width: 22px
+	height: 22px
+	margin-right: 10px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -4755,17 +4747,17 @@ textarea.form-control
 	.header-user-link
 		height: auto
 		line-height: 1.2
-		margin-bottom: rem(12px)
+		margin-bottom: 12px
 		&:last-child
 			margin-bottom: 0
 
 .header-user-exit
-	padding-left: rem(47px)
-	padding-top: rem(14px)
+	padding-left: 47px
+	padding-top: 14px
 	a
 		display: inline-block
 		position: relative
-		padding-right: rem(27px)
+		padding-right: 27px
 		transition: $time
 		font-weight: 500
 		color: #000!important
@@ -4774,15 +4766,15 @@ textarea.form-control
 			opacity: 0.5
 		&:after
 			content: ''
-			width: rem(15px)
-			height: rem(8px)
+			width: 15px
+			height: 8px
 			background-image: url(../img/icons/arrow-right.svg)
 			background-size: contain
 			background-repeat: no-repeat
 			background-position: center
 			position: absolute
 			right: 0
-			top: rem(10px)
+			top: 10px
 
 .header-acc-close
 	display: none
@@ -4791,7 +4783,7 @@ textarea.form-control
 	display: none
 
 .profile-nav-block
-	margin-bottom: rem(50px)
+	margin-bottom: 50px
 
 .profile-nav
 	display: flex
@@ -4799,45 +4791,45 @@ textarea.form-control
 
 .profile-nav-link
 	display: inline-block
-	height: rem(52px)
-	line-height: rem(52px)
-	padding: 0 rem(15px)
+	height: 52px
+	line-height: 52px
+	padding: 0 15px
 	display: flex
 	align-items: center
 	transition: $time
 	text-decoration: none !important
-	border-radius: rem(7px)
+	border-radius: 7px
 	color: #000 !important
 	&.active,
 	&:hover
 		background-color: #FFF6E6
 	&:not(:last-child)
-		margin-right: rem(57px)
+		margin-right: 57px
 	img
-		width: rem(32px)
-		height: rem(32px)
+		width: 32px
+		height: 32px
 		flex-shrink: 0
 	.basket-cashback-qnt
-		margin-left: rem(10px)
+		margin-left: 10px
 
 .profile-nav-link-title
-	font-size: rem(22px)
+	font-size: 22px
 	color: #000
 	font-weight: bold
-	margin-left: rem(10px)
+	margin-left: 10px
 
 .account-profile
 	display: flex
 	align-items: flex-start
-	padding-bottom: rem(20px)
+	padding-bottom: 20px
 
 .account-profile-left
-	margin-right: rem(59px)
+	margin-right: 59px
 
 .account-profile-avatar
 	position: relative
-	width: rem(174px)
-	height: rem(174px)
+	width: 174px
+	height: 174px
 	border-radius: 50%
 	overflow: hidden
 	img
@@ -4870,10 +4862,10 @@ textarea.form-control
 			content: ''
 			position: absolute
 			left: 50%
-			margin-left: rem(-13px)
-			bottom: rem(18px)
-			width: rem(26px)
-			height: rem(26px)
+			margin-left: -13px
+			bottom: 18px
+			width: 26px
+			height: 26px
 			flex-shrink: 0
 			background-image: url(../img/icons/photo.svg)
 			background-size: contain
@@ -4892,21 +4884,21 @@ textarea.form-control
 
 .account-profile-main
 	.h5
-		font-size: rem(24px)
+		font-size: 24px
 		color: $dark
 		font-weight: bold
-		margin-bottom: rem(27px)
+		margin-bottom: 27px
 
 .profile-form
-	max-width: rem(816px)
+	max-width: 816px
 
 .account-tab
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 
 .order-list-header
 	display: flex
-	padding: 0 rem(20px) 0 rem(27px)
-	margin-bottom: rem(10px)
+	padding: 0 20px 0 27px
+	margin-bottom: 10px
 
 .order-header-item
 	width: 100%
@@ -4914,26 +4906,26 @@ textarea.form-control
 	max-width: 14.286%
 	font-size: 14px
 	color: #828282
-	padding-right: rem(10px)
+	padding-right: 10px
 
 .order
-	padding: 0 rem(20px) 0 rem(27px)
+	padding: 0 20px 0 27px
 	background-color: #fff
 	border: 1px solid #E9E9E9
 	border-bottom-width: 0
 	&:first-child
-		border-top-left-radius: rem(10px)
-		border-top-right-radius: rem(10px)
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
 	&:last-child
-		border-bottom-left-radius: rem(10px)
-		border-bottom-right-radius: rem(10px)
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
 		border-bottom-width: 1px
 
 .order-main
-	font-size: rem(16px)
+	font-size: 16px
 	display: flex
 	align-items: center
-	padding: rem(17px) 0 0
+	padding: 17px 0 0
 	cursor: pointer
 	position: relative
 	&.opened
@@ -4942,10 +4934,10 @@ textarea.form-control
 	&:after
 		content: ''
 		position: absolute
-		top: rem(20px)
-		right: rem(20px)
-		width: rem(26px)
-		height: rem(26px)
+		top: 20px
+		right: 20px
+		width: 26px
+		height: 26px
 		background-image: url(../img/icons/angle-down-gray.svg)
 		background-repeat: no-repeat
 		background-position: center
@@ -4956,18 +4948,18 @@ textarea.form-control
 	width: 100%
 	flex: 0 0 14.286%
 	max-width: 14.286%
-	padding-right: rem(10px)
+	padding-right: 10px
 	&.number
-		font-size: rem(18px)
+		font-size: 18px
 		font-weight: bold
 	&:last-child
-		padding-right: rem(30px)
+		padding-right: 30px
 
 .label
-	font-size: rem(16px)
-	padding: rem(3px) rem(9px) rem(4px)
+	font-size: 16px
+	padding: 3px 9px 4px
 	background-color: #ebebeb
-	border-radius: rem(6px)
+	border-radius: 6px
 	line-height:
 	display: inline-block
 	&.orange
@@ -4981,45 +4973,45 @@ textarea.form-control
 		background-color: #E8FFF2
 
 .order-composition-block
-	padding-bottom: rem(17px)
+	padding-bottom: 17px
 
 .order-composition
-	padding: 0 rem(41px) rem(28px) rem(32px)
-	border-radius: rem(10px)
+	padding: 0 41px 28px 32px
+	border-radius: 10px
 	background-color: #F7F9FB
 	display: none
 	position: relative
-	top: rem(17px)
-	margin-bottom: rem(17px)
+	top: 17px
+	margin-bottom: 17px
 
 .order-composition-item
 	display: flex
-	font-size: rem(16px)
-	margin-bottom: rem(15px)
+	font-size: 16px
+	margin-bottom: 15px
 	&:first-child
-		padding-top: rem(28px)
+		padding-top: 28px
 
 .order-composition-name
 	width: 100%
 	flex: 0 0 42.858%
 	max-width: 0 0 42.858%
-	padding-right: rem(10px)
+	padding-right: 10px
 
 .order-composition-qnt
-	font-size: rem(14px)
+	font-size: 14px
 	color: #A8A8A8
 	width: 100%
 	flex: 0 0 28.572%
 	max-width: 28.572%
-	padding-right: rem(10px)
+	padding-right: 10px
 
 .order-composition-price
 	width: 100%
 	flex: 0 0 14.286%
 	max-width: 14.286%
-	padding-right: rem(10px)
+	padding-right: 10px
 	color: #A8A8A8
-	padding-left: rem(20px)
+	padding-left: 20px
 
 .order-composition-total
 	width: 100%
@@ -5038,18 +5030,18 @@ textarea.form-control
 	text-decoration: none !important
 	transition: $time
 	display: inline-block
-	padding-right: rem(20px)
-	font-size: rem(14px)
+	padding-right: 20px
+	font-size: 14px
 	font-weight: 500
 	position: relative
 	&:not(:last-child)
-		margin-right: rem(21px)
+		margin-right: 21px
 	&:hover
 		opacity: 0.7
 	&:after
 		content: ''
-		width: rem(19px)
-		height: rem(19px)
+		width: 19px
+		height: 19px
 		right: 0
 		top: 1px
 		position: absolute
@@ -5059,26 +5051,26 @@ textarea.form-control
 		color: #F14545!important
 		&:after
 			background-image: url(../img/icons/close-red.svg)
-			background-size: rem(16px)
+			background-size: 16px
 	&.orange
 		color: #FFA200!important
 		&:after
 			background-image: url(../img/icons/angle-right-orange.svg)
-			background-size: rem(16px)
+			background-size: 16px
 			background-position: top calc(50% + 1px) left 50%
 	&.gray
 		color: #929292!important
 		&:after
 			background-image: url(../img/icons/reload.svg)
-			background-size: rem(12px)
+			background-size: 12px
 
 .order-full-list
 	margin-top: 33px
 	.btn
 		background-color: #FFF6E6
 		color: $accent !important
-		height: rem(64px)
-		line-height: rem(64px)
+		height: 64px
+		line-height: 64px
 		&:hover
 			background-color: #ffefd2
 
@@ -5089,110 +5081,110 @@ textarea.form-control
 	background-repeat: no-repeat
 	background-position: center
 	color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	display: flex
 	align-items: center
-	padding: rem(90px) rem(120px)
-	margin-bottom: rem(100px)
+	padding: 90px 120px
+	margin-bottom: 100px
 
 .cashback-banner-left
 	width: 50%
-	font-size: rem(34px)
+	font-size: 34px
 	line-height: 1.265
 
 .cashback-banner-right
-	padding-left: rem(130px)
+	padding-left: 130px
 	width: 50%
 
 .cashback-qnt
 	position: relative
-	font-size: rem(34px)
+	font-size: 34px
 	font-weight: 500
 	&:after
 		content: ''
 		position: absolute
-		top: rem(38px)
-		left: rem(-61px)
+		top: 38px
+		left: -61px
 		border-radius: 50%
-		width: rem(40px)
-		height: rem(40px)
+		width: 40px
+		height: 40px
 		background-color: #fff
 		background-image: url(../img/icons/flash.svg)
-		background-size: rem(30px)
+		background-size: 30px
 		background-repeat: no-repeat
 		background-position: center
 	span
-		font-size: rem(130px)
+		font-size: 130px
 		font-family: $font2
 		white-space: nowrap
 
 .cashback-text
-	margin-bottom: rem(40px)
-	font-size: rem(26px)
-	padding-right: rem(120px)
+	margin-bottom: 40px
+	font-size: 26px
+	padding-right: 120px
 	&.right
 		padding-right: 0
 	.h4, h4
-		font-size: rem(30px)
-		margin-bottom: rem(40px)
+		font-size: 30px
+		margin-bottom: 40px
 		font-family: $font
 	ul
 		margin: 0
 		padding: 0
 		list-style-type: none
 		li
-			padding-left: rem(40px)
+			padding-left: 40px
 			position: relative
 			&:after
 				content: ''
 				position: absolute
-				top: rem(7px)
+				top: 7px
 				left: 0
-				width: rem(24px)
-				height: rem(24px)
+				width: 24px
+				height: 24px
 				background-image: url(../img/icons/flash.svg)
 				background-repeat: no-repeat
 				background-position: center
 				background-size: contain
 			&:not(:last-child)
-				margin-bottom: rem(35px)
+				margin-bottom: 35px
 
 .big-text
-	margin-top: rem(50px)
-	font-size: rem(30px)
+	margin-top: 50px
+	font-size: 30px
 	font-family: $font2
 	letter-spacing: 0.02em
 	text-transform: uppercase
 
 .cashback-img
 	img
-		width: calc(100% + #{rem(100px)})
-		margin-left: rem(-100px)
+		width: calc(100% + 100px)
+		margin-left: -100px
 
 .cashback-footer-text
 	text-align: center
-	margin-top: rem(50px)
-	font-size: rem(20px)
+	margin-top: 50px
+	font-size: 20px
 	color: #B9B9B9
 
 .settings-form
 	.checkbox-item
-		margin-bottom: rem(30px)
-		font-size: rem(18px)
+		margin-bottom: 30px
+		font-size: 18px
 		span
-			padding-left: rem(42px)
+			padding-left: 42px
 			&:after
-				width: rem(26px)
-				height: rem(26px)
+				width: 26px
+				height: 26px
 			&:before
-				width: rem(26px)
-				height: rem(26px)
+				width: 26px
+				height: 26px
 	.form-submit
-		margin-top: rem(50px)
+		margin-top: 50px
 
 .basket-promo
 	position: relative
-	margin-bottom: rem(24px)
+	margin-bottom: 24px
 	&.success
 		.promocode-input
 			border-color: #E8FFF2
@@ -5213,16 +5205,16 @@ textarea.form-control
 				content: 'Сбросить'
 
 .promocode-input
-	padding-right: rem(110px)
+	padding-right: 110px
 	transition: $time
 	&.active
 		border-color: $accent
 
 .promocode-apply
 	position: absolute
-	right: rem(26px)
-	top: rem(15px)
-	font-size: rem(14px)
+	right: 26px
+	top: 15px
+	font-size: 14px
 	color: $accent !important
 	text-decoration: none !important
 	font-weight: 500
@@ -5236,41 +5228,41 @@ textarea.form-control
 		visibility: visible
 
 .text-danger
-	font-size: rem(12px)
+	font-size: 12px
 	color: #F14545
-	margin-top: rem(6px)
+	margin-top: 6px
 
 .checkout-success
 	display: flex
-	padding-bottom: rem(80px)
+	padding-bottom: 80px
 
 .checkout-success-left
 	width: 42%
-	padding-right: rem(30px)
+	padding-right: 30px
 	.h4
-		margin-bottom: rem(30px)
-		font-size: rem(28px)
+		margin-bottom: 30px
+		font-size: 28px
 		font-family: $font
 		font-weight: bold
 
 .checkout-success-info
 	display: flex
 	flex-wrap: wrap
-	margin-bottom: rem(70px)
+	margin-bottom: 70px
 
 .checkout-success-info-item
-	margin: 0 rem(80px) rem(20px) 0
+	margin: 0 80px 20px 0
 	color: #A8A8A8
 	span
 		display: block
 		font-weight: 500
 		color: #000
-		font-size: rem(20px)
+		font-size: 20px
 
 .checkout-success-profile
 	color: #585858
 	p
-		margin-bottom: rem(15px)
+		margin-bottom: 15px
 
 .checkout-success-right
 	width: 58%
@@ -5284,80 +5276,80 @@ textarea.form-control
 
 .checkout-success-contacts-block
 	background-color: #FFF6E6
-	border-radius: rem(10px)
-	padding: rem(36px) rem(36px) rem(50px)
-	max-width: rem(446px)
+	border-radius: 10px
+	padding: 36px 36px 50px
+	max-width: 446px
 	.h4
 		font-family: $font
-		font-size: rem(24px)
+		font-size: 24px
 		font-weight: bold
-		margin-bottom: rem(6px)
+		margin-bottom: 6px
 	p
 		color: #585858
-		margin-bottom: rem(35px)
+		margin-bottom: 35px
 	a
-		font-size: rem(22px)
+		font-size: 22px
 		font-weight: bold
 		color: #000
 		text-decoration: none !important
 		transition: $time
 		display: inline-block
-		margin-bottom: rem(6px)
+		margin-bottom: 6px
 		&:hover
 			color: $accent
 
 .checkout-success-contacts-worktime
-	font-size: rem(14px)
+	font-size: 14px
 	color: #727272
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 	sup
-		font-size: rem(8px)
+		font-size: 8px
 
 .checkout-success-contacts-bg
 	position: absolute
 	z-index: -1
-	bottom: rem(30px)
-	left: rem(-320px)
+	bottom: 30px
+	left: -320px
 	img
-		width: rem(374px)
+		width: 374px
 
 .not-found-wrapper
 	display: flex
-	margin-top: rem(40px)
-	padding-right: rem(120px)
+	margin-top: 40px
+	padding-right: 120px
 
 .not-found-composition
-	margin-right: rem(80px)
+	margin-right: 80px
 	line-height: 1
-	font-size: rem(310px)
+	font-size: 310px
 	font-family: $font2
 	color: #FFF6E5
 	position: relative
 	img
-		width: rem(304px)
+		width: 304px
 		position: absolute
 		z-index: 1
-		top: rem(120px)
-		right: rem(129px)
+		top: 120px
+		right: 129px
 		max-width: 50%
 
 .not-found-text
-	padding-top: rem(145px)
+	padding-top: 145px
 	h1
-		font-size: rem(40px)
+		font-size: 40px
 		line-height: 1.1
-		margin-bottom: rem(20px)
+		margin-bottom: 20px
 	p
-		font-size: rem(20px)
-		margin-bottom: rem(43px)
+		font-size: 20px
+		margin-bottom: 43px
 
 .cashback-card-info-block
 	position: relative
-	border-radius: rem(10px)
+	border-radius: 10px
 	background-color: #4A9BFF
 	color: #fff
-	padding: rem(72px) rem(85px)
-	margin-bottom: rem(250px)
+	padding: 72px 85px
+	margin-bottom: 250px
 
 .cashback-card-info-bg
 	position: absolute
@@ -5365,56 +5357,56 @@ textarea.form-control
 	left: 0
 	width: 100%
 	height: 100%
-	border-radius: rem(10px)
+	border-radius: 10px
 	overflow: hidden
 	&:before
 		content: ''
 		position: absolute
-		top: rem(-130px)
-		left: rem(-528px)
-		width: rem(1272px)
-		height: rem(1272px)
+		top: -130px
+		left: -528px
+		width: 1272px
+		height: 1272px
 		border-radius: 50%
 		background: radial-gradient(50% 50% at 50% 50%, #3300FF 0%, rgba(31, 107, 255, 0) 100%)
 		opacity: 0.8
 	&:after
 		content: ''
 		position: absolute
-		width: rem(1321px)
-		height: rem(1321px)
+		width: 1321px
+		height: 1321px
 		border-radius: 50%
 		background: radial-gradient(50% 50% at 50% 50%, #B3FFF1 0%, rgba(179, 255, 241, 0) 100%)
-		right: rem(-459px)
-		top: rem(-915px)
+		right: -459px
+		top: -915px
 
 .cashback-card-info
 	position: relative
 	z-index: 1
 	max-width: 50%
 	h2, .h2
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 	p
-		font-size: rem(26px)
-		margin-bottom: rem(60px)
+		font-size: 26px
+		margin-bottom: 60px
 
 .cashback-card-img
 	position: absolute
 	width: 59%
 	right: 0
-	top: rem(16px)
-	right: rem(-25px)
+	top: 16px
+	right: -25px
 	z-index: 1
 	img
-		width: rem(917px)
+		width: 917px
 		max-width: 100%
 
 .get-cashback
 	position: relative
-	border-radius: rem(10px)
+	border-radius: 10px
 	background-color: #4A9BFF
-	padding: rem(75px) rem(270px) rem(75px) rem(135px)
+	padding: 75px 270px 75px 135px
 	color: #fff
-	margin-top: rem(60px)
+	margin-top: 60px
 
 .get-cashback-text
 	position: relative
@@ -5423,20 +5415,20 @@ textarea.form-control
 	align-items: center
 	.h2
 		flex-grow: 1
-		margin: 0 rem(20px) 0 0
+		margin: 0 20px 0 0
 	.btn
-		padding: 0 rem(36px)
+		padding: 0 36px
 
 .cashback-info
-	margin-bottom: rem(129px)
+	margin-bottom: 129px
 
 .news-main
-	margin-bottom: rem(55px)
+	margin-bottom: 55px
 
 .news-main-item
 	position: relative
 	&:not(:last-child)
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 	&:hover
 		.news-main-item-title
 			color: $accent
@@ -5444,8 +5436,8 @@ textarea.form-control
 			img
 				transform: scale(1.05)
 	&.small
-		padding: rem(100px) rem(24px) rem(24px)
-		min-height: calc(50% - #{rem(30px)})
+		padding: 100px 24px 24px
+		min-height: calc(50% - 30px)
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
@@ -5491,39 +5483,39 @@ textarea.form-control
 	z-index: 1
 
 .news-main-item-img
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	overflow: hidden
-	border-radius: rem(10px)
+	border-radius: 10px
 	img
 		width: 100%
-		border-radius: rem(10px)
+		border-radius: 10px
 		transition: $time
 
 .news-main-item-title
-	font-size: rem(30px)
+	font-size: 30px
 	line-height: 1.167
-	margin-bottom: rem(8px)
+	margin-bottom: 8px
 	font-weight: 500
 	transition: $time
 
 .news-footer
 	display: flex
 	color: #727272
-	font-size: rem(14px)
+	font-size: 14px
 
 .news-date
-	margin-right: rem(14px)
+	margin-right: 14px
 
 .news-views
 	position: relative
-	padding-left: rem(20px)
+	padding-left: 20px
 	&:before
 		content: ''
 		position: absolute
-		top: rem(3px)
+		top: 3px
 		left: 0
-		width: rem(15px)
-		height: rem(15px)
+		width: 15px
+		height: 15px
 		background-image: url(../img/icons/eye.svg)
 		background-size: contain
 		background-repeat: no-repeat
@@ -5533,18 +5525,18 @@ textarea.form-control
 	position: relative
 
 .news
-	padding: rem(100px) 0 rem(20px)
+	padding: 100px 0 20px
 	background-color: #FBFBFB
 	.pagination-wrapper
-		margin-top: rem(40px)
+		margin-top: 40px
 
 .news-item
-	margin-bottom: rem(30px)
+	margin-bottom: 30px
 	background-color: #fff
 	box-shadow: 0px 14px 30px -12px rgba(0, 0, 0, 0.03)
 	overflow: hidden
-	border-radius: rem(10px)
-	height: calc(100% - #{rem(30px)})
+	border-radius: 10px
+	height: calc(100% - 30px)
 	display: flex
 	flex-direction: column
 	&:hover
@@ -5559,13 +5551,13 @@ textarea.form-control
 	overflow: hidden
 	img
 		width: 100%
-		height: rem(315px)
+		height: 315px
 		object-fit: cover
 		transition: $time
 
 .news-body
 	flex-grow: 1
-	padding: rem(37px) rem(32px) rem(26px)
+	padding: 37px 32px 26px
 	display: flex
 	flex-direction: column
 
@@ -5573,19 +5565,19 @@ textarea.form-control
 	font-weight: 500
 	letter-spacing: 0.06em
 	color: #A8A8A8
-	margin-bottom: rem(22px)
+	margin-bottom: 22px
 	text-transform: uppercase
-	font-size: rem(14px)
+	font-size: 14px
 
 .news-title
 	font-size: 24px
 	transition: $time
 	line-height: 1.167
-	margin-bottom: rem(24px)
+	margin-bottom: 24px
 	flex-grow: 1
 
 .article
-	padding: rem(50px) 0 rem(35px)
+	padding: 50px 0 35px
 
 .article-container
 	position: relative
@@ -5602,19 +5594,19 @@ textarea.form-control
 	color: #A3A3A3
 
 .article-date
-	margin-bottom: rem(16px)
+	margin-bottom: 16px
 
 .article-views
 	position: relative
-	font-size: rem(14px)
-	padding-left: rem(20px)
+	font-size: 14px
+	padding-left: 20px
 	&:before
 		content: ''
 		position: absolute
-		top: rem(3px)
+		top: 3px
 		left: 0
-		width: rem(15px)
-		height: rem(15px)
+		width: 15px
+		height: 15px
 		background-image: url(../img/icons/eye-gray.svg)
 		background-size: contain
 		background-repeat: no-repeat
@@ -5622,115 +5614,115 @@ textarea.form-control
 
 .text-content
 	color: $dark
-	margin-bottom: rem(55px)
+	margin-bottom: 55px
 	> *:first-child
 		margin-top: 0 !important
 	> *:last-child
 		margin-bottom: 0 !important
 	h1, .h1
-		font-size: rem(50px)
-		margin-bottom: rem(45px)
-		margin-top: rem(30px)
+		font-size: 50px
+		margin-bottom: 45px
+		margin-top: 30px
 	h2, .h2
-		font-size: rem(40px)
-		margin-bottom: rem(25px)
-		margin-top: rem(30px)
+		font-size: 40px
+		margin-bottom: 25px
+		margin-top: 30px
 	h3, .h3
-		font-size: rem(30px)
-		margin-bottom: rem(24px)
-		margin-top: rem(30px)
+		font-size: 30px
+		margin-bottom: 24px
+		margin-top: 30px
 	h4, .h4
-		font-size: rem(27px)
-		margin-bottom: rem(20px)
-		margin-top: rem(30px)
+		font-size: 27px
+		margin-bottom: 20px
+		margin-top: 30px
 	h5, .h5
-		font-size: rem(21px)
+		font-size: 21px
 		font-weight: bold
-		margin-bottom: rem(18px)
-		margin-top: rem(30px)
+		margin-bottom: 18px
+		margin-top: 30px
 	h6, .h6
-		font-size: rem(18px)
+		font-size: 18px
 		font-weight: bold
-		margin-bottom: rem(15px)
-		margin-top: rem(30px)
+		margin-bottom: 15px
+		margin-top: 30px
 	p
-		margin-bottom: rem(30px)
+		margin-bottom: 30px
 	img
 		width: 100%
 		display: block
-		border-radius: rem(10px)
-		margin-bottom: rem(30px)
+		border-radius: 10px
+		margin-bottom: 30px
 		&.big-img
 			width: 120%
 			margin-left: -10%
-			margin-bottom: rem(70px)
+			margin-bottom: 70px
 	ul, ol
 		list-style-type: none
 		padding: 0
-		margin-bottom: rem(70px)
-		font-size: rem(20px)
+		margin-bottom: 70px
+		font-size: 20px
 		li
 			position: relative
-			margin-bottom: rem(7px)
-			padding-left: rem(21px)
+			margin-bottom: 7px
+			padding-left: 21px
 	ul
 		li
 			&:before
 				content: ''
 				position: absolute
-				width: rem(5px)
-				height: rem(5px)
+				width: 5px
+				height: 5px
 				border-radius: 50%
 				background-color: $accent
 				left: 0
-				top: rem(10px)
+				top: 10px
 	ol
 		counter-reset: olCounter
 		li
 			&:before
 				content: counter(olCounter)
 				counter-increment: olCounter
-				font-size: rem(16px)
+				font-size: 16px
 				font-weight: 500
 				color: $accent
-				top: rem(3px)
+				top: 3px
 				left: 0
 				position: absolute
 
 
 .big-text-content
-	margin-bottom: rem(50px)
-	font-size: rem(28px)
+	margin-bottom: 50px
+	font-size: 28px
 
 .images-gallery
-	margin: rem(55px) 0 rem(70px)
+	margin: 55px 0 70px
 	.fotorama__img
-		border-radius: rem(10px) !important
+		border-radius: 10px !important
 	.fotorama__nav:before, .fotorama__stage:before,
 	.fotorama__nav:after, .fotorama__stage:after
 		display: none !important
 	.fotorama__arr
-		width: rem(64px)
-		height: rem(64px)
-		margin-top: rem(-32px)
+		width: 64px
+		height: 64px
+		margin-top: -32px
 		border-radius: 50%
 		background-color: #FFCB72
-		background-size: rem(32px)
+		background-size: 32px
 		background-repeat: no-repeat
 		background-position: center
 	.fotorama__arr--prev
 		background-image: url(../img/icons/angle-left-white.svg)
-		background-position: top 50% left calc(50% - #{rem(2px)})
-		left: rem(32px)
+		background-position: top 50% left calc(50% - 2px)
+		left: 32px
 	.fotorama__arr--next
 		background-image: url(../img/icons/angle-right-white.svg)
-		background-position: top 50% right calc(50% - #{rem(2px)}})
-		right: rem(32px)
+		background-position: top 50% right calc(50% - 2px)
+		right: 32px
 	.fotorama__nav__frame--thumb
 		.fotorama__thumb
 			transition: $time
 			position: relative
-			border-radius: rem(5px)
+			border-radius: 5px
 			&:after
 				content: ''
 				position: absolute
@@ -5739,7 +5731,7 @@ textarea.form-control
 				right: 0
 				bottom: 0
 				border: 1px solid #EDECEC
-				border-radius: rem(5px)
+				border-radius: 5px
 				transition: $time
 		.fotorama__video-play
 			position: absolute
@@ -5747,7 +5739,7 @@ textarea.form-control
 			left: 0
 			right: 0
 			bottom: 0
-			border-radius: rem(5px)
+			border-radius: 5px
 			margin: 0
 			width: auto
 			height: auto
@@ -5759,11 +5751,11 @@ textarea.form-control
 				left: 0
 				width: 100%
 				height: 100%
-				border-radius: rem(5px)
+				border-radius: 5px
 				background-image: url(../img/icons/play.svg)
 				background-repeat: no-repeat
 				background-position: top 50% left calc(50% + 1px)
-				background-size: rem(14.67px)
+				background-size: 14.67px
 				z-index: 1
 			&:before
 				content: ''
@@ -5783,21 +5775,21 @@ textarea.form-control
 	.fotorama__thumb-border
 		display: none
 	.fotorama__nav-wrap
-		margin-top: rem(14px)
+		margin-top: 14px
 	.fotorama__stage__frame
 		.fotorama__video-play
 			background-color: #fff
 			border-radius: 50%
 			background-image: url(../img/icons/play.svg)
-			background-size: rem(21px)
+			background-size: 21px
 			background-repeat: no-repeat
-			background-position: top 50% left calc(50% + #{rem(2px)})
+			background-position: top 50% left calc(50% + 2px)
 
 .table-wrapper
 	overflow: auto hidden
-	padding-bottom: rem(20px)
-	margin-bottom: rem(45px)
-	padding-top: rem(16px)
+	padding-bottom: 20px
+	margin-bottom: 45px
+	padding-top: 16px
 	&::-webkit-scrollbar
 		width: 4px
 		height: 4px
@@ -5817,29 +5809,29 @@ textarea.form-control
 			&:last-child
 				border-bottom: none
 	th, td
-		min-width: rem(220px)
-		padding: rem(24px) rem(10px) rem(24px) 0
+		min-width: 220px
+		padding: 24px 10px 24px 0
 		vertical-align: top
 	th
 		padding-top: 0
 		font-weight: 500
-		font-size: rem(24px)
+		font-size: 24px
 	td
-		font-size: rem(20px)
+		font-size: 20px
 	.accent
 		font-weight: 500
 		color: $accent
 
 .article-footer
-	margin-top: rem(55px)
+	margin-top: 55px
 	border-top: 1px solid #E9E9E9
-	padding-top: rem(24px)
+	padding-top: 24px
 	display: flex
 	align-items: center
 	justify-content: space-between
 
 .article-footer-date
-	margin-right: rem(15px)
+	margin-right: 15px
 	color: #A3A3A3
 
 .share-block
@@ -5861,8 +5853,8 @@ textarea.form-control
 	transition: $time
 	position: relative
 	display: inline-block
-	padding-right: rem(22px)
-	font-size: rem(18px)
+	padding-right: 22px
+	font-size: 18px
 	color: #A3A3A3
 	text-decoration: none !important
 	&:hover
@@ -5875,10 +5867,10 @@ textarea.form-control
 	&:after
 		content: ''
 		position: absolute
-		top: rem(6px)
+		top: 6px
 		right: 0
-		width: rem(15px)
-		height: rem(15px)
+		width: 15px
+		height: 15px
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: center
@@ -5894,23 +5886,23 @@ textarea.form-control
 	position: absolute
 	align-items: center
 	top: 100%
-	margin-top: rem(8px)
+	margin-top: 8px
 	right: 0
-	height: rem(52px)
-	padding: 0 rem(20px)
-	border-radius: rem(7px)
+	height: 52px
+	padding: 0 20px
+	border-radius: 7px
 	overflow: hidden
 	background-color: #fff
 	z-index: 5
 	box-shadow: -4px 4px 36px rgba(147, 147, 147, 0.15)
-	transform: translateY(rem(-10px))
+	transform: translateY(-10px)
 	opacity: 0
 	visibility: hidden
 	transition: $time
 
 
 .share-soc
-	margin-right: rem(19px)
+	margin-right: 19px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -5920,21 +5912,21 @@ textarea.form-control
 	&:last-child
 		margin-right: 0
 	img
-		width: rem(30px)
+		width: 30px
 		margin: 0!important
 		flex-shrink: 0
 
 .s-some-news
-	padding: rem(90px) 0 rem(110px)
+	padding: 90px 0 110px
 	background-color: #FBFBFB
 
 .section-title-3
-	margin-bottom: rem(40px)
+	margin-bottom: 40px
 
 .news-slider
 	.owl-nav
 		button
-			top: rem(281px)
+			top: 281px
 	.news-item
 		margin: 0
 		height: 100%
@@ -5942,50 +5934,50 @@ textarea.form-control
 .delivery-block
 	position: relative
 	overflow: hidden
-	border-radius: rem(10px)
+	border-radius: 10px
 	border: 1px solid #D5D5D5
-	margin-bottom: rem(70px)
+	margin-bottom: 70px
 
 .delivery-header
-	padding: rem(32px) rem(70px)
+	padding: 32px 70px
 	background-color: #FFF6E6
 	display: flex
 	align-items: center
 
 .delivery-header-img
-	width: rem(107px)
-	height: rem(107px)
+	width: 107px
+	height: 107px
 	background-color: #fff
 	border-radius: 50%
 	flex-shrink: 0
-	margin-right: rem(31px)
+	margin-right: 31px
 	display: flex
 	align-items: center
 	justify-content: center
 	img
-		min-width: rem(50px)
+		min-width: 50px
 		max-width: 50%
 		max-height: 50%
 		object-fit: contain
 
 .delivery-header-title
-	font-size: rem(34px)
+	font-size: 34px
 	font-weight: bold
 
 .delivery-body
-	padding: rem(40px) rem(70px) rem(70px)
+	padding: 40px 70px 70px
 	[class*=col-]:first-child
-		padding-right: rem(100px)
+		padding-right: 100px
 	ol
 		list-style-type: none
 		padding: 0
-		margin: 0 0 rem(30px)
+		margin: 0 0 30px
 		counter-reset: olCounter2
 		&:last-child
 			margin-bottom: 0
 		li
-			margin-bottom: rem(10px)
-			padding-left: rem(20px)
+			margin-bottom: 10px
+			padding-left: 20px
 			position: relative
 			&:last-child
 				margin-bottom: 0
@@ -5995,39 +5987,38 @@ textarea.form-control
 				position: absolute
 				top: 1px
 				left: 0
-				font-size: rem(16px)
+				font-size: 16px
 				font-weight: 500
 	ul
 		list-style-type: none
-		margin: 0 0 rem(30px)
+		margin: 0 0 30px
 		padding: 0
 		&:last-child
 			margin-bottom: 0
 		li
-			margin-bottom: rem(5px)
+			margin-bottom: 5px
 			position: relative
-			padding-left: rem(16px)
+			padding-left: 16px
 			&:before
 				content: ''
 				position: absolute
-				top: rem(10px)
-				width: rem(5px)
-				height: rem(5px)
+				top: 10px
+				width: 5px
+				height: 5px
 				background-color: $accent
 				border-radius: 50%
 				left: 0
-
 .accent-title
 	text-transform: uppercase
 	font-weight: 500
 	color: $accent
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 
 .delivery-contacts
 	display: flex
 	flex-wrap: wrap
 	.delivery-contacts-item
-		margin-right: rem(130px)
+		margin-right: 130px
 		&:last-child
 			margin-right: 0
 
@@ -6035,17 +6026,17 @@ textarea.form-control
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	margin-bottom: rem(40px)
+	margin-bottom: 40px
 	span
-		font-size: rem(24px)
+		font-size: 24px
 		font-weight: bold
 		margin-bottom: 4px
 		line-height: 1.1
 	.btn
-		margin-top: rem(30px)
+		margin-top: 30px
 
 .small-mute-text
-	font-size: rem(15px)
+	font-size: 15px
 	color: #A8A8A8
 
 .delivery-brands
@@ -6054,29 +6045,29 @@ textarea.form-control
 	align-items: center
 
 .delivery-brand
-	margin-right: rem(32px)
-	margin-bottom: rem(20px)
+	margin-right: 32px
+	margin-bottom: 20px
 	img
-		max-width: rem(246px)
-		max-height: rem(124px)
+		max-width: 246px
+		max-height: 124px
 		object-fit: contain
 
 .delivery-warning-text
-	margin-bottom: rem(45px)
+	margin-bottom: 45px
 
 .delivery-contact-links
 	display: flex
 	flex-wrap: wrap
-	margin-bottom: rem(45px)
+	margin-bottom: 45px
 	p
 		width: 100%
-		margin-bottom: rem(10px)
+		margin-bottom: 10px
 	a
-		font-size: rem(24px)
+		font-size: 24px
 		line-height: 1.1
-		margin-bottom: rem(10px)
+		margin-bottom: 10px
 		font-weight: bold
-		margin-right: rem(86px)
+		margin-right: 86px
 		color: #000
 		text-decoration: none !important
 		transition: $time
@@ -6085,7 +6076,7 @@ textarea.form-control
 
 .delivery-calculator
 	p
-		margin-bottom: rem(14px)
+		margin-bottom: 14px
 
 .delivery-calc-row
 	display: flex
@@ -6095,18 +6086,18 @@ textarea.form-control
 .delivery-calc-item
 	display: inline-flex
 	align-items: center
-	margin: 0 rem(15px) rem(15px) 0
-	height: rem(54px)
-	line-height: rem(54px)
-	padding: 0 rem(24px) 0 rem(15px)
-	border-radius: rem(7px)
+	margin: 0 15px 15px 0
+	height: 54px
+	line-height: 54px
+	padding: 0 24px 0 15px
+	border-radius: 7px
 	box-shadow: -4px 4px 33px rgba(147, 147, 147, 0.13)
 	background-color: #fff
 	font-weight: 500
-	font-size: rem(14px)
+	font-size: 14px
 	text-decoration: none !important
 	color: #000
-	min-width: rem(207px)
+	min-width: 207px
 	transition: $time
 	&:last-child
 		margin-right: 0
@@ -6119,21 +6110,21 @@ textarea.form-control
 	&.blue
 		color: #0055A5
 	img
-		max-height: rem(40px)
-		max-width: rem(75px)
+		max-height: 40px
+		max-width: 75px
 		margin-right: auto
 		object-fit: contain
 
 .delivery-big-text
 	letter-spacing: .0.01em
-	font-size: rem(28px)
-	margin-bottom: rem(50px)
+	font-size: 28px
+	margin-bottom: 50px
 
 .delivery-phone
 	p
-		margin-bottom: rem(10px)
+		margin-bottom: 10px
 	a
-		font-size: rem(24px)
+		font-size: 24px
 		font-weight: bold
 		line-height: 1.1
 		color: #000
@@ -6143,7 +6134,7 @@ textarea.form-control
 			color: $accent
 
 .delivery-contacts-item
-	margin-bottom: rem(55px)
+	margin-bottom: 55px
 	&:last-child
 		margin-bottom: 0
 	.delivery-contact
@@ -6151,94 +6142,94 @@ textarea.form-control
 			margin-bottom: 0
 
 .delivery-price
-	font-size: rem(24px)
+	font-size: 24px
 	font-weight: bold
 	line-height: 1.1
-	margin-bottom: rem(18px)
+	margin-bottom: 18px
 	&:last-child
 		margin-bottom: 0
 
 .delivery-ul
 	display: flex
 	ul
-		margin-bottom: rem(22px)
-		margin-right: rem(80px)
+		margin-bottom: 22px
+		margin-right: 80px
 		&:last-child
 			margin-right: 0
 
 .delivery-text-content
-	max-width: rem(1024px)
+	max-width: 1024px
 	h4, .h4
-		font-size: rem(34px)
+		font-size: 34px
 		font-family: $font
 		font-weight: bold
 
 .delivery-text-item
-	margin-bottom: rem(75px)
-	font-size: rem(20px)
+	margin-bottom: 75px
+	font-size: 20px
 
 .delivery-map-block
 	h4, .h4
-		font-size: rem(34px)
+		font-size: 34px
 		font-family: $font
 		font-weight: bold
 
 .map-wrapper
 	#map
-		height: rem(535px)
-		border-radius: rem(10px)
+		height: 535px
+		border-radius: 10px
 		overflow: hidden
 
 .map-item
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: -4px 4px 50px rgba(147, 147, 147, 0.27)
-	padding: rem(15px) rem(22px) rem(22px)
+	padding: 15px 22px 22px
 	position: relative
 	&:after
 		content: ''
 		position: absolute
-		width: rem(23px)
-		height: rem(23px)
-		bottom: rem(-10px)
-		left: rem(42px)
+		width: 23px
+		height: 23px
+		bottom: -10px
+		left: 42px
 		transform: rotate(45deg)
-		border-radius: rem(2px)
+		border-radius: 2px
 		background-color: #fff
 
 .map-item-title
 	font-weight: bold
-	margin-bottom: rem(10px)
+	margin-bottom: 10px
 
 .map-item-street
-	font-size: rem(14px)
+	font-size: 14px
 
 .map-item-worktime
-	font-size: rem(14px)
+	font-size: 14px
 	color: #ccc
 
 .popover-inner
 	> ymaps
 		height: auto !important
-		width: rem(320px) !important
+		width: 320px !important
 		overflow: visible !important
 
 .popup-map-frame
-	height: rem(420px)
-	border-radius: rem(5px)
+	height: 420px
+	border-radius: 5px
 	overflow: hidden
 
 .map-popup
-	width: rem(930px)
+	width: 930px
 	.popup-close
-		top: rem(12px)
-		right: rem(12px)
+		top: 12px
+		right: 12px
 
 .about-slider-wrapper
 	position: relative
 	.breadcrumbs
 		position: absolute
-		top: rem(50px)
+		top: 50px
 		left: 0
 		width: 100%
 		z-index: 2
@@ -6271,7 +6262,7 @@ textarea.form-control
 	// 			right: 45px
 
 .about-slider-item
-	height: rem(812px)
+	height: 812px
 	position: absolute
 	top: 0
 	left: 0
@@ -6285,7 +6276,7 @@ textarea.form-control
 	display: flex
 	flex-direction: column
 	justify-content: flex-end
-	padding-bottom: rem(193px)
+	padding-bottom: 193px
 	transition: all .8s ease
 	opacity: 0
 	visibility: hidden
@@ -6308,24 +6299,24 @@ textarea.form-control
 .about-slider-nav-btn
 	position: absolute
 	top: 50%
-	width: rem(64px)
-	height: rem(64px)
+	width: 64px
+	height: 64px
 	z-index: 3
 	border-radius: 50%
 	transform: translateY(-50%)
 	background-color: rgba(#FFCB72, .3)
 	cursor: pointer
-	background-size: rem(32px)
+	background-size: 32px
 	background-repeat: no-repeat
 	transition: $time
 	&.prev
-		left: rem(45px)
+		left: 45px
 		background-image: url(../img/icons/angle-left-white.svg) !important
-		background-position: top 50% left calc(50% - #{rem(2px)}) !important
+		background-position: top 50% left calc(50% - 2px) !important
 	&.next
-		right: rem(45px)
+		right: 45px
 		background-image: url(../img/icons/angle-right-white.svg) !important
-		background-position: top 50% right calc(50% - #{rem(2px)}) !important
+		background-position: top 50% right calc(50% - 2px) !important
 
 .about-slider-nav-block
 	position: absolute
@@ -6348,9 +6339,9 @@ textarea.form-control
 	overflow: auto hidden
 	white-space: nowrap
 	justify-content: space-between
-	margin-left: rem(-40px)
-	margin-right: rem(-40px)
-	padding: 0 rem(40px)
+	margin-left: -40px
+	margin-right: -40px
+	padding: 0 40px
 	&::-webkit-scrollbar
 		width: 3px
 		height: 3px
@@ -6368,17 +6359,17 @@ textarea.form-control
 	max-width: 100%
 	height: 109px
 	position: relative
-	line-height: rem(97px)
+	line-height: 97px
 	color: #fff
 	font-weight: 500
-	font-size: rem(24px)
+	font-size: 24px
 	cursor: pointer
 	&:first-child
 		&:after
 			content: ''
 			position: absolute
 			right: 100%
-			width: rem(40px)
+			width: 40px
 			height: 100%
 	&:last-child
 		margin-right: 0
@@ -6386,7 +6377,7 @@ textarea.form-control
 			content: ''
 			position: absolute
 			left: 100%
-			width: rem(40px)
+			width: 40px
 			height: 100%
 	&.active
 		.about-slider-nav-link-progress
@@ -6400,7 +6391,7 @@ textarea.form-control
 	left: 0
 	width: 100%
 	background-color: rgba(#fff, .4)
-	height: rem(4px)
+	height: 4px
 	transition: $time
 	opacity: 0
 	span
@@ -6421,29 +6412,29 @@ textarea.form-control
 		transform: scaleX(1)
 
 .s-blockquote
-	padding-top: rem(20px)
-	padding-bottom: rem(35px)
+	padding-top: 20px
+	padding-bottom: 35px
 
 .blockquote
 	margin-left: auto
 	margin-right: auto
-	max-width: rem(812px)
+	max-width: 812px
 	position: relative
 	text-align: center
-	font-size: rem(24px)
+	font-size: 24px
 	letter-spacing: 0.04em
 	color: #A8A8A8
-	font-size: rem(24px)
+	font-size: 24px
 	line-height: 2
 	text-transform: uppercase
-	padding: rem(24px) 0
+	padding: 24px 0
 	&:after,
 	&:before
 		content: ''
 		position: absolute
-		height: rem(4px)
-		width: rem(82px)
-		border-radius: rem(7px)
+		height: 4px
+		width: 82px
+		border-radius: 7px
 		background: linear-gradient(90.29deg, #62EAE9 -4.98%, #3B82F4 54.4%, #4966FF 84.93%)
 		left: 50%
 		transform: translateX(-50%)
@@ -6453,36 +6444,36 @@ textarea.form-control
 		bottom: 0
 
 .s-about-company
-	padding: rem(35px) 0 rem(40px)
+	padding: 35px 0 40px
 
 .about-company-row
 	display: flex
 
 .about-company
-	padding-right: rem(100px)
-	width: calc(100% - #{rem(396px)})
+	padding-right: 100px
+	width: calc(100% - 396px)
 
 
 .about-company-sidebar
-	width: rem(396px)
+	width: 396px
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.05)
 	position: sticky
-	top: rem(30px)
+	top: 30px
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	padding: rem(30px) rem(40px)
-	margin-bottom: rem(50px)
+	padding: 30px 40px
+	margin-bottom: 50px
 
 .about-company-sidebar-link
-	font-size: rem(22px)
+	font-size: 22px
 	font-weight: 500
 	color: #000
 	text-decoration: none !important
 	transition: $time
-	margin-bottom: rem(20px)
+	margin-bottom: 20px
 	&:last-child
 		margin-bottom: 0
 	&:hover,
@@ -6490,7 +6481,7 @@ textarea.form-control
 		color: $accent	
 
 .video-frame
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 	position: relative
 	width: 100%
 	padding-bottom: 56.25%
@@ -6503,18 +6494,18 @@ textarea.form-control
 
 blockquote
 	display: block
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 	position: relative
 	background-color: #fff
-	border-radius: rem(4px)
-	padding: rem(60px) rem(62px) rem(50px) rem(109px)
+	border-radius: 4px
+	padding: 60px 62px 50px 109px
 	&:after
 		content: ''
 		position: absolute
-		width: rem(49px)
-		height: rem(39px)
-		top: rem(46px)
-		left: rem(46px)
+		width: 49px
+		height: 39px
+		top: 46px
+		left: 46px
 		background-image: url(../img/icons/quote.svg)
 		background-size: contain
 		background-repeat: no-repeat
@@ -6524,21 +6515,21 @@ blockquote
 		content: ''
 		position: absolute
 		z-index: -1
-		top: rem(-4px)
-		left: rem(-4px)
-		right: rem(-4px)
-		bottom: rem(-4px)
-		border-radius: rem(7px)
+		top: -4px
+		left: -4px
+		right: -4px
+		bottom: -4px
+		border-radius: 7px
 		background: linear-gradient(0, #3F79F8 0%, #59D1EB 100%)
 	p
-		font-size: rem(28px)
+		font-size: 28px
 		color: #17212C
-		margin-bottom: rem(24px)
+		margin-bottom: 24px
 		&:last-child
 			margin-bottom: 0
 
 .blockquote-author
-	font-size: rem(24px)
+	font-size: 24px
 	font-weight: 500
 	color: #4966FF
 	background-image: linear-gradient(90deg, #62EAE9 0%, #3B82F4 40%, #4966FF 100%)
@@ -6549,15 +6540,15 @@ blockquote
 
 .timeline
 	position: relative
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 	&:after
 		content: ''
 		position: absolute
-		top: rem(21px)
-		bottom: rem(12px)
+		top: 21px
+		bottom: 12px
 		left: 50%
-		margin-left: rem(-3px)
-		border-radius: rem(5px)
+		margin-left: -3px
+		border-radius: 5px
 		width: 6px
 		background: linear-gradient(180.48deg, #62FF9D 0.42%, #39E0EC 18.35%, #499CFF 50.38%, #256FFF 71.55%, #5301FF 93.76%)
 
@@ -6568,11 +6559,11 @@ blockquote
 	&:after
 		content: ''
 		position: absolute
-		top: rem(7px)
-		width: rem(35px)
-		height: rem(35px)
+		top: 7px
+		width: 35px
+		height: 35px
 		background-image: url(../img/icons/flash-dark.svg)
-		background-size: rem(23.38px) auto
+		background-size: 23.38px auto
 		background-repeat: no-repeat
 		background-position: center
 	&:before
@@ -6587,42 +6578,42 @@ blockquote
 		// border: 5px solid #4AC2F2
 	&:nth-child(odd)
 		margin-left: auto
-		padding-left: rem(55px)
+		padding-left: 55px
 		&:after
-			left: rem(13px)
+			left: 13px
 		&:before
-			left: rem(-11px)
+			left: -11px
 		&:last-child
 			&:after
 				content: ''
 				position: absolute
-				top: rem(22px)
-				width: rem(30px)
-				left: rem(-15px)
+				top: 22px
+				width: 30px
+				left: -15px
 				background-color: #fff
 				z-index: 1
 				height: 100%
 	&:nth-child(even)
-		padding-right: rem(55px)
+		padding-right: 55px
 		text-align: right
 		flex-direction: row-reverse
 		.timeline-item-date
 			margin-right: 0
-			margin-left: rem(24px)
+			margin-left: 24px
 		&:last-child
 			&:after
 				content: ''
 				position: absolute
-				top: rem(22px)
-				width: rem(30px)
-				right: rem(-15px)
+				top: 22px
+				width: 30px
+				right: -15px
 				background-color: #fff
 				z-index: 1
 				height: 100%
 		&:after
-			right: rem(13px)
+			right: 13px
 		&:before
-			right: rem(-11px)
+			right: -11px
 		.timeline-item-content
 			.h5
 				margin-left: auto
@@ -6631,106 +6622,106 @@ blockquote
 
 
 .timeline-item-date
-	font-size: rem(34px)
+	font-size: 34px
 	font-family: $font2
-	margin-right: rem(24px)
-	min-width: rem(100px)
+	margin-right: 24px
+	min-width: 100px
 
 .timeline-item-content
-	padding-top: rem(4px)
-	max-width: calc(100% - #{rem(124px)})
+	padding-top: 4px
+	max-width: calc(100% - 124px)
 	.h5
-		font-size: rem(28px)
+		font-size: 28px
 		font-weight: 500
 		color: $dark
 		line-height: 1.18
-		margin-bottom: rem(28px)
-		max-width: rem(500px)
+		margin-bottom: 28px
+		max-width: 500px
 	p
-		margin-bottom: rem(12px)
-		font-size: rem(20px)
+		margin-bottom: 12px
+		font-size: 20px
 	img
-		width: rem(441px)
+		width: 441px
 		max-width: 100%
-		border-radius: rem(10px)
-		margin-top: rem(30px)
+		border-radius: 10px
+		margin-top: 30px
 		display: block
 	.logo
 		img
-			width: rem(244px)
+			width: 244px
 			margin: 0
 
 .tl-soc-link
 	display: flex
 	align-items: center
-	width: rem(553px)
+	width: 553px
 	max-width: 100%
-	height: rem(95px)
+	height: 95px
 	line-height: 1.1
 	color: #000 !important
 	text-decoration: none !important
-	font-size: rem(22px)
+	font-size: 22px
 	font-weight: bold
-	padding: 0 rem(25px) 0 rem(32px)
+	padding: 0 25px 0 32px
 	text-align: left
 	img
-		width: rem(41px)
+		width: 41px
 		flex-shrink: 0
-		margin: 0 rem(20px) 0 0 !important
+		margin: 0 20px 0 0 !important
 	&.vk
 		color: #4D7198 !important
 		box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.03)
-		border-radius: rem(10px)
+		border-radius: 10px
 		background-color: #fff
 
 .tl-link-block
 	display: flex
 	align-items: center
-	padding: rem(30px) rem(27px)
+	padding: 30px 27px
 	background-color: #fff
-	border-radius: rem(10px)
+	border-radius: 10px
 	box-shadow: 0px 12px 74px 15px rgba(54, 59, 69, 0.03)
-	font-size: rem(22px)
+	font-size: 22px
 	line-height: 1.18
 	font-weight: bold
 	color: #000
 	text-decoration: none !important
 	transition: $time
-	margin-bottom: rem(15px)
+	margin-bottom: 15px
 	&:hover
 		color: $accent
 	img
-		width: rem(95px)
+		width: 95px
 		flex-shrink: 0
-		margin: 0 rem(25px) 0 0
+		margin: 0 25px 0 0
 
 .small-img
 	img
 		width: auto !important
-		margin: 0 0 rem(20px)
+		margin: 0 0 20px
 
 .s-timeline
-	padding-top: rem(50px)
+	padding-top: 50px
 
 .warranty-content
-	font-size: rem(20px)
+	font-size: 20px
 
 .warranty-item
-	margin-bottom: rem(70px)
+	margin-bottom: 70px
 
 .warranty-header
-	font-size: rem(34px)
+	font-size: 34px
 	font-weight: bold
 	line-height: 1.1
-	padding: rem(43px) rem(50px)
-	border-radius: rem(10px) rem(10px) 0 0
+	padding: 43px 50px
+	border-radius: 10px 10px 0 0
 	background-color: #FFF6E6
 
 .warranty-body
-	padding: rem(40px) rem(50px) rem(50px)
+	padding: 40px 50px 50px
 	border: 1px solid #E6E6E6
 	border-top: none
-	border-radius: 0 0 rem(10px) rem(10px)
+	border-radius: 0 0 10px 10px
 	> *:last-child
 		margin-bottom: 0
 
@@ -6738,37 +6729,37 @@ blockquote
 	padding-top: 0
 
 .auth-wrapper
-	margin-bottom: rem(80px)
+	margin-bottom: 80px
 	.auth-form
-		max-width: rem(368px)
+		max-width: 368px
 
 .select-city-popup
-	width: rem(720px)
+	width: 720px
 
 .select-shop-tab
 	display: none
 
 .popup-back
-	padding-right: rem(30px)
+	padding-right: 30px
 
 .current-city-link
-	font-size: rem(15px)
+	font-size: 15px
 	display: inline-block
 	position: relative
-	padding-left: rem(30px)
+	padding-left: 30px
 	color: #A8A8A8 !important
 	text-decoration: none !important
 	transition: $time
-	margin-bottom: rem(7px)
+	margin-bottom: 7px
 	&:hover
 		&:after
-			transform: translateX(rem(-5px))
+			transform: translateX(-5px)
 	&:after
 		content: ''
 		position: absolute
-		width: rem(24px)
-		height: rem(24px)
-		top: rem(-1px)
+		width: 24px
+		height: 24px
+		top: -1px
 		left: 0
 		background-size: contain
 		background-repeat: no-repeat
