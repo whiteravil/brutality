@@ -3621,7 +3621,7 @@ textarea.form-control
 		position: absolute
 		width: rem(13px)
 		height: rem(8px)
-		top: rem(9px)
+		top: rem(10px)
 		left: 0
 		background-size: contain
 		background-repeat: no-repeat
@@ -5554,6 +5554,9 @@ textarea.form-control
 			color: $accent
 	.news-footer
 		opacity: 0.7
+	&.disabled
+		.news-img
+			opacity: 0.4
 
 .news-img
 	overflow: hidden
@@ -5578,7 +5581,7 @@ textarea.form-control
 	font-size: rem(14px)
 
 .news-title
-	font-size: 24px
+	font-size: rem(24px)
 	transition: $time
 	line-height: 1.167
 	margin-bottom: rem(24px)
@@ -5600,6 +5603,9 @@ textarea.form-control
 	left: 0
 	max-width: 15.5%
 	color: #A3A3A3
+	.go-back-link
+		opacity: 0.4
+		margin-top: rem(16px)
 
 .article-date
 	margin-bottom: rem(16px)
@@ -5939,6 +5945,12 @@ textarea.form-control
 		margin: 0
 		height: 100%
 
+.delivery-descr
+	font-size: rem(20px)
+	margin-bottom: rem(55px)
+	*:last-child
+		margin-bottom: 0
+
 .delivery-block
 	position: relative
 	overflow: hidden
@@ -5975,7 +5987,7 @@ textarea.form-control
 .delivery-body
 	padding: rem(40px) rem(70px) rem(70px)
 	[class*=col-]:first-child
-		padding-right: rem(100px)
+		padding-right: rem(70px)
 	ol
 		list-style-type: none
 		padding: 0
@@ -6775,5 +6787,131 @@ blockquote
 		background-position: center
 		background-image: url(../img/icons/arrow-left-gray.svg)
 		transition: $time
+
+.contacts-item
+	margin-bottom: rem(96px)
+	.h3
+		font-size: rem(34px)
+		margin-bottom: rem(45px)
+		font-family: $font
+		font-weight: bold
+
+.contact
+	margin-bottom: rem(40px)
+	a
+		font-size: rem(34px)
+		font-weight: bold
+		color: $accent !important
+		text-decoration: none !important
+		transition: $time
+		margin-bottom: rem(4px)
+	p
+		&:last-child
+			margin-bottom: 0
+
+.contact-inline
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: rem(25px)
+	.h4
+		font-size: rem(24px)
+		font-weight: bold
+		margin: 0 rem(30px) 0 0
+		min-width: rem(210px)
+		a
+			color: #000 !important
+			text-decoration: none !important
+	p
+		margin: 0
+		font-size: rem(15px)
+
+.contact-data
+	.h5
+		font-weight: 500
+		color: $accent
+		text-transform: uppercase
+		margin-bottom: rem(21px)
+	ul
+		margin: 0 0 rem(34px)
+		padding: 0
+		list-style-type: none
+		&:last-child
+			margin-bottom: 0
+		li
+			font-size: rem(20px)
+			margin-bottom: rem(8px)
+
+.download-doc-link
+	display: inline-flex
+	color: #000 !important
+	text-decoration: none !important
+
+.doc-icon
+	margin-right: rem(12px)
+	padding-top: rem(2px)
+	img
+		width: rem(32px)
+
+.doc-info
+	span
+		display: block
+
+.doc-info-title
+	margin-bottom: rem(5px)
+	font-size: rem(18px)
+	font-weight: bold
+	line-height: 1
+
+.doc-size
+	font-size: rem(14px)
+	color: #8B9095
+
+.gifts
+	.page-title
+		margin-bottom: rem(45px)
+		p
+			max-width: rem(800px)
+			font-size: rem(20px)
+			margin-top: rem(30px)
+
+.gift-card
+	margin-bottom: rem(50px)
+
+.gift-card-price
+	font-weight: bold
+	color: $accent
+	font-size: rem(24px)
+	margin-bottom: rem(25px)
+
+.gift-card-img
+	text-align: center
+	margin-bottom: rem(25px)
+	img
+		max-height: 270px
+		width: 100%
+		object-fit: contain
+
+.gift-card-text
+	.h5
+		font-size: rem(21px)
+		margin-bottom: rem(12px)
+		font-weight: 500
+		line-height: 1.167
+	p
+		margin-bottom: 0
+		color: #585858
+		font-size: rem(18px)
+
+.promotions
+	margin-bottom: rem(50px)
+	.news-item
+		box-shadow: 0px 14px 40px -12px rgba(0, 0, 0, 0.06)
+
+.completed-promotions
+	padding-top: rem(85px)
+	padding-bottom: rem(55px)
+	.section-title
+		text-align: left
 
 @import "media" // Always at the end

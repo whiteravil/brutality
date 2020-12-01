@@ -108,7 +108,7 @@
 						<li><a href="#">Акции</a></li>
 						<li><a href="#">Доставка</a></li>
 						<li><a href="#">Оплата</a></li>
-						<li><a href="#">Отзывы</a></li>
+						<li><a href="#" class="with-icon">Отзывы <img src="img/icons/share-link.svg" alt=""></a></li>
 						<li class="has-submenu">
 							<a href="#">Еще</a>
 							<ul class="submenu">
@@ -2525,7 +2525,7 @@
 						balloonLayout: MyBalloonLayout,
 						balloonContentLayout: MyBalloonContentLayout,
 						balloonPanelMaxMapArea: 0,
-						balloonOffset: [-53, -131],
+						balloonOffset: [-53, -156],
 						iconLayout: 'default#imageWithContent',
 						iconImageHref: 'img/map-sticker.png',
 						iconImageSize: [59, 59],
@@ -2555,7 +2555,7 @@
 						balloonLayout: MyBalloonLayout,
 						balloonContentLayout: MyBalloonContentLayout,
 						balloonPanelMaxMapArea: 0,
-						balloonOffset: [-53, -131],
+						balloonOffset: [-53, -157],
 						iconLayout: 'default#imageWithContent',
 						iconImageHref: 'img/map-sticker.png',
 						iconImageSize: [59, 59],
@@ -2588,7 +2588,7 @@
 						balloonLayout: MyBalloonLayout,
 						balloonContentLayout: MyBalloonContentLayout,
 						balloonPanelMaxMapArea: 0,
-						balloonOffset: [-53, -90],
+						balloonOffset: [-53, -116],
 						iconLayout: 'default#imageWithContent',
 						iconImageHref: 'img/map-sticker.png',
 						iconImageSize: [59, 59],
@@ -2655,6 +2655,10 @@
 				}
 			});
 			$(window).on('resize', disableDrag);
+
+			$('.open-popup').on('click', function() {
+				myMap2.panTo(mainStreet[0].coordinates)
+			});
 
 		}
 

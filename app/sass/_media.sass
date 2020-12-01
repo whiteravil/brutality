@@ -740,6 +740,11 @@
 		padding: 30px 20px
 	.catalog-item .product-img img
 		height: 330px
+	.gift-card-img
+		img
+			max-height: 190px
+	.gift-card-price
+		font-size: 15px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -1320,6 +1325,20 @@
 	.product-item.product-item-small .product-img img
 		width: 225px !important
 		height: 225px !important
+	.contacts-item
+		margin-bottom: 3.5rem
+		.h3
+			font-size: 1.5rem
+			margin-bottom: 1.5rem
+	.contact
+		margin-bottom: 1.5rem
+		a
+			font-size: 1.5rem
+	.contact-inline .h4
+		font-size: 1.2rem
+		min-width: 10.7rem
+	.article-view-info .go-back-link
+		margin-top: 0
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1583,6 +1602,10 @@
 		left: -15px
 	.timeline-item-date
 		padding-left: 20px
+	.contact-data
+		margin-bottom: 30px
+	.contact-data ul li
+		font-size: 1rem
 
 
 // ≥576px
@@ -2118,7 +2141,7 @@
 		margin-bottom: 30px
 		border-bottom: 1px solid #E0E0E0
 	.soc-link
-		width: 52px
+		width: 34px
 	.footer-copyright
 		font-size: 12px
 	.popup-block
@@ -3144,6 +3167,25 @@
 		max-width: 100%
 	.products-category .h3
 		font-size: 22px
+	.contact-inline
+		flex-direction: column
+		align-items: flex-start
+		.btn
+			margin-top: 10px
+	.gifts
+		.row
+			margin-left: -20px
+			margin-right: -20px
+			padding-left: 10px
+			padding-right: 10px
+			flex-wrap: nowrap
+			overflow: auto hidden
+			[class*=col]
+				max-width: 70%
+				flex: 0 0 70%
+	.completed-promotions
+		padding-top: 40px
+
 
 
 
