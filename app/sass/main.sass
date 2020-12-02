@@ -2781,6 +2781,18 @@ textarea.form-control
 .filter-body
 	margin-bottom: rem(18px)
 
+.checkbox-list
+	max-height: 274px
+	overflow-y: auto
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		border-radius: 2px
+		background-color: #E0E0E0
+	&::-webkit-scrollbar-thumb
+		background-color: $accent
+		border-radius: 2px
+
 .checkbox-item
 	font-size: rem(16px)
 	&:not(:last-child)
