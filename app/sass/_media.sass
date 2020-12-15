@@ -1610,6 +1610,9 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
+	body
+		padding-bottom: 60px
+		padding-top: 55px
 	.btn
 		font-size: 16px
 	.btn.btn-icon img
@@ -1687,7 +1690,7 @@
 		left: 0
 		width: 100%
 		padding: 0
-		height: calc(100vh - 56px)
+		height: calc(100vh - 116px)
 	.bg-overlay
 		display: none !important
 	.catalog-window-header
@@ -1757,9 +1760,9 @@
 		display: block
 	.catalog-window-right
 		width: auto
-		padding: 0 36px 20px
+		padding: 0 36px 60px
 		border-radius: 0
-		max-height: calc(100vh - 56px)
+		height: 100%
 		overflow-y: auto
 	.catalog-window-items-col
 		max-width: 100%
@@ -2886,8 +2889,8 @@
 	.search-dropdown-right
 		display: none !important
 	.search-dropdown
-		// top: 133px
-		top: 121px
+		top: 60px
+		height: calc(100vh - 175px)
 	.product-main-delivery
 		text-align: center
 	.product-main-del-btn
@@ -3186,9 +3189,40 @@
 				flex: 0 0 70%
 	.completed-promotions
 		padding-top: 40px
-
-
-
+	.header
+		position: fixed
+		height: 56px
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 50
+		background-color: #fff
+	.open-catalog-btn
+		display: none !important
+	.search-btn
+		display: none !important
+	.header-bottom
+		padding: 0
+		height: 0
+	.header-mobile-profile
+		display: none
+	.header-mobile-basket
+		display: none
+	.mobile-fixed-menu
+		display: block
+	.header-top
+		height: calc(100% - 60px)
+	.catalog-window-items-list
+		padding-bottom: 70px
+	.catalog-window-items-tab:last-child
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			height: 100px
 
 
 /*==========  Mobile First  ==========*/
