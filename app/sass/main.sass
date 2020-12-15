@@ -6999,4 +6999,44 @@ blockquote
 			top: 14px
 			right: 12px
 
+.catalog-current-categories
+	margin-bottom: 30px
+	display: none
+
+.current-categories
+	display: flex
+	align-items: center
+	background-color: F7F8FB
+	white-space: nowrap
+	padding: 25px 20px
+	margin: 0 -20px
+	overflow: auto hidden
+	background-color: #F7F8FB
+
+.current-categories-link
+	height: 32px
+	line-height: 32px
+	margin-right: 8px
+	padding: 0 10px
+	border-radius: 10px
+	background-color: #fff
+	font-size: 12px
+	font-weight: 500
+	text-transform: uppercase
+	color: #17212C !important
+	text-decoration: none !important
+	transition: $time
+	&.active
+		background-color: $accent
+		color: #fff !important
+	&:last-child
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 20px
+			left: 100%
+			top: 0
+			height: 100%
+
 @import "media" // Always at the end
