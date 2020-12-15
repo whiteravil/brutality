@@ -993,11 +993,13 @@ $(function() {
   $('.open-fiter-btn').on('click', function() {
   	$('.catalog-sidebar').toggleClass('opened');
   	bodyNoScroll();
+  	$('.bg-overlay-mob').fadeIn(400);
   });
 
   $('.catalog-sidebar-close').on('click', function() {
   	$('.catalog-sidebar').removeClass('opened');
   	bodyHasScroll();
+  	$('.bg-overlay-mob').fadeOut(400);
   });
 
   let prodFotorama = $('.product-page-img').fotorama(),
@@ -1499,6 +1501,7 @@ $(function() {
 		if ( !$(e.target).closest('.catalog-sidebar').length && !$(e.target).closest('.open-fiter-btn').length && $('.catalog-sidebar.opened').length != 0 ) {
 			$('.catalog-sidebar').removeClass('opened');
 			bodyHasScroll();
+			$('.bg-overlay-mob').fadeOut(400);
 		}
 		if ( !$(e.target).closest('.header-acc').length && !$(e.target).closest('.profile-link').length ) {
 			$('.header-acc').removeClass('opened visible')
