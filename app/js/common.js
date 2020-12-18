@@ -81,20 +81,31 @@ $(function() {
 		closeAccDropdown();
 	});
 
+	let hoverCatalogTm;
+
 	$('.catalog-window-link').hover(function() {
 		if ( isMobile.any() == null ) {
 			let ths = $(this),
-					id = ths.data('tab');
+			id = ths.data('tab');
 			if ( $(id).is(':hidden') ) {
-				$('.catalog-window-link').removeClass('active');
-				ths.addClass('active');
-				$('.catalog-window-items-tab').hide().removeClass('visible');
-				$(id).show();
-				setTimeout(() => {
-					$(id).addClass('visible');
-				}, 50)
+				hoverCatalogTm = setTimeout(() => {
+					$('.catalog-window-link').removeClass('active');
+					ths.addClass('active');
+					$('.catalog-window-items-tab').hide().removeClass('visible');
+					$(id).show();
+					setTimeout(() => {
+						$(id).addClass('visible');
+					}, 50)
+					console.log(true)
+				}, 400);
 			}
 		}
+	}, function() {
+		clearTimeout(hoverCatalogTm);
+	});
+
+	$('.catalog-window-right').hover(function() {
+		clearTimeout(hoverCatalogTm);
 	});
 
 	$('.catalog-window-link').on('click', function(e) {
@@ -760,7 +771,6 @@ $(function() {
 
   $(document).on('click', '.number-minus', function () {
     var input = $(this).parent().find('.number-input');
-    console.log($(this).parent().find('.number-minus'));
     if (parseInt(input.val()) > 1) {
       input.val(parseInt(input.val()) - 1);
       if ( parseInt($(this).parent().find('.number-input').val()) < 2 ) {
