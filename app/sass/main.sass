@@ -1329,7 +1329,7 @@ input:focus::placeholder
 	position: relative
 	&.category-item--big
 		.category-item-brand
-			margin-bottom: rem(55px)
+			margin-bottom: rem(35px)
 			font-size: rem(52px)
 			img
 				width: rem(311px)
@@ -1339,6 +1339,9 @@ input:focus::placeholder
 				height: rem(360px)
 				margin: 0
 				transform: translateY(rem(-75px))
+		.category-item-slang
+			margin-bottom: rem(45px)
+			font-size: rem(21px)
 
 .category-item-left
 	flex-grow: 1
@@ -1346,13 +1349,18 @@ input:focus::placeholder
 	flex-direction: column
 
 .category-item-brand
-	margin-bottom: rem(35px)
-	flex-grow: 1
+	margin-bottom: rem(25px)
 	font-size: rem(22px)
 	font-family: $font2
 	line-height: 1.2
 	img
 		width: 165px
+
+.category-item-slang
+	flex-grow: 1
+	margin-bottom: rem(30px)
+	line-height: 1.15
+	font-weight: 600
 
 .category-item-nav
 	display: flex
@@ -1394,6 +1402,7 @@ input:focus::placeholder
 .category-item-right
 	padding-left: rem(10px)
 	text-align: right
+	flex-shrink: 0
 	img
 		width: rem(123px)
 		height: rem(123px)
