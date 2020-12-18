@@ -3290,6 +3290,7 @@ textarea.form-control
 
 .category-small-left
 	padding-right: rem(15px)
+	max-width: calc(100% - #{rem(121px)})
 
 .category-small-header
 	display: flex
@@ -3331,10 +3332,12 @@ textarea.form-control
 .category-small-img
 	flex-grow: 1
 	margin-bottom: rem(15px)
+	text-align: right
 	img
 		width: rem(78px) !important
 		height: rem(67px)
 		object-fit: contain
+		display: inline !important
 
 .catalog-sidebar-close
 	display: none
