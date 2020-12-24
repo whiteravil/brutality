@@ -1513,8 +1513,8 @@ input:focus::placeholder
 		content: ''
 		position: absolute
 		bottom: rem(20px)
-		left: 0
-		width: 100%
+		left: 96px
+		right: 96px
 		height: 1px
 		background-color: rgba(#fff, .5)
 
@@ -1524,7 +1524,7 @@ input:focus::placeholder
 	margin-right: auto
 	overflow: hidden
 	max-width: 100%
-	padding: 0 rem(40px) rem(20px)
+	padding: 0 96px 20px
 
 .tabs-nav-link
 	display: inline-block
@@ -1559,25 +1559,29 @@ input:focus::placeholder
 		left: 50%
 		margin-left: rem(-5.5px)
 		bottom: rem(-4.5px)
+	&.hidden
+		opacity: 0
 
 .tabs-nav-slider
+	padding-top: 4px
 	.owl-nav
 		button
-			top: rem(-2px)
-			background-color: transparent !important
-			background-size: rem(18px) !important
-			width: rem(30px)
-			height: rem(30px)
-			opacity: 0.5
+			top: 0
+			background-color: #fff !important
+			background-size: 18px !important
+			background-position: center !important
+			width: 44px
+			height: 44px
+			transition: $time
+			border-radius: 50%
 			&.owl-prev
-				background-image: url(../img/icons/angle-left-black-2.svg) !important
-				left: rem(-49px)
+				background-image: url(../img/icons/arrow-left-black.svg) !important
+				left: -96px
 			&.owl-next
-				background-image: url(../img/icons/angle-right-black-2.svg) !important
-				right: rem(-49px)
+				background-image: url(../img/icons/arrow-right-black.svg) !important
+				right: -96px
 			&.disabled
-				opacity: 0.1
-				display: none
+				opacity: 0.4
 	.owl-item:last-child
 		.tabs-nav-link
 			margin-right: 0
@@ -3198,9 +3202,14 @@ textarea.form-control
 		background-repeat: no-repeat
 		background-position: top 0 left 0
 
+.view-more-btn
+	margin-bottom: rem(50px)
+	.btn
+		border-radius: rem(7px)
+
 .pagination-wrapper
 	display: flex
-	justify-content: space-between
+	justify-content: center
 	align-items: center
 	margin-bottom: rem(80px)
 

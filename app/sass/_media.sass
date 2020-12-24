@@ -528,10 +528,12 @@
 			height: 45px
 			border-radius: 7px
 		&.btn-large
-			height: 64px
-			line-height: 64px
+			height: 54px
+			line-height: 54px
 			font-size: 20px
 			padding: 0 50px
+			&.btn-border-gray
+				line-height: 52px
 		&.btn-block
 			padding: 0 10px
 		&.btn-border-gray
@@ -941,6 +943,11 @@
 		width: 250px !important
 	.tabs-nav
 		overflow: visible
+		padding-left: 0
+		padding-right: 0
+	.tabs-nav-block:after
+		left: 0
+		right: 0
 	.tabs-nav-slider .owl-nav
 		display: none
 	.print-tshirt-wrapper
@@ -1339,6 +1346,7 @@
 		min-width: 10.7rem
 	.article-view-info .go-back-link
 		margin-top: 0
+
 
 // ≥768px
 +media-breakpoint-down(sm)

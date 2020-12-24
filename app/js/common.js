@@ -349,6 +349,7 @@ $(function() {
 					switchNav = ths.find('.switch-border'),
 					link = ths.find('.tabs-nav-link.active'),
 					leftOffset = link.offset().left - ( $(window).width() - ths.width() ) / 2 + parseFloat(ths.css('padding-left'));
+			leftOffset < 0 ? switchNav.addClass('hidden') : switchNav.removeClass('hidden');
 			switchNav.css({
 				'-webkit-transform': `translate3d(${leftOffset}px, 0, 0)`,
 				'transform': `translate3d(${leftOffset}px, 0, 0)`,
