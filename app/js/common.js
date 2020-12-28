@@ -584,9 +584,12 @@ $(function() {
 
   function closePopup(e) {
   	e.preventDefault();
+  	let popupVideo = $('.popup-wrapper.opened').find('iframe'),
+  			popupVidepSrc = popupVideo.attr('src');
   	$('.popup-wrapper').removeClass('opened');
   	setTimeout(() => {
-  		$('.popup-wrapper').hide()
+  		$('.popup-wrapper').hide();
+  		popupVideo.attr('src', '').attr('src', popupVidepSrc);
   	}, 400);
   	bodyHasScroll();
   	$('.header-mobile-universal-close').removeClass('visible');
@@ -1477,6 +1480,13 @@ $(function() {
 		$('.catalog-window').fadeOut(400);
 		$('.bg-overlay').fadeOut(400);
 		bodyHasScroll();
+	});
+
+	$('.product-video-link').on('click', function(e) {
+		e.preventDefault();
+		let videoSrc = $(this).data('video-id');
+		$('#insert-video-src iframe').attr('src', `https://www.youtube.com/embed/${videoSrc}`);
+		openPopup('#video-popup');
 	});
 
 	$(window).on('scroll', function() {

@@ -269,6 +269,7 @@ input:focus::placeholder
 
 .header-soc
 	margin-right: rem(9px)
+	margin-left: auto
 
 .header-soc-title
 	display: none
@@ -3358,13 +3359,16 @@ textarea.form-control
 
 .product-page-left
 	width: 100%
-	max-width: rem(756px)
+	max-width: 756px
 	margin-left: auto
 	margin-right: auto
 	position: relative
 
 .product-page-img
 	margin-top: rem(34px)
+	margin-left: 50px
+	margin-right: 50px
+	width: auto
 	.fotorama__wrap
 		width: 100% !important
 	.fotorama__stage__shaft
@@ -3372,7 +3376,7 @@ textarea.form-control
 			width: auto !important
 			max-width: 80% !important
 			height: auto !important
-			max-height: rem(544px) !important
+			max-height: 544px !important
 			object-fit: contain
 			top: 0 !important
 			left: 0 !important
@@ -3388,9 +3392,20 @@ textarea.form-control
 			width: 100% !important
 	.fotorama__thumb
 		background-color: transparent
-		border: 1px solid #BDBDBD
 		border-radius: 5px
 		transition: $time
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 1px
+			bottom: 1px
+			border: 1px solid #BDBDBD
+			border-radius: 5px
+			transition: $time
+			z-index: 11
 		.fotorama__img
 			width: 60px !important
 			height: 60px !important
@@ -3403,8 +3418,8 @@ textarea.form-control
 	.fotorama__nav__frame
 		transition: $time
 		&.fotorama__active
-			transform: scale(1.3785)
-			.fotorama__thumb
+			// transform: scale(1.3785)
+			.fotorama__thumb:after
 				border-color: $accent
 	.fotorama__nav:after, .fotorama__nav:before, .fotorama__stage:after, .fotorama__stage:before
 		display: none !important
@@ -3416,30 +3431,30 @@ textarea.form-control
 		background-color: #fff
 		margin: 0
 		background-image: url(../img/icons/play.svg)
-		background-size: rem(21px)
+		background-size: 21px
 		background-repeat: no-repeat
-		background-position: top 50% left calc(50% + #{rem(2px)})
+		background-position: top 50% left calc(50% + 2px)
 	.fotorama__stage__frame
 		.fotorama__video-play
 			background-color: #fff
 			border-radius: 50%
 			background-image: url(../img/icons/play.svg)
-			background-size: 21px
+			background-size: rem(21px)
 			background-repeat: no-repeat
-			background-position: top 50% left calc(50% + #{rem(2px)})
+			background-position: top 50% left calc(50% + 2px)
 	.fotorama__nav-wrap
-		margin-top: rem(30px)
+		margin-top: 30px
 
 .gallery-thumbs-nav
 	a
 		display: inline-block
 		position: absolute
-		bottom: rem(50px)
-		width: rem(36px)
-		height: rem(36px)
+		bottom: 50px
+		width: 36px
+		height: 36px
 		border-radius: 50%
 		border: 1px solid $accent
-		background-size: rem(18px)
+		background-size: 18px
 		background-repeat: no-repeat
 		background-position: center
 		transition: $time
@@ -6668,7 +6683,7 @@ blockquote
 			margin-right: 0
 			margin-left: rem(24px)
 		&:last-child
-			&:after
+			&:before
 				content: ''
 				position: absolute
 				top: rem(22px)
@@ -7063,5 +7078,35 @@ blockquote
 			left: 100%
 			top: 0
 			height: 100%
+
+.video-popup
+	width: rem(1200px)
+	.video-frame
+		margin: 0
+	.popup-close
+		top: rem(12px)
+		right: rem(12px)
+
+.map-popup-content
+	iframe
+		width: 100%
+		border: none
+
+.ya-share2__list.ya-share2__list_direction_horizontal
+	display: flex
+	align-items: center
+	margin-bottom: 0 !important
+
+.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item
+	margin: 0 10px 0 0 !important
+	&:last-child
+		margin-right: 0 !important
+
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy)
+	background-size: 26px 26px !important
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon
+	width: 30px !important
+	height: 30px !important
 
 @import "media" // Always at the end
