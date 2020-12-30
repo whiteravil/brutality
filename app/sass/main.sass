@@ -575,6 +575,7 @@ input:focus::placeholder
 	opacity: 0
 	display: none
 	left: 0
+	min-width: 100%
 	&.opened
 		opacity: 1
 		transform: translateY(0)
@@ -1126,6 +1127,9 @@ input:focus::placeholder
 		.product-btns
 			opacity: 1
 			transform: translateY(0)
+		.product-img-slider
+			.owl-nav
+				opacity: 1
 	&.with-background
 		border-radius: rem(15px)
 		padding: rem(24px)
@@ -1350,6 +1354,7 @@ input:focus::placeholder
 	flex-grow: 1
 	display: flex
 	flex-direction: column
+	max-width: calc(100% - #{rem(123px)})
 
 .category-item-brand
 	margin-bottom: rem(25px)
@@ -1372,8 +1377,9 @@ input:focus::placeholder
 
 .category-item-nav-link
 	display: inline-block
-	height: rem(32px)
-	line-height: rem(32px)
+	// height: rem(32px)
+	// line-height: rem(32px)
+	line-height: 1.1
 	background-color: #fff
 	transition: $time
 	border-radius: rem(10px)
@@ -1381,11 +1387,11 @@ input:focus::placeholder
 	text-decoration: none !important
 	font-size: rem(12px)
 	font-weight: 500
-	padding: 0 rem(10px)
+	padding: rem(10px) rem(10px)
 	text-transform: uppercase
-	white-space: nowrap
+	// white-space: nowrap
 	position: relative
-	overflow: hidden
+	// overflow: hidden
 	text-overflow: ellipsis
 	max-width: 100%
 	&:hover
@@ -3086,6 +3092,26 @@ textarea.form-control
 			margin-top: rem(20px)
 			&.active
 				background-color: $accent !important
+	.owl-nav
+		transition: $time
+		opacity: 0
+		button
+			width: 36px
+			height: 36px
+			background-color: #fff !important
+			border: 1px solid #FFA200 !important
+			top: 50%
+			margin-top: -18px
+			background-size: 18px !important
+			&.owl-prev
+				left: 0
+				background-image: url(../img/icons/angle-left-orange.svg) !important
+				background-position: top 50% left calc(50% - 1px) !important
+			&.owl-next
+				right: 0
+				background-image: url(../img/icons/angle-right-orange.svg) !important
+				background-position: top 50% left calc(50% + 1px) !important
+
 	.owl-stage-outer
 		overflow: hidden !important
 
@@ -3309,20 +3335,21 @@ textarea.form-control
 	margin-bottom: rem(10px)
 	.h3
 		margin-right: rem(8px)
-		font-size: rem(24px)
+		font-size: rem(18px)
 		font-weight: bold
 		font-family: $font
-		margin-top: rem(2px)
+		margin-top: rem(7px)
+		line-height: 1.1
 	span
-		width: rem(40px)
-		height: rem(40px)
+		width: rem(35px)
+		height: rem(35px)
 		border-radius: 50%
 		color: #fff
 		background-color: $accent
-		line-height: rem(40px)
+		line-height: rem(35px)
 		text-align: center
 		flex-shrink: 0
-		font-size: rem(16px)
+		font-size: rem(12px)
 		font-weight: 500
 
 .category-small-list-item
@@ -5448,6 +5475,8 @@ textarea.form-control
 	p
 		font-size: rem(26px)
 		margin-bottom: rem(60px)
+	.btn
+		margin-top: 25px
 
 .cashback-card-img
 	position: absolute
@@ -7108,5 +7137,10 @@ blockquote
 .ya-share2__container_size_m .ya-share2__badge .ya-share2__icon
 	width: 30px !important
 	height: 30px !important
+
+.categories-row
+	.category-small-item
+		height: calc(100% - 30px)
+		margin-bottom: 30px
 
 @import "media" // Always at the end

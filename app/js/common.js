@@ -980,7 +980,7 @@ $(function() {
   	$(this).owlCarousel({
 	  	items: 1,
 	  	dots: true,
-	  	nav: false,
+	  	nav: true,
 	  	margin: 10,
 	  	touchDrag: drag,
 	  	mouseDrag: drag
