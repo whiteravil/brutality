@@ -542,6 +542,13 @@
 			padding: 0 12px
 			height: 36px
 			line-height: 36px
+	.tabs-nav-slider
+		.owl-nav
+			button
+				&.owl-prev
+					left: -75px
+				&.owl-next
+					right: -75px
 
 // ≥1200px
 +media-breakpoint-down(lg)
@@ -741,6 +748,8 @@
 	.warranty-body
 		padding: 30px 20px
 	.catalog-item .product-img img
+		height: 330px
+	.product-img-slider
 		height: 330px
 	.gift-card-img
 		img
@@ -942,9 +951,13 @@
 			background-position: center !important
 	.products-slider-with-category .owl-nav button
 		top: 120px
-	.product-img img
-		height: 250px !important
-		width: 250px !important
+	.product-img
+		&.no-img
+			height: 250px
+		img
+			height: 250px !important
+			width: 250px !important
+
 	.tabs-nav
 		overflow: visible
 		padding-left: 0
@@ -1333,6 +1346,8 @@
 		width: 150px
 	.catalog-item .product-img img
 		height: 260px !important
+	.product-img-slider
+		height: 260px
 	.product-item.product-item-small .product-img img
 		width: 225px !important
 		height: 225px !important
@@ -1618,6 +1633,9 @@
 		margin-bottom: 30px
 	.contact-data ul li
 		font-size: 1rem
+	.checkout-delivery-item
+		width: calc(50% - 10px)
+		margin-bottom: 20px
 
 
 // ≥576px
@@ -1892,6 +1910,8 @@
 		img
 			width: 195px !important
 			height: 195px !important
+		&.no-img
+			height: 195px
 	.product-sale-stick
 		width: 53px
 		height: 58px
@@ -3183,6 +3203,8 @@
 		max-width: none
 	.catalog-item .product-img img
 		height: 170px !important
+	.product-img-slider
+		height: 170px
 	.search-city-results-item
 		flex: 0 0 100%
 		max-width: 100%
@@ -3279,6 +3301,11 @@
 		.category-small-item
 			height: auto
 			margin-bottom: 15px
+	.product-main-descr-btns
+		flex-direction: column-reverse
+		text-align: left
+		.open-descr-tab
+			margin-right: auto
 
 
 /*==========  Mobile First  ==========*/

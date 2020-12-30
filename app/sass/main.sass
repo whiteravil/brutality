@@ -1158,6 +1158,14 @@ input:focus::placeholder
 		height: rem(220px)
 		object-fit: contain
 		display: inline !important
+	&.no-img
+		border: 1px solid #FFECCB
+		border-radius: rem(23px)
+		background-image: url(../img/no-img.svg)
+		background-size: 51%
+		background-repeat: no-repeat
+		background-position: center
+		height: rem(220px)
 
 .product-sale-time
 	margin-bottom: rem(34px)
@@ -1521,7 +1529,7 @@ input:focus::placeholder
 	&:after
 		content: ''
 		position: absolute
-		bottom: rem(20px)
+		bottom: rem(34px)
 		left: 96px
 		right: 96px
 		height: 1px
@@ -1533,20 +1541,46 @@ input:focus::placeholder
 	margin-right: auto
 	overflow: hidden
 	max-width: 100%
-	padding: 0 96px 20px
+	padding: 0 rem(96px) rem(20px)
 
 .tabs-nav-link
 	display: inline-block
-	padding-bottom: rem(20px)
+	padding-bottom: rem(28px)
 	font-weight: 500
 	color: $dark !important
 	text-decoration: none !important
 	margin-right: rem(68px)
 	transition: $time
+	position: relative
 	&:not(.active):hover
 		color: $accent !important
 	&.active
 		font-weight: bold
+		&:after,
+		&:before
+			opacity: 1
+	&:after
+		content: ''
+		position: absolute
+		bottom: rem(7px)
+		left: 0
+		width: 100%
+		border-radius: rem(10px)
+		height: rem(8px)
+		background-color: #fff
+		opacity: 0
+	&:before
+		content: ''
+		background-color: #fff
+		position: absolute
+		width: rem(11px)
+		height: rem(11px)
+		border-radius: rem(2px)
+		transform: rotate(45deg)
+		left: 50%
+		margin-left: rem(-5.5px)
+		bottom: rem(2px)
+		opacity: 0
 
 .switch-border
 	position: absolute
@@ -1602,7 +1636,7 @@ input:focus::placeholder
 			top: calc(50% - #{rem(64px)})
 
 .tabs-items
-	margin-top: rem(30px)
+	margin-top: rem(15px)
 
 .tabs-item
 	display: none
@@ -2115,7 +2149,7 @@ input:focus::placeholder
 	flex-grow: 1
 	text-align: center
 	&.active
-		background-color: #fff
+		background-color: #D8D8D8
 		box-shadow: -4px 4px 26px rgba(147, 147, 147, 0.12)
 	&:not(.active):hover
 		color: $accent !important
@@ -2591,6 +2625,9 @@ textarea.form-control
 		img
 			width: rem(83px) !important
 			height: rem(83px) !important
+		&.no-img
+			border-radius: 3px
+			height: 83px
 	.product-sale-stick
 		height: rem(51px)
 		width: rem(46px)
@@ -2667,8 +2704,8 @@ textarea.form-control
 		margin-right: rem(8px)
 
 .breadcrumbs
-	margin-top: rem(45px)
-	margin-bottom: rem(30px)
+	margin-top: rem(30px)
+	margin-bottom: rem(20px)
 	ul
 		list-style-type: none
 		padding: 0
@@ -2698,7 +2735,7 @@ textarea.form-control
 				text-overflow: ellipsis
 
 .page-title
-	margin-bottom: rem(73px)
+	margin-bottom: rem(40px)
 	h1, .h1
 		font-size: rem(40px)
 		margin: 0
@@ -2940,7 +2977,7 @@ textarea.form-control
 	border: 1px solid #EFEFEF
 	border-radius: rem(20px)
 	position: relative
-	margin-bottom: rem(57px)
+	margin-bottom: rem(45px)
 
 .border-block-title
 	margin-top: rem(-22px)
@@ -2998,7 +3035,7 @@ textarea.form-control
 .catalog-header
 	display: flex
 	align-items: flex-start
-	margin-bottom: rem(63px)
+	margin-bottom: rem(40px)
 	.h2
 		margin-right: rem(20px)
 		flex-grow: 1
@@ -3079,6 +3116,14 @@ textarea.form-control
 		font-weight: 500
 
 .product-img-slider
+	height: rem(333px)
+	&.no-img
+		border: 1px solid #FFECCB
+		border-radius: rem(23px)
+		background-image: url(../img/no-img.svg)
+		background-size: 51%
+		background-repeat: no-repeat
+		background-position: center
 	.owl-dots
 		display: flex
 		justify-content: center
@@ -3217,7 +3262,7 @@ textarea.form-control
 
 .s-catalog
 	position: relative
-	padding-bottom: rem(70px)
+	padding-bottom: rem(40px)
 	&:after
 		content: ''
 		position: absolute
@@ -3240,7 +3285,7 @@ textarea.form-control
 	display: flex
 	justify-content: center
 	align-items: center
-	margin-bottom: rem(80px)
+	margin-bottom: rem(50px)
 
 .pagination-nav
 	display: flex
@@ -3304,7 +3349,7 @@ textarea.form-control
 			text-decoration: none
 
 .category-slider
-	margin-bottom: rem(69px)
+	margin-bottom: rem(55px)
 	.owl-nav
 		button
 			top: 50%
@@ -3648,7 +3693,7 @@ textarea.form-control
 	font-weight: 500
 
 .product-main
-	margin-bottom: rem(100px)
+	margin-bottom: rem(60px)
 
 .s-interested
 	.products-category
@@ -4141,7 +4186,7 @@ textarea.form-control
 			margin-bottom: rem(24px)
 
 .s-also-buy
-	padding: rem(70px) 0
+	padding: rem(35px) 0
 
 .section-title-2
 	margin-bottom: rem(40px)
@@ -4300,7 +4345,7 @@ textarea.form-control
 .checkout-acc
 	display: flex
 	align-items: center
-	padding: rem(22px) rem(49px) rem(22px) rem(26px)
+	padding: rem(22px) rem(35px) rem(22px) rem(26px)
 	background-color: #FFF6E6
 	border-radius: rem(10px)
 	margin-bottom: rem(50px)
@@ -4404,10 +4449,11 @@ textarea.form-control
 .checkout-delivery-row
 	display: flex
 	justify-content: space-between
-	max-width: rem(672px)
+	// max-width: rem(672px)
+	flex-wrap: wrap
 
 .checkout-delivery-item
-	width: calc(50% - #{rem(15px)})
+	width: calc(33.33333% - #{rem(15px)})
 	background-color: #FCFCFC
 	transition: $time
 	padding: rem(30px) rem(82px) rem(30px) rem(30px)
@@ -4417,6 +4463,7 @@ textarea.form-control
 	flex-direction: column
 	align-items: flex-start
 	border-radius: rem(10px)
+	margin-bottom: 30px
 	img
 		max-width: rem(159px)
 		max-height: rem(35px)
@@ -4426,7 +4473,7 @@ textarea.form-control
 		font-weight: 500
 		font-size: rem(20px)
 		margin-bottom: rem(5px)
-	p
+	p, div:not(.checkout-delivery-price):not(.h5)
 		margin: 0
 		font-size: rem(14px)
 		color: #828282
@@ -4627,7 +4674,7 @@ textarea.form-control
 	line-height: 1.1875
 
 .checkout
-	margin-bottom: rem(100px)
+	margin-bottom: rem(50px)
 
 .checkout-cart
 	margin-bottom: rem(40px)
@@ -5435,8 +5482,8 @@ textarea.form-control
 	border-radius: rem(10px)
 	background-color: #4A9BFF
 	color: #fff
-	padding: rem(72px) rem(85px)
-	margin-bottom: rem(250px)
+	padding: rem(45px) rem(55px)
+	margin-bottom: rem(100px)
 
 .cashback-card-info-bg
 	position: absolute
@@ -5471,16 +5518,16 @@ textarea.form-control
 	z-index: 1
 	max-width: 50%
 	h2, .h2
-		margin-bottom: rem(30px)
+		margin-bottom: rem(23px)
 	p
-		font-size: rem(26px)
-		margin-bottom: rem(60px)
+		font-size: rem(21px)
+		margin-bottom: rem(30px)
 	.btn
 		margin-top: 25px
 
 .cashback-card-img
 	position: absolute
-	width: 59%
+	width: 50%
 	right: 0
 	top: rem(16px)
 	right: rem(-25px)
@@ -5495,7 +5542,7 @@ textarea.form-control
 	background-color: #4A9BFF
 	padding: rem(75px) rem(270px) rem(75px) rem(135px)
 	color: #fff
-	margin-top: rem(60px)
+	margin-top: rem(30px)
 
 .get-cashback-text
 	position: relative
@@ -5508,8 +5555,12 @@ textarea.form-control
 	.btn
 		padding: 0 rem(36px)
 
+.cashback-text-wrapper
+	position: relative
+	z-index: 1
+
 .cashback-info
-	margin-bottom: rem(129px)
+	margin-bottom: rem(50px)
 
 .news-main
 	margin-bottom: rem(55px)
@@ -6037,7 +6088,7 @@ textarea.form-control
 	overflow: hidden
 	border-radius: rem(10px)
 	border: 1px solid #D5D5D5
-	margin-bottom: rem(70px)
+	margin-bottom: rem(40px)
 
 .delivery-header
 	padding: rem(32px) rem(70px)
@@ -7142,5 +7193,41 @@ blockquote
 	.category-small-item
 		height: calc(100% - 30px)
 		margin-bottom: 30px
+
+.product-main-descr-wrapper
+	max-height: 148px
+	overflow: hidden
+	position: relative
+	text-overflow: ellipsis
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 40px
+		width: 100%
+		z-index: 1
+		background: linear-gradient(to bottom, rgba(#fff, 0) 0%, rgba(#fff, 1) 100%)
+	&.full
+		max-height: none
+		&:after
+			display: none
+
+.product-main-descr-btns
+	display: flex
+	margin-top: 20px
+	.open-descr-tab
+		margin-right: auto
+	.open-more-descr
+		color: #8e8e8e !important
+		span
+			&:last-child
+				display: none
+		&.opened
+			span
+				&:first-child
+					display: none
+				&:last-child
+					display: block
 
 @import "media" // Always at the end

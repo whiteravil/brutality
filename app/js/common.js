@@ -344,18 +344,22 @@ $(function() {
 	});
 
 	function checkNavSwitchPos() {
-		$('.tabs-nav').each(function() {
-			let ths = $(this),
-					switchNav = ths.find('.switch-border'),
-					link = ths.find('.tabs-nav-link.active'),
-					leftOffset = link.offset().left - ( $(window).width() - ths.width() ) / 2 + parseFloat(ths.css('padding-left'));
-			leftOffset < 0 ? switchNav.addClass('hidden') : switchNav.removeClass('hidden');
-			switchNav.css({
-				'-webkit-transform': `translate3d(${leftOffset}px, 0, 0)`,
-				'transform': `translate3d(${leftOffset}px, 0, 0)`,
-				'width': `${link.outerWidth()}px`
-			})
-		});
+		let tabsNav = $('.tabs-nav');
+		if ( tabsNav.length > 0 ) {
+			tabsNav.each(function () {
+				let ths = $(this),
+				switchNav = ths.find('.switch-border'),
+				link = ths.find('.tabs-nav-link.active');
+				if ( link.length > 0 ) {
+					let leftOffset = link.offset().left - ($(window).width() - ths.width()) / 2 + parseFloat(ths.css('padding-left'));
+					switchNav.css({
+						'-webkit-transform': `translate3d(${leftOffset}px, 0, 0)`,
+						'transform': `translate3d(${leftOffset}px, 0, 0)`,
+						'width': `${link.outerWidth()}px`
+					})
+				}
+			});
+		}
 	}checkNavSwitchPos();
 
 	let tabSlider = $('.tabs-nav-slider');
@@ -1428,7 +1432,7 @@ $(function() {
 			$('.about-company-sidebar-link').each(function() {
 				let ths = $(this);
 				if (  $(ths.attr('href')).length > 0 ) {
-					if ( $(window).scrollTop() >= $(ths.attr('href')).offset().top - 20 ) {
+					if ( $(window).scrollTop() >= $(ths.attr('href')).offset().top - 30 ) {
 						$('.about-company-sidebar-link').removeClass('active');
 						ths.addClass('active')
 					}
@@ -1487,6 +1491,12 @@ $(function() {
 		let videoSrc = $(this).data('video-id');
 		$('#insert-video-src iframe').attr('src', `https://www.youtube.com/embed/${videoSrc}`);
 		openPopup('#video-popup');
+	});
+
+	$('.open-more-descr').on('click', function(e) {
+		e.preventDefault();
+		$('.product-main-descr-wrapper').toggleClass('full');
+		$(this).toggleClass('opened');
 	});
 
 	$(window).on('scroll', function() {
