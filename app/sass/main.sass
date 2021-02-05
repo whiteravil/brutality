@@ -1619,10 +1619,10 @@ input:focus::placeholder
 			border-radius: 50%
 			&.owl-prev
 				background-image: url(../img/icons/arrow-left-black.svg) !important
-				left: -96px
+				left: -#{rem(96px)}
 			&.owl-next
 				background-image: url(../img/icons/arrow-right-black.svg) !important
-				right: -96px
+				right: -#{rem(96px)}
 			&.disabled
 				opacity: 0.4
 	.owl-item:last-child
@@ -7230,4 +7230,5 @@ blockquote
 				&:last-child
 					display: block
 
+@import "new"
 @import "media" // Always at the end

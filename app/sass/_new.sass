@@ -1,0 +1,501 @@
+@import "vars"
+
+.product-info-list
+	margin-bottom: rem(35px)
+	.h6
+		font-size: rem(18px)
+		font-weight: 500
+		margin-bottom: rem(12px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		font-size: rem(18px)
+		li
+			display: flex
+			margin-bottom: rem(7px)
+			&:last-child
+				margin-bottom: 0
+			span
+				&:first-child
+					flex-grow: 1
+					display: flex
+					&:after
+						content: ''
+						height: 1px
+						border-top: 1px dashed #E7E7E7
+						display: block
+						flex-shrink: 0
+						flex-grow: 1
+						margin: auto rem(5px) rem(4px)
+
+.cashback-new-img
+	position: relative
+	padding-bottom: 56%
+	background-color: #459BFF
+	border-radius: rem(10px)
+	max-width: 704px
+	img
+		position: absolute
+		width: 107%
+		z-index: 2
+		top: -17%
+		left: -4%
+
+.cashback-new-img-gradients
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	border-radius: rem(10px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: rem(-112px)
+		width: rem(1037px)
+		height: rem(1037px)
+		border-radius: 50%
+		left: rem(-474px)
+		opacity: 0.8
+		background: radial-gradient(50% 50% at 50% 50%, #3300FF 0%, rgba(31, 107, 255, 0) 100%)
+	&:before
+		content: ''
+		position: absolute
+		top: rem(-527px)
+		right: rem(-603px)
+		width: rem(933px)
+		height: rem(933px)
+		border-radius: 50%
+		background: radial-gradient(50% 50% at 50% 50%, #B3FFF1 0%, rgba(179, 255, 241, 0) 100%)
+
+.cashback-text
+	font-size: rem(24px)
+	margin-bottom: 0
+	h3
+		font-size: rem(30px)
+		margin-bottom: rem(22px)
+	p
+		margin-bottom: rem(18px)
+		span
+			font-weight: bold
+	ul
+		margin-bottom: rem(36px)
+		li
+			font-size: rem(20px)
+			padding-left: rem(28px)
+			&:not(:last-child)
+				margin-bottom: rem(16px)
+			&:after
+				top: rem(3px)
+	.cashback-big-text
+		font-size: rem(24px)
+		font-weight: 500
+		margin-bottom: rem(34px)
+
+.s-cashback
+	padding-bottom: rem(89px)
+
+.new-delivery-nav-link
+	&:not(:last-child)
+		margin-right: rem(18px)
+	img
+		width: rem(28px)
+
+.new-delivery-tab
+	display: none
+
+.new-delivery-content
+	margin-bottom: rem(65px)
+	ol
+		counter-reset: delCounter
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			padding-left: rem(23px)
+			margin-bottom: rem(15px)
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: counter(delCounter)
+				counter-increment: delCounter
+				font-size: rem(16px)
+				font-weight: bold
+				color: $accent
+				position: absolute
+				left: 0
+				top: 1px
+
+.custom-link
+	display: inline-block
+	color: $accent !important
+	text-decoration: none !important
+	transition: $time
+	font-size: rem(20px)
+	margin-top: rem(2px)
+	font-weight: normal
+
+.pickup-points
+	margin-top: rem(25px)
+	.h4
+		margin-bottom: rem(32px)
+
+.delivery-map
+	.map-wrapper
+		margin-bottom: 0
+		#map
+			height: rem(393px)
+
+.delivery-methods-list
+	align-items: center
+	flex-wrap: wrap
+	img
+		margin-right: rem(15px)
+		margin-bottom: rem(10px)
+		max-width: rem(157px)
+		max-height: rem(70px)
+		object-fit: contain
+
+.delivery-methods-attention
+	font-size: rem(20px)
+	line-height: 1.2
+	max-width: rem(532px)
+	span
+		color: $accent
+
+.delivery-new-big-text
+	margin-bottom: rem(30px)
+
+.new-delivery-content
+	.delivery-ul
+		ul
+			column-count: 2
+			list-style-type: none
+			margin: 0 0 rem(30px)
+			padding: 0
+			li
+				margin-bottom: rem(5px)
+				position: relative
+				padding-left: rem(16px)
+				overflow: hidden
+				break-inside: avoid-column
+				&:before
+					content: ''
+					position: absolute
+					top: rem(10px)
+					width: rem(5px)
+					height: rem(5px)
+					background-color: $accent
+					border-radius: 50%
+					left: 0
+
+.custom-frame-map
+	iframe
+		border: none
+		height: rem(356px)
+		width: 100%
+		border-radius: rem(10px)
+
+.new-contacts-item
+	margin-bottom: rem(24px)
+	a
+		font-weight: bold
+		font-size: rem(24px)
+		margin-bottom: rem(5px)
+		color: #000
+		text-decoration: none !important
+		transition: $time
+		&:hover
+			color: $accent
+	p
+		margin: 0
+		max-width: rem(363px)
+
+.pickup-points-contacts
+	margin-top: rem(37px)
+	.h5
+		font-family: $font2
+		font-size: rem(24px)
+		line-height: 1.167
+		margin-bottom: rem(30px)
+	.small-mute-text
+		font-size: rem(20px)
+		margin-top: rem(2px)
+	.delivery-contacts-item
+		margin-bottom: rem(25px)
+	.delivery-contacts-item
+		margin-top: 0 !important
+
+.new-contacts
+	.contact-data
+		margin-bottom: rem(35px)
+		&:last-child
+			margin-bottom: 0
+		.h5
+			margin-bottom: rem(5px)
+		ul
+			li
+				font-size: rem(18px)
+				margin-bottom: rem(1px)
+	.download-doc-link
+		align-items: center
+	.doc-icon
+		padding-top: 0
+		margin-bottom: 0
+		display: flex
+		align-items: center
+		img
+			width: rem(20px)
+			flex-shrink: 0
+	.doc-info-title
+		margin-bottom: 0
+
+.title-with-download-link
+	display: flex
+	align-items: center
+	margin-bottom: rem(12px)
+	.h5
+		margin-right: rem(23px)
+		margin-bottom: 0 !important
+
+.product-availability
+	border-radius: rem(10px)
+	border: 1px solid #E1E1E1
+	margin-bottom: rem(24px)
+
+.product-availability-title
+	padding: rem(18px) rem(60px) rem(18px) rem(20px)
+	cursor: pointer
+	font-size: rem(20px)
+	font-weight: 500
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: rem(18px)
+		height: rem(18px)
+		top: rem(23px)
+		right: rem(19px)
+		background-image: url(../img/icons/angle-down-black.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		transition: $time
+	&.active
+		&:after
+			transform: rotate(180deg)
+
+.product-availability-body
+	padding: 0 rem(26px) rem(20px)
+	display: none
+
+.product-availability-item
+	display: flex
+	margin-bottom: rem(10px)
+	&:last-child
+		margin-bottom: 0
+
+.product-availability-info
+	flex-grow: 1
+	padding-right: rem(15px)
+	font-size: rem(16px)
+	span
+		display: block
+		&:last-child
+			color: #BDBDBD
+
+.product-availability-status
+	font-size: rem(14px)
+	&.green
+		color: #27AE60
+	&.red
+		color: $red
+
+.main-banner-slide-right
+	position: relative
+	display: flex
+	align-items: flex-start
+
+.main-banner-stock
+	position: absolute
+	height: rem(69px)
+	z-index: 1
+	border-radius: 0 rem(6px) rem(6px) 0
+	white-space: nowrap
+	background-color: #fff
+	padding-right: rem(21px)
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: flex-start
+	user-select: none
+	top: 50%
+	transform: translateY(-50%)
+	right: 0
+	&:after
+		content: ''
+		position: absolute
+		min-width: rem(177px)
+		height: rem(69px)
+		width: 100%
+		z-index: -1
+		background-image: url(../img/stock-stick.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: top 50% left 0
+		top: 0
+		left: -#{rem(29px)}
+		height: 100%
+
+.main-banner-stock-current-price
+	font-size: rem(36px)
+	font-weight: bold
+	background: linear-gradient(320.25deg, #F14545 11.43%, #FF7121 86.47%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	color: #F75836
+	line-height: 1
+	padding-left: rem(28px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(15px)
+		left: 0
+		width: rem(23px)
+		height: rem(23px)
+		background-image: url(../img/icons/fire.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+.main-banner-stock-old-price
+	position: relative
+	color: #A8A8A8
+	font-size: rem(14px)
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: 1px
+		width: 100%
+		height: 1px
+		background-color: #A29FAC
+		transform: rotate(-7deg)
+
+.with-stocks-icon
+	.main-banner-slide-right-img
+		padding-right: rem(144px)
+
+.main-banner-slide-right-img
+	position: relative
+	margin-left: auto
+
+.header-mobile-search
+	display: none
+
+@media (max-width: 1199.98px)
+	.main-banner-stock
+		height: 44px
+		padding-right: 21px
+		&:after
+			min-width: 113px
+			height: 44px
+			left: -22px
+	.main-banner-stock-current-price
+		font-size: 14px
+		&:after
+			width: 12px
+			top: 7px
+			height: 12px
+			padding-left: 20px
+	.main-banner-stock-current-price
+		font-size: 12px
+	.with-stocks-icon .main-banner-slide-right-img
+		padding-right: 69px
+
+@media (max-width: 991.98px)
+	.new-delivery-content
+		.delivery-contacts
+			margin-top: 0
+		.delivery-contacts-item
+			&:first-child
+				margin-top: 0
+	.with-stocks-icon .main-banner-slide-right-img
+		padding-right: 0
+	.main-banner-stock
+		position: absolute
+		top: 0
+		right: 0
+		transform: none
+
+@media (max-width: 767.98px)
+	.cashback-new-img
+		margin-bottom: 22%
+	.new-delivery-content ol
+		margin-bottom: 25px
+	.new-delivery-content
+		.delivery-contacts-item
+			margin-bottom: 25px
+	.delivery-map .map-wrapper #map
+		height: 250px
+	.delivery-methods-attention
+		margin-bottom: 35px
+		font-size: 14px
+	.custom-frame-map iframe
+		height: 250px
+	.pickup-points-contacts .h5
+		font-size: 16px
+
+@media (max-width: 575.98px)
+	.delivery-methods-attention
+		margin-top: 15px
+		margin-bottom: 25px
+	.title-with-download-link
+		display: block
+		.h5
+			margin-bottom: 7px !important
+	.main-banner-slide-right-img
+		position: static
+	.main-banner-slide-right
+		position: static
+	.main-banner-stock
+		display: none
+	.header-mobile-search
+		display: flex
+		margin-right: 10px
+		a
+			display: flex
+			img
+				width: 19px
+				flex-shrink: 0
+	.profile-nav-block
+		display: block
+		margin-left: 0 !important
+		margin-right: 0 !important
+		overflow: visible !important
+	.profile-nav
+		display: block !important
+		padding-left: 0 !important
+		padding-right: 0 !important
+	.profile-nav-link
+		width: 100% !important
+		margin-right: 0 !important
+	.basket-cashback-qnt
+		order: -1
+		
+
+@media (min-width: 576px)
+	.category-item-nav
+		&.grid
+			margin-right: -#{rem(123px)}
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-column-gap: rem(12px)
+			max-width: 300px
+		.category-item-nav-link
+			margin-right: auto
