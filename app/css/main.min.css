@@ -18132,6 +18132,35 @@ blockquote p:last-child {
   display: none;
 }
 
+.header-callback {
+  margin-right: 1.22222rem;
+}
+
+.header-callback:last-child {
+  margin-right: 0;
+}
+
+.header-worktime {
+  margin-right: 2.16667rem;
+}
+
+.header-logo {
+  margin-right: 1.94444rem;
+}
+
+.header-cities {
+  margin-right: 1.44444rem;
+}
+
+.header-menu a {
+  font-size: 0.83333rem;
+}
+
+.header-top {
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
 @media (max-width: 1199.98px) {
   .main-banner-stock {
     height: 44px;
@@ -18176,6 +18205,16 @@ blockquote p:last-child {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+  }
+  .header-phone-descr {
+    display: block !important;
+  }
+  .header-callback {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .header-callback:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -18223,6 +18262,13 @@ blockquote p:last-child {
 
 .alert-block p {
   margin: 0;
+}
+
+.product-list-view-name .alert-block {
+  font-size: 0.77778rem;
+  padding: 0.22222rem 0.44444rem;
+  display: inline-block;
+  margin-top: 0.38889rem;
 }
 
 @media (max-width: 575.98px) {
