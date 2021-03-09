@@ -416,8 +416,519 @@
 	font-size: rem(15px)
 
 .header-top
-	padding-left: 85px
-	padding-right: 85px
+	padding-left: rem(85px)
+	padding-right: rem(85px)
+
+.s-production
+	padding-bottom: rem(60px)
+	padding-top: rem(30px)
+
+.production-row
+	margin-top: rem(140px)
+
+.production-item
+	position: relative
+	border-radius: rem(10px)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	display: flex
+	height: calc(100% - #{rem(73px)})
+	margin-bottom: rem(73px)
+	min-height: rem(260px)
+
+.production-item-left
+	flex-grow: 1
+	padding: rem(43px) rem(15px) rem(35px) rem(39px)
+	display: flex
+	flex-direction: column
+	position: relative
+	z-index: 1
+	.h4
+		font-size: rem(22px)
+		margin-bottom: rem(14px)
+
+.mute-text
+	color: #3B4856
+	margin-bottom: rem(6px)
+	text-transform: uppercase
+	letter-spacing: 0.05em
+
+.production-link
+	margin-top: auto
+	padding-top: rem(30px)
+	.category-next-link
+		position: static
+		display: inline-block
+		width: rem(53px)
+		height: rem(53px)
+		background-size: rem(19px)
+
+.production-item-right
+	width: 35%
+	flex-shrink: 0
+
+.production-item-img
+	img
+		position: absolute
+		right: 0
+		bottom: 0
+		width: auto
+		height: auto
+		max-width: 66%
+		max-height: 110%
+
+.production-catalog-links-nav
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: rem(11px)
+	a
+		display: inline-block
+		position: relative
+		color: #2E3338
+		transition: all .3s ease
+		font-weight: bold
+		margin-right: rem(15px)
+		text-decoration: none !important
+		line-height: 1.1
+		margin-bottom: rem(5px)
+		font-size: rem(16px)
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $accent
+			&:after
+				background-color: $accent
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background-color: #2E3338
+			transition: all .3s ease
+
+.checkbox-list
+	.radio
+		width: 100%
+		display: block
+		span
+			&:before
+				display: none
+			&:after
+				transition: all .3s ease
+		input:checked + span:after
+			border-width: rem(5px) !important
+
+.nav-border-links
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: rem(80px)
+
+.nav-border-link
+	margin: 0 rem(9px) rem(9px) 0
+	transition: all .3s ease
+	height: rem(32px)
+	display: inline-block
+	line-height: rem(28px)
+	padding: 0 rem(18px)
+	display: block
+	border: 1px solid #E0E0E0
+	border-radius: rem(16px)
+	font-size: rem(16px)
+	color: $text
+	transition: all .3s ease
+	text-decoration: none !important
+	white-space: nowrap
+	&:hover:not(.active)
+		color: $accent
+		border-color: $accent
+	&.active
+		border-color: $accent
+		background-color: $accent
+		color: #fff
+	&:last-child
+		margin-right: 0
+
+.product-name
+	margin-top: rem(10px)
+
+.alert-block
+	padding: rem(15px)
+	border-radius: rem(5px)
+	font-size: rem(16px)
+	margin-bottom: rem(10px)
+	&.success
+		background-color: #e8fff2
+		color: #27ae60
+	&.danger
+		background-color: #ffe8e8
+		color: $red
+	p
+		margin: 0
+
+.product-list-view-name
+	.alert-block
+		font-size: rem(14px)
+		padding: rem(4px) rem(8px)
+		display: inline-block
+		margin-top: rem(7px)
+
+.product-main-size
+	margin-bottom: rem(26px)
+	.h5
+		font-size: rem(18px)
+		font-weight: 500
+		margin-bottom: rem(12px)
+
+.select-size
+	display: flex
+	flex-wrap: wrap
+	margin-right: rem(-30px)
+
+.select-size-item
+	margin: 0 rem(8px) rem(8px) 0
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		z-index: -1
+		visibility: hidden
+		opacity: 0
+		&:checked + span
+			border-color: $accent
+			color: #fff
+			background-color: $accent
+			span
+				color: #fff
+		&:disabled + span
+			border-color: #E3E3E3
+			background-color: #E3E3E3
+			color: #8C8C8C
+	> span
+		display: block
+		text-align: center
+		padding: 0 rem(5px)
+		height: rem(34px)
+		line-height: rem(32px)
+		border-radius: rem(4px)
+		min-width: rem(117px)
+		border: 1px solid #E7E7E7
+		cursor: pointer
+		color: #000
+		transition: $time
+		font-size: rem(14px)
+		span
+			color: #8c8c8c
+			transition: $time
+	&:last-child
+		margin-right: 0
+
+.product-main-color
+	margin-bottom: rem(16px)
+	.h5
+		font-size: rem(20px)
+		font-weight: 500
+		margin-bottom: rem(18px)
+
+.select-color
+	display: flex
+	flex-wrap: wrap
+
+.select-color-item
+	display: block
+	margin: 0 rem(19px) rem(19px) 0
+	position: relative
+	input
+		position: absolute
+		visibility: hidden
+		opacity: 0
+		z-index: -1
+		&:checked
+			& + span:after
+				transform: scale(1)
+				opacity: 1
+	span
+		width: rem(35px)
+		height: rem(35px)
+		border-radius: rem(3px)
+		border: 1px solid #BDBDBD
+		display: block
+		cursor: pointer
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: rem(-5px)
+			left: rem(-5px)
+			bottom: rem(-5px)
+			right: rem(-5px)
+			border-radius: rem(3px)
+			border: 1px solid #ccc
+			transition: $time
+			opacity: 0
+			transform: scale(.9)
+
+.product-list-view-size
+	font-size: rem(16px)
+	margin-top: rem(8px)
+	margin-bottom: rem(4px)
+	span
+		&:first-child
+			font-weight: 500
+			color: #424547
+		&:last-child
+			font-weight: normal
+			color: #50565B
+
+.product-list-view-color
+	font-size: rem(16px)
+	span
+		font-weight: 500
+		color: #424547
+		margin-bottom: rem(4px)
+		display: block
+
+.product-list-view-color-item
+	width: rem(20px)
+	height: rem(20px)
+	border-radius: rem(3px)
+	border: 1px solid #BDBDBD
+
+#select-city-new
+	.popup-flex
+		justify-content: flex-start
+	&.opened
+		.select-city-new-popup
+			transform: translateX(0)
+
+.select-city-new-popup
+	border-radius: 0
+	height: 100%
+	width: rem(1472px)
+	transform: translateX(-#{rem(70px)})
+	overflow: hidden
+	.popup-content
+		max-height: 100%
+
+.select-city-new-popup-content
+	padding: rem(80px) rem(80px) rem(55px) rem(80px)
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+.select-city-new-wrapper
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	overflow: hidden
+	.h2
+		margin-bottom: rem(30px)
+
+.select-city-new-form
+	margin-bottom: rem(40px)
+	position: relative
+
+.select-city-new-search-input
+	height: rem(64px)
+	border-radius: rem(13px)
+	padding: 0 rem(25px) 0 rem(63px)
+	background-image: url(../img/icons/search.svg)
+	background-size: rem(23px)
+	background-position: top 50% left rem(25px)
+	background-repeat: no-repeat
+	&::placeholder
+		transform: none !important
+
+.select-city-new-form-close
+	position: absolute
+	top: 50%
+	margin-top: rem(-14px)
+	right: rem(14px)
+	width: rem(28px)
+	height: rem(28px)
+	background-image: url(../img/icons/close-circle.svg)
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center
+	background-color: transparent
+	cursor: pointer
+	border: none
+	outline: none !important
+	visibility: hidden
+	opacity: 0
+	transform: scale(.85)
+	transition: $time
+	z-index: 1
+
+.select-city-new-block
+	margin-bottom: rem(35px)
+	.h5
+		font-weight: 500
+		margin-bottom: rem(20px)
+	p
+		font-size: rem(15px)
+		color: #444445
+		position: relative
+		padding-left: rem(10px)
+		&:after
+			content: ''
+			position: absolute
+			width: rem(6px)
+			height: rem(6px)
+			border-radius: 50%
+			left: 0
+			top: rem(9px)
+			background-color: #D0D0D0
+
+.select-city-new-list
+	display: flex
+	flex-wrap: wrap
+	a
+		transition: $time
+		display: inline-block
+		position: relative
+		font-size: rem(16px)
+		color: #000
+		text-decoration: none !important
+		padding-left: rem(9px)
+		margin-right: rem(15px)
+		margin-bottom: rem(6px)
+		white-space: nowrap
+		&:last-child
+			margin-right: 0
+		&:after
+			content: ''
+			position: absolute
+			width: rem(4px)
+			height: rem(4px)
+			background-color: $accent
+			border-radius: 50%
+			left: 0
+			top: rem(10px)
+		&.active,
+		&:hover
+			color: $accent
+
+.cities-alphabet-list
+	flex-grow: 1
+	display: flex
+	overflow: hidden
+
+.cities-alphabet-words
+	margin-right: rem(63px)
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	white-space: nowrap
+
+.cities-alphabet-words-link
+	font-size: rem(16px)
+	color: #000
+	text-decoration: none !important
+	transition: $time
+	margin-bottom: rem(6px)
+	&:hover,
+	&.active
+		color: $accent
+
+.cities-alphabet-row
+	flex-grow: 1
+	overflow-y: auto
+	display: flex
+	flex-wrap: wrap
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		background-color: $mute
+		background-color: #e2e2e2
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		border-radius: 2px
+		background-color: $accent
+
+.cities-alphabet-col
+	width: 33.3333%
+	flex-shrink: 0
+	padding-right: rem(10px)
+	margin-bottom: rem(30px)
+	padding-left: rem(13px)
+	.h3
+		font-size: rem(26px)
+		text-transform: uppercase
+		margin-bottom: rem(9px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		font-size: rem(15px)
+		column-count: 2
+		li
+			margin-bottom: rem(5px)
+			break-inside: avoid-column
+		a
+			display: inline-block
+			position: relative
+			color: #444445
+			text-decoration: none !important
+			transition: $time
+			&:hover
+				color: $accent
+			&.fullsize
+				&:after
+					content: ''
+					position: absolute
+					top: rem(8px)
+					left: rem(-13px)
+					width: rem(4px)
+					height: rem(4px)
+					border-radius: 50%
+					background-color: #D0D0D0
+
+.select-pickup-addresses
+	display: flex
+	a
+		position: relative
+		margin-right: rem(14px)
+		display: inline-block
+		padding-left: rem(11px)
+		font-size: rem(15px)
+		color: #444445
+		transition: $time
+		text-decoration: none !important
+		&:hover,
+		&.active
+			color: $accent
+		&:after
+			content: ''
+			position: absolute
+			top: rem(10px)
+			left: 0
+			width: rem(4px)
+			height: rem(4px)
+			border-radius: 50%
+			background-color: #c4c4c4
+
+.select-pickup-addresses-block
+	display: none
+
+.header-mob-acc
+	display: none
+
+.header-menu
+	ul
+		li
+			img
+				display: none
+
+.header-mobile-menu-list
+	display: none
+
+@media (max-width: 1500px)
+	.production-row
+		margin-top: rem(80px)
 
 @media (max-width: 1199.98px)
 	.main-banner-stock
@@ -438,6 +949,13 @@
 		font-size: 12px
 	.with-stocks-icon .main-banner-slide-right-img
 		padding-right: 69px
+	.production-item-left
+		padding: 20px
+	.production-item-img img
+		max-width: 54%
+	.production-item
+		margin-bottom: 30px
+		height: calc(100% - 30px)
 
 @media (max-width: 991.98px)
 	.new-delivery-content
@@ -460,6 +978,128 @@
 		margin-bottom: 10px
 		&:last-child
 			margin-bottom: 0
+	.production-row
+		.row
+			margin: 0 -5px
+			[class*=col-]
+				padding: 0 5px
+	.production-item
+		margin-bottom: 10px
+		height: calc(100% - 10px)
+	.production-item-left
+		padding: 15px
+		.h4
+			font-size: 16px
+	.mute-text
+		font-size: 12px
+	.production-catalog-links-nav
+		a
+			font-size: 12px
+			margin-right: 5px
+	.production-item-right
+		width: 0
+	.production-item-img img
+		max-height: 70%
+	.alert-block
+		padding: rem(15px)
+		border-radius: rem(5px)
+		font-size: rem(16px)
+		margin-bottom: rem(10px)
+		&.success
+			background-color: #e8fff2
+			color: #27ae60
+		&.danger
+			background-color: #ffe8e8
+			color: $red
+		p
+			margin: 0
+	.header-mob-acc
+		display: block
+		order: 2
+		border-bottom: 1px solid #E0E0E0
+		padding-bottom: 12px
+		margin-bottom: 13px
+		.h6
+			font-size: 14px
+			color: #A8A8A8
+			margin-bottom: 6px
+	.header-mob-acc-main
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.header-mob-acc-name
+		font-weight: 500
+		flex-grow: 1
+		padding-right: 20px
+		overflow: hidden
+		white-space: nowrap
+		font-size: 16px
+		text-overflow: ellipsis
+	.header-acc-exit-link
+		display: flex
+		align-items: center
+		white-space: nowrap
+		font-size: 14px
+		font-weight: 500
+		color: #FFA200 !important
+		text-decoration: none !important
+		img
+			width: 24px
+			flex-shrink: 0
+			margin-right: 8px
+	.header-top
+		padding-left: 20px !important
+		padding-right: 20px !important
+	.header-logo
+		padding-left: 28px !important
+		.logo
+			img
+				width: 152px !important
+	.header-top .header-menu
+		display: none !important
+	.header-mobile-menu-list
+		display: block
+		order: 3
+		padding-bottom: 9px
+		margin-bottom: 14px
+		border-bottom: 1px solid #EFEFEF
+		ul
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -3px
+			list-style-type: none
+			padding: 0
+			li
+				padding: 0 3px
+				margin: 0 0 7px
+				width: 50%
+				flex-shrink: 0
+				&.header-menu-catalog-link
+					width: 100%
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 16px
+			color: #17212C !important
+			text-decoration: none !important
+			font-weight: normal
+			padding: 0 5px
+			overflow: hidden
+			white-space: nowrap
+			height: 56px
+			border-radius: 10px
+			background-color: #FFF6E6
+			img
+				flex-shrink: 0
+				width: 18px
+				margin-right: 6px
+	.header-phone a
+		font-size: 18px
+		font-weight: bold
+	.header-phone-descr
+		font-size: 14px
+		color: #A8A8A8
 
 @media (max-width: 767.98px)
 	.cashback-new-img
@@ -478,27 +1118,17 @@
 		height: 250px
 	.pickup-points-contacts .h5
 		font-size: 16px
+	.nav-border-links
+		flex-wrap: nowrap
+		overflow: auto visible
+		margin: 0 -20px 25px
+		padding: 0 20px
+		&:after
+			content: ''
+			width: 20px
+			flex-shrink: 0
+			height: 10px
 
-.alert-block
-	padding: rem(15px)
-	border-radius: rem(5px)
-	font-size: rem(16px)
-	margin-bottom: rem(10px)
-	&.success
-		background-color: #e8fff2
-		color: #27ae60
-	&.danger
-		background-color: #ffe8e8
-		color: $red
-	p
-		margin: 0
-
-.product-list-view-name
-	.alert-block
-		font-size: rem(14px)
-		padding: rem(4px) rem(8px)
-		display: inline-block
-		margin-top: rem(7px)
 
 @media (max-width: 575.98px)
 	.delivery-methods-attention
@@ -536,6 +1166,23 @@
 		margin-right: 0 !important
 	.basket-cashback-qnt
 		order: -1
+	.product-list-view-color
+		display: flex
+		align-items: center
+		span
+			margin-right: 5px
+			margin-bottom: 0
+	.product-list-view-color
+		margin-bottom: 23px
+
+@media (max-width: 420px)
+	.select-size
+		margin: 0 -3px
+	.select-size-item
+		margin: 0 3px 6px
+		width: calc(32% - 3px)
+		flex-shrink: 0
+		min-width: 0
 		
 
 @media (min-width: 576px)

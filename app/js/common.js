@@ -915,6 +915,7 @@ $(function() {
   let filterWrapper = $('.catalog-sidebar'),
   		helpBtn = filterWrapper.find('.filter-help-btn'),
   		checkboxes = filterWrapper.find('.checkbox-item input'),
+  		radios = filterWrapper.find('.radio input'),
   		rangeInputs = $('.slider-range-inp input'),
   		helpBtnVisibleTime;
 
@@ -923,6 +924,10 @@ $(function() {
   });
 
   rangeInputs.on('change', function() {
+  	setHelpBtnPosition($(this));
+  });
+
+  radios.on('change', function() {
   	setHelpBtnPosition($(this));
   });
 
@@ -1529,6 +1534,19 @@ $(function() {
 		bodyHasScroll();
 	});
 
+	// New
+	$('.cities-alphabet-words-link').on('click', function() {
+		$('.cities-alphabet-words-link').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.multi-addresses').on('click', function(e) {
+		e.preventDefault();
+		$('.select-pickup-addresses-block').fadeIn(400);
+		$('.select-city-new-list a').removeClass('active');
+		$(this).addClass('active');
+	});
+
 	$(window).on('scroll', function() {
 		scrollSidebar();
 	});
@@ -1573,7 +1591,7 @@ $(function() {
 	});
 
 	$(window).on('load', function() {
-		openPopup('#is-your-city');
+		// openPopup('#is-your-city');
 		adaptiveHeader();
 	});
 

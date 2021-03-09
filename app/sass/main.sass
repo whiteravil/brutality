@@ -3825,6 +3825,35 @@ textarea.form-control
 	border-radius: rem(10px)
 	background-color: #FFF6E6
 	margin-bottom: rem(30px)
+	position: relative
+
+.one-click-delivery-load
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	span
+		height: rem(16px)
+		background-color: rgb(255, 230, 186)
+		border-radius: 2px
+		margin-bottom: rem(7px)
+		animation: fadeOpacity 2s ease infinite
+		&:first-child
+			width: 25%
+		&:nth-child(2)
+			width: 80%
+		&:nth-child(3)
+			width: 65%
+		&:nth-child(4)
+			width: 33%
+			margin-bottom: 0
+
+@keyframes fadeOpacity
+	0%
+		opacity: 1
+	50%
+		opacity: 0.5
+	100%
+		opacity: 1
 
 .form-checkbox
 	.checkbox-item
