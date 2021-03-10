@@ -1547,6 +1547,24 @@ $(function() {
 		$(this).addClass('active');
 	});
 
+	$('.select-city-new-search-input').on('input', function() {
+		let thsVal = $(this).val();
+		if ( thsVal.trim().length > 0 ) {
+			$('.select-city-main-search-results').addClass('opened');
+			$('.select-city-new-form-close').addClass('opened');
+		}
+		else {
+			$('.select-city-main-search-results').removeClass('opened');
+			$('.select-city-new-form-close').removeClass('opened');
+		}
+	});
+
+	$('.select-city-new-form-close').on('click', function() {
+		$('.select-city-new-search-input').val('');
+		$('.select-city-main-search-results').removeClass('opened');
+		$('.select-city-new-form-close').removeClass('opened');
+	});
+
 	$(window).on('scroll', function() {
 		scrollSidebar();
 	});
@@ -1591,7 +1609,7 @@ $(function() {
 	});
 
 	$(window).on('load', function() {
-		// openPopup('#is-your-city');
+		openPopup('#is-your-city');
 		adaptiveHeader();
 	});
 

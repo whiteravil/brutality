@@ -102,7 +102,7 @@
 
 				<div class="header-cities">
 					<div class="header-cities-mob-title">Ваш город</div>
-					<a href="#select-city-new" class="header-cities-current open-popup">Казань</a>
+					<a href="#select-city" class="header-cities-current open-popup">Казань</a>
 				</div>
 
 				<div class="header-menu">
@@ -4280,7 +4280,7 @@
 					</div>
 					<div class="question-popup-content-btns">
 						<a href="#" class="btn close-popup">Да, верно</a>
-						<a href="#select-city-new" class="btn btn-border-gray open-popup">Выбрать другой</a>
+						<a href="#select-city" class="btn btn-border-gray open-popup">Выбрать другой</a>
 					</div>
 				</div>
 			</div>
@@ -4288,7 +4288,7 @@
 		</div>
 	</div>
 
-	<div class="popup-wrapper" id="select-city">
+<!-- 	<div class="popup-wrapper" id="select-city">
 		<div class="popup-flex">
 			<div class="popup-block select-city-popup">
 				<div class="popup-close"></div>
@@ -4348,9 +4348,9 @@
 			</div>
 			<div class="popup-bg"></div>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="popup-wrapper opened" id="select-city-new" style="display: block;">
+	<div class="popup-wrapper popup-wrapper--select-city" id="select-city">
 		<div class="popup-flex">
 			<div class="popup-block select-city-new-popup">
 				<div class="popup-close"></div>
@@ -4361,647 +4361,688 @@
 							<input type="text" class="form-control select-city-new-search-input" placeholder="Введите город">
 							<button class="select-city-new-form-close"></button>
 						</div>
-						<div class="select-city-new-block">
-							<div class="h5">Полноформатные магазины</div>
-							<div class="select-city-new-list">
-								<a href="#" class="active">Москва</a>
-								<a href="#">Санкт-Петербург</a>
-								<a href="#" class="multi-addresses">Казань</a>
-								<a href="#">Екатеринбург</a>
-								<a href="#">Армавир</a>
-								<a href="#">Сочи</a>
-								<a href="#">Рязань</a>
-								<a href="#">Тюмень</a>
-								<a href="#">Владикавказ</a>
-								<a href="#">Севастополь</a>
-								<a href="#">Вологда</a>
-								<a href="#">Саратов</a>
-								<a href="#">Астрахань</a>
-								<a href="#">Пермь</a>
-								<a href="#">Киров</a>
-								<a href="#">Краснодар</a>
-								<a href="#">Набережные челны</a>
-								<a href="#">Нижний Новгород</a>
-								<a href="#">Рыбинск</a>
-								<a href="#">Нижний Новгород</a>
-								<a href="#">Набережные челны</a>
-								<a href="#">Астрахань</a>
-								<a href="#">Ачинск</a>
-								<a href="#">Бирск</a>
-								<a href="#">Борисоглебск</a>
+						<div class="select-city-main-wrapper">
+							<div class="select-city-main-search-results">
+								<ul>
+									<li class="active"><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+									<li><a href="#"><span>К</span>азань</a></li>
+								</ul>
 							</div>
-						</div>
-						<div class="select-city-new-block select-pickup-addresses-block">
-							<div class="h5">Полноформатные магазины</div>
-							<div class="select-pickup-addresses">
-								<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
-								<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
-								<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
+							<div class="select-city-new-block">
+								<div class="h5">Полноформатные магазины</div>
+								<div class="select-city-new-list">
+									<a href="#" class="active">Москва</a>
+									<a href="#">Санкт-Петербург</a>
+									<a href="#" class="multi-addresses">Казань</a>
+									<a href="#">Екатеринбург</a>
+									<a href="#">Армавир</a>
+									<a href="#">Сочи</a>
+									<a href="#">Рязань</a>
+									<a href="#">Тюмень</a>
+									<a href="#">Владикавказ</a>
+									<a href="#">Севастополь</a>
+									<a href="#">Вологда</a>
+									<a href="#">Саратов</a>
+									<a href="#">Астрахань</a>
+									<a href="#">Пермь</a>
+									<a href="#">Киров</a>
+									<a href="#">Краснодар</a>
+									<a href="#">Набережные челны</a>
+									<a href="#">Нижний Новгород</a>
+									<a href="#">Рыбинск</a>
+									<a href="#">Нижний Новгород</a>
+									<a href="#">Набережные челны</a>
+									<a href="#">Астрахань</a>
+									<a href="#">Ачинск</a>
+									<a href="#">Бирск</a>
+									<a href="#">Борисоглебск</a>
+								</div>
 							</div>
-						</div>
-						<div class="select-city-new-block">
-							<div class="h5">Выберите букву необходимого вам города</div>
-							<p>— полноформатные магазины, некоторые товары в которых можно забрать в день покупки.</p>
-						</div>
-						<div class="cities-alphabet-list">
-							<div class="cities-alphabet-words">
-								<a href="#cities-alp-1" class="cities-alphabet-words-link active">А-В</a>
-								<a href="#cities-alp-2" class="cities-alphabet-words-link">Г-Ж</a>
-								<a href="#cities-alp-3" class="cities-alphabet-words-link">З-Й</a>
-								<a href="#cities-alp-4" class="cities-alphabet-words-link">К-Л</a>
-								<a href="#cities-alp-5" class="cities-alphabet-words-link">Н-П</a>
-								<a href="#cities-alp-6" class="cities-alphabet-words-link">Р-У</a>
-								<a href="#cities-alp-7" class="cities-alphabet-words-link">Ф-Я</a>
+							<div class="select-city-new-block select-pickup-addresses-block">
+								<div class="h5">Полноформатные магазины</div>
+								<div class="select-pickup-addresses">
+									<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
+									<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
+									<a href="#">ул. Нурсультана Назарбаева, 27, офис 11 б, этаж 1</a>
+								</div>
 							</div>
-							<div class="cities-alphabet-row">
-								<div class="cities-alphabet-col" id="cities-alp-1">
-									<div class="h3">А</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
+							<div class="select-city-new-block">
+								<div class="h5">Выберите букву необходимого вам города</div>
+								<p>— полноформатные магазины, некоторые товары в которых можно забрать в день покупки.</p>
+							</div>
+							<div class="cities-alphabet-list">
+								<div class="cities-alphabet-words">
+									<a href="#cities-alp-1" class="cities-alphabet-words-link active">А-В</a>
+									<a href="#cities-alp-2" class="cities-alphabet-words-link">Г-Ж</a>
+									<a href="#cities-alp-3" class="cities-alphabet-words-link">З-Й</a>
+									<a href="#cities-alp-4" class="cities-alphabet-words-link">К-Л</a>
+									<a href="#cities-alp-5" class="cities-alphabet-words-link">Н-П</a>
+									<a href="#cities-alp-6" class="cities-alphabet-words-link">Р-У</a>
+									<a href="#cities-alp-7" class="cities-alphabet-words-link">Ф-Я</a>
 								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Б</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
+								<div class="cities-alphabet-row">
+									<div class="cities-alphabet-col" id="cities-alp-1">
+										<div class="h3">А</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Б</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">В</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-2">
+										<div class="h3">Г</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Д</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Е</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-3">
+										<div class="h3">Ё</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Ж</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">И</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-4">
+										<div class="h3">Й</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Б</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">В</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-5">
+										<div class="h3">А</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Б</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">В</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-6">
+										<div class="h3">А</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Б</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">В</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col" id="cities-alp-7">
+										<div class="h3">А</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">Б</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
+									<div class="cities-alphabet-col">
+										<div class="h3">В</div>
+										<ul>
+											<li><a href="#">Абакан</a></li>
+											<li><a href="#">Адлер</a></li>
+											<li><a href="#" class="fullsize">Азнакаево</a></li>
+											<li><a href="#">Азов</a></li>
+											<li><a href="#">Алатырь</a></li>
+											<li><a href="#">Александровское</a></li>
+											<li><a href="#">Алексеевка</a></li>
+											<li><a href="#">Алексеевское</a></li>
+											<li><a href="#">Алексин</a></li>
+											<li><a href="#">Альметьевск</a></li>
+											<li><a href="#">Анапа</a></li>
+											<li><a href="#">Ангарск</a></li>
+											<li><a href="#">Апатиты</a></li>
+											<li><a href="#">Апрелевка</a></li>
+											<li><a href="#">Арамиль</a></li>
+											<li><a href="#">Арзамас</a></li>
+											<li><a href="#">Армавир</a></li>
+											<li><a href="#">Арск</a></li>
+											<li><a href="#">Асбест</a></li>
+											<li><a href="#">Астрахань</a></li>
+											<li><a href="#">Аткарск</a></li>
+											<li><a href="#">Ахтубинск</a></li>
+											<li><a href="#">Ачинск</a></li>
+										</ul>
+									</div>
 								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">В</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-2">
-									<div class="h3">Г</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Д</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Е</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-3">
-									<div class="h3">Ё</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Ж</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">И</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-4">
-									<div class="h3">Й</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Б</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">В</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-5">
-									<div class="h3">А</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Б</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">В</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-6">
-									<div class="h3">А</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Б</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">В</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col" id="cities-alp-7">
-									<div class="h3">А</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">Б</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
-								<div class="cities-alphabet-col">
-									<div class="h3">В</div>
-									<ul>
-										<li><a href="#">Абакан</a></li>
-										<li><a href="#">Адлер</a></li>
-										<li><a href="#" class="fullsize">Азнакаево</a></li>
-										<li><a href="#">Азов</a></li>
-										<li><a href="#">Алатырь</a></li>
-										<li><a href="#">Александровское</a></li>
-										<li><a href="#">Алексеевка</a></li>
-										<li><a href="#">Алексеевское</a></li>
-										<li><a href="#">Алексин</a></li>
-										<li><a href="#">Альметьевск</a></li>
-										<li><a href="#">Анапа</a></li>
-										<li><a href="#">Ангарск</a></li>
-										<li><a href="#">Апатиты</a></li>
-										<li><a href="#">Апрелевка</a></li>
-										<li><a href="#">Арамиль</a></li>
-										<li><a href="#">Арзамас</a></li>
-										<li><a href="#">Армавир</a></li>
-										<li><a href="#">Арск</a></li>
-										<li><a href="#">Асбест</a></li>
-										<li><a href="#">Астрахань</a></li>
-										<li><a href="#">Аткарск</a></li>
-										<li><a href="#">Ахтубинск</a></li>
-										<li><a href="#">Ачинск</a></li>
-									</ul>
-								</div>
+							</div>
+							<div class="select-city-mob-helper">
+								<div class="h5">Доставляем по всей России</div>
+								<p>Возможно, мы неправильно определили ваше месторасположение, Вы можете  ввести в строке поиска название вашего  города и найти его </p>
 							</div>
 						</div>
 					</div>

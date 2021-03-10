@@ -697,7 +697,7 @@
 	border-radius: rem(3px)
 	border: 1px solid #BDBDBD
 
-#select-city-new
+.popup-wrapper--select-city
 	.popup-flex
 		justify-content: flex-start
 	&.opened
@@ -762,6 +762,10 @@
 	transform: scale(.85)
 	transition: $time
 	z-index: 1
+	&.opened
+		opacity: 1
+		transform: scale(1)
+		visibility: visible
 
 .select-city-new-block
 	margin-bottom: rem(35px)
@@ -926,6 +930,72 @@
 .header-mobile-menu-list
 	display: none
 
+.select-city-main-wrapper
+	flex-grow: 1
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	position: relative
+
+.select-city-main-search-results
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #fff
+	z-index: 5
+	padding-left: rem(64px)
+	padding-right: rem(64px)
+	overflow: hidden auto
+	transition: all .2s ease
+	opacity: 0
+	transform: translateY(-20px)
+	visibility: hidden
+	&.opened
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		background-color: $mute
+		background-color: #e2e2e2
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		border-radius: 2px
+		background-color: $accent
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		margin-bottom: 12px
+		&.active
+			font-weight: 500
+		a
+			color: #222323
+			text-decoration: none !important
+			transition: all .4s ease
+			&:hover
+				color: #FFA200
+			span
+				color: #FFA200
+
+.select-city-mob-helper
+	display: none
+	padding: 17px 19px 20px
+	border-radius: 8px
+	background-color: #F2F7FC
+	margin-top: 30px
+	.h5
+		font-size: 16px
+		color: #454545
+		margin-bottom: 5px
+	p
+		font-size: 14px
+		color: #A4B4C1
+
 @media (max-width: 1500px)
 	.production-row
 		margin-top: rem(80px)
@@ -956,6 +1026,8 @@
 	.production-item
 		margin-bottom: 30px
 		height: calc(100% - 30px)
+	.cities-alphabet-col
+		width: 50%
 
 @media (max-width: 991.98px)
 	.new-delivery-content
@@ -1100,6 +1172,8 @@
 	.header-phone-descr
 		font-size: 14px
 		color: #A8A8A8
+	.select-city-new-popup-content
+		padding: 20px
 
 @media (max-width: 767.98px)
 	.cashback-new-img
@@ -1128,6 +1202,8 @@
 			width: 20px
 			flex-shrink: 0
 			height: 10px
+	.cities-alphabet-words
+		display: none
 
 
 @media (max-width: 575.98px)
@@ -1174,6 +1250,46 @@
 			margin-bottom: 0
 	.product-list-view-color
 		margin-bottom: 23px
+	.select-city-new-wrapper .h2
+		margin-bottom: 14px
+		font-size: 22px
+	.select-city-new-search-input
+		height: 52px
+		padding: 0 44px 0 39px
+		border-radius: 10px
+		border-color: #FFA200
+		font-size: 16px
+		background-image: url(../img/icons/search-accent.svg)
+		background-position: top 50% left 18px
+		background-size: 15px
+	.select-city-main-search-results
+		padding-left: 39px
+		padding-right: 39px
+	.select-city-new-block
+		display: none
+	.select-city-new-list
+		display: none
+	.cities-alphabet-col
+		width: 100%
+		margin-bottom: 0
+		padding-left: 0
+		.h3
+			display: none
+		ul
+			column-count: auto
+	.cities-alphabet-list
+		ul
+			a
+				font-size: 16px
+				color: #000
+				&:after
+					display: none
+				&.active
+					color: #FFA200
+	.select-city-main-search-results li a
+		font-size: 16px
+	.select-city-mob-helper
+		display: block
 
 @media (max-width: 420px)
 	.select-size
